@@ -30,7 +30,7 @@
         {% include '_messages.jinja2' %}
         {# Build a navigation bar that will affix itself to the top of the screen and highligh active sections#}
         {% set tab_list = [("Treatment","treatment"), ("Nodules", "nodules"), ("Emphysema/Coronary Calcifications","emphysema-coronary"),
-                            ("Other Abnormalities","abnormalities"), ("Intervention & Follow-Up","intervention")] -%}
+                            ("Other Abnormalities","abnormalities"), ("Follow-Up","follow-up")] -%}
         <nav class="navbar navbar-default hidden-xs" id="wizard-bar" data-spy="affix" data-offset-top="220"
              data-offset-bottom="70">
             <div class="row">
@@ -117,68 +117,6 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6 ">
-                        <label for="rbcst8m">Clinical TNM status
-                            <small>(8th edition modified)</small>
-                        </label>
-                        <div class="form-group form-inline">
-
-                            <label class="aria-hidden" for="rbcst8m">T status</label>
-                            <select name="rbcst8m" id="rbcst8m" class="form-control">
-                                <option value="-"> -</option>
-                                <option value="0"> T0</option>
-                                <option value="is"> Tis</option>
-                                <option value="1am"> T1a mi</option>
-                                <option value="1as"> T1a SS</option>
-                                <option value="1a1"> T1a</option>
-                                <option value="1b"> T1b</option>
-                                <option value="1c"> T1c</option>
-                                <option value="2v"> T2 Visc Pl</option>
-                                <option value="2c"> T2 Centr</option>
-                                <option value="2a"> T2a</option>
-                                <option value="2b"> T2b</option>
-                                <option value="3"> T3</option>
-                                <option value="3i"> T3 Inv</option>
-                                <option value="3s"> T3 Satell</option>
-                                <option value="4"> T4</option>
-                                <option value="4i"> T4 Inv</option>
-                                <option value="4n"> T4 Ipsi Nod</option>
-                                <option value="x"> TX</option>
-                            </select>
-
-                            <label class="aria-hidden" for="rbcsn8m">N status</label>
-                            <select name="rbcsn8m" id="rbcsn8m" class="form-control">
-                                <option value="-"> -</option>
-                                <option value="0"> N0</option>
-                                <option value="1"> N1</option>
-                                <option value="2"> N2</option>
-                                <option value="3"> N3</option>
-                                <option value="X"> NX</option>
-                            </select>
-
-                            <label class="aria-hidden" for="rbcsm8m">M status</label>
-                            <select name="rbcsm8m" id="rbcsm8m" class="form-control">
-                                <option value="-"> -</option>
-                                <option value="0"> M0</option>
-                                <option value="1ap"> M1a Pl Dissem</option>
-                                <option value="1ac"> M1a Contr Nod</option>
-                                <option value="1b"> M1b Single</option>
-                                <option value="1c"> M1c Multi</option>
-                                <option value="X"> MX</option>
-                            </select>
-                            {{ f.checkbox("rbcsx8m", "y","Not applicable (specify)") }}
-                        </div>
-
-                    </div>
-                    <div class="col-md-6" id="rbcsx8m-container">
-                        <div class="form-group">
-                            <label for="rbcsxs8m">Specify</label>
-                            <input name="rbcsxs8m" id="rbcsxs8m" class="form-control">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
                     <div class="col-md-6">
                         <label for="rbcsb">Clinical staging based on</label>
                         <div class="form-group  form-inline">
@@ -202,6 +140,27 @@
                         <div class="form-group">
                             <label for="rbcsbos">Specify</label>
                             <input type="text" name="rbcsbos" id="rbcsbos" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label for="sbfev1">FEV1 (L/s)</label>
+                        <input class="form-control input-sm numeric" type="text" name="sbfev1" id="sbfev1"
+                               size="4">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="sbfvc">FVC (L)</label>
+                        <input class="form-control input-sm numeric" type="text" name="sbfvc" id="sbfvc"
+                               size="4">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="sbfvc">FEV1/FVC</label>
+                        <div class="input-group">
+                            <input class="form-control input-sm whole-number" type="text" name="sbffr" id="sbffr"
+                                   size="3" maxlength="3">
+                            <span class="input-group-addon">%</span>
                         </div>
                     </div>
                 </div>
@@ -243,17 +202,18 @@
                         <div class="form-group">
                             <label for="rbloc">Lesion site</label>
                             <select name="rbloc" id="rbloc" class="form-control">
-                                <option value="-"> -</option>
-                                <option value="lul"> LUL</option>
-                                <option value="lll"> LLL</option>
-                                <option value="rul"> RUL</option>
-                                <option value="rml"> RML</option>
-                                <option value="rll"> RLL</option>
-                                <option value="e"> Endobronchial</option>
-                                <option value="m"> Mediastinum</option>
-                                <option value="p"> Pleura</option>
-                                <option value="o"> Other (specify)</option>
+                                <option value="-">-</option>
+                                <option value="lul">LUL</option>
+                                <option value="lll">LLL</option>
+                                <option value="rul">RUL</option>
+                                <option value="rml">RML</option>
+                                <option value="rll">RLL</option>
+                                <option value="e">Endobronchial</option>
+                                <option value="m">Mediastinum</option>
+                                <option value="p">Pleura</option>
+                                <option value="o">Other (specify)</option>
                             </select>
+                            <span class="form-text text-muted">If multiple sites, select other and specify</span>
                         </div>
                     </div>
 
@@ -303,7 +263,7 @@
                         </div>
 
                         <div class="form-group col-md-3">
-                            <label for="rbsud">Treatment date</label>
+                            <label for="rbsud">Treatment <span id="treatment-start-label">start </span>date</label>
                             {{ f.datepicker("rbsud", "past") }}
                         </div>
 
@@ -321,7 +281,7 @@
                 <div id="surgery" style="display: none;">
                     <h2>Surgical Treatment Information</h2>
                     <div class="row">
-                        <div class="col-sm-6 col-md-4">
+                        <div class="col-sm-6 col-md-3">
                             <div class="form-group">
                                 <label>Have you had a pulmonary function test?</label>
                                 <br/>
@@ -329,26 +289,12 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-8 form-inline" id="sbahpft-container">
-                            <div class="form-group">
-                                <label for="sbfev1">FEV1 (L/s)</label>
-                                <input class="form-control input-sm numeric" type="text" name="sbfev1" id="sbfev1"
-                                       size="4">
-                            </div>
-                            <div class="form-group">
-                                <label for="sbfvc">FVC (L)</label>
-                                <input class="form-control input-sm numeric" type="text" name="sbfvc" id="sbfvc"
-                                       size="4">
-                            </div>
+                        <div class="col-sm-6 col-md-3" id="sbahpft-container">
                             <div class="form-group">
                                 <label for="sbcop">Diffusion capacity (mL/min/mm Hg)</label>
                                 <input class="form-control input-sm numeric" type="text" name="sbcop" id="sbcop"
                                        size="4">
                             </div>
-                            <div class="alert alert-info" id="ffr-message" style="display: none; margin-top:5px;">
-                                FEV1/FVC (%) is <strong><span id="ffr-value"></span></strong>
-                            </div>
-                            <input type="hidden" name="sbffr" id="sbffr"/>
                         </div>
                     </div>
 
@@ -368,46 +314,48 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="rbmed">Procedure date</label>
-                                    {{ f.datepicker("rbmed", "past") }}
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="rbmspid">Specimen ID</label>
-                                    <input name="rbmspid" id="rbmspid" class="form-control" size="24">
+                    <div id="rbmep-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="rbmed">Procedure date</label>
+                                        {{ f.datepicker("rbmed", "past") }}
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="rbmspid">Specimen ID</label>
+                                        <input name="rbmspid" id="rbmspid" class="form-control" size="24">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="rbmel">Location of procedure</label>
-                                <input name="rbmel" id="rbmel" class="form-control">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="rbmemd">Physician</label>
-                                <input name="rbmemd" id="rbmemd" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="rbmemdp">Physician's phone</label>
-                                    <input name="rbmemdp" id="rbmemdp" class="form-control">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="rbmel">Location of procedure</label>
+                                    <input name="rbmel" id="rbmel" class="form-control">
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label for="rbmemdf">Physician's fax</label>
-                                    <input name="rbmemdf" id="rbmemdf" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="rbmemd">Physician</label>
+                                    <input name="rbmemd" id="rbmemd" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="rbmemdp">Physician's phone</label>
+                                        <input name="rbmemdp" id="rbmemdp" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="rbmemdf">Physician's fax</label>
+                                        <input name="rbmemdf" id="rbmemdf" class="form-control">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -469,15 +417,8 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6">
-                            <label>Was there a conversion of VATS to open?</label>
-                            <div class="form-group form-inline">
-                                {{ f.inlineRadio("rbvto", "rbvto-n", "n", "No", true) }}
-                                {{ f.inlineRadio("rbvto", "rbvto-y", "y", "Yes", true) }}
-                            </div>
-                        </div>
-                        <div id="rbvto-container">
-                            <div class="col-md-2">
+                        <div>
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="rbexs">Extent of surgery</label>
                                     <select name="rbexs" id="rbexs" class="form-control">
@@ -491,11 +432,27 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3 col-md-offset-3">
                                 <div class="form-group">
                                     <label for="rbexss">Extent (specify)</label>
                                     <input type="text" name="rbexss" id="rbexss" class="form-control" size="24">
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Was there a conversion of VATS to open?</label>
+                            <div class="form-group form-inline">
+                                {{ f.inlineRadio("rbvto", "rbvto-n", "n", "No", true) }}
+                                {{ f.inlineRadio("rbvto", "rbvto-y", "y", "Yes", true) }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="rbrasc">Comments</label>
+                                <textarea name="rbvtoc" id="rbvtoc" class="form-control" rows="3"
+                                          cols="64"></textarea>
                             </div>
                         </div>
                     </div>
@@ -653,6 +610,8 @@
                         <div class="col-md-6">
                             <label>Pathology tumor size (mm)</label>
                             <div class="form-group form-inline">
+                                <label for="rbtsl">Length &nbsp;</label>
+                                <input name="rbtsl" id="rbtsl" class="form-control numeric" size="4">
                                 <label for="rbtsw">Width &nbsp;</label>
                                 <input name="rbtsw" id="rbtsw" class="form-control numeric" size="4">
                                 <label for="rbtsh">Height &nbsp;</label>
@@ -1285,66 +1244,6 @@
                                 <option value="M1c">M1c Multi</option>
                                 <option value="X">MX</option>
                             </select>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="form-group">
-                                <label for="rbpst8m">Post-surgical TNM status (8th Edition Modified)</label>
-                                <div class="form-inline">
-                                    <select name="rbpst8m" id="rbpst8m" class="form-control">
-                                        <option value="-"> -</option>
-                                        <option value="0"> T0</option>
-                                        <option value="is"> Tis</option>
-                                        <option value="1am"> T1a mi</option>
-                                        <option value="1as"> T1a SS</option>
-                                        <option value="1a1"> T1a</option>
-                                        <option value="1b"> T1b</option>
-                                        <option value="1c"> T1c</option>
-                                        <option value="2v"> T2 Visc Pl</option>
-                                        <option value="2c"> T2 Centr</option>
-                                        <option value="2a"> T2a</option>
-                                        <option value="2b"> T2b</option>
-                                        <option value="3"> T3</option>
-                                        <option value="3i"> T3 Inv</option>
-                                        <option value="3s"> T3 Satell</option>
-                                        <option value="4"> T4</option>
-                                        <option value="4i"> T4 Inv</option>
-                                        <option value="4n"> T4 Ipsi Nod</option>
-                                        <option value="x"> TX</option>
-                                    </select>
-
-                                    <label class="aria-hidden" for="rbpsn8m">N Status</label>
-                                    <select name="rbpsn8m" id="rbpsn8m" class="form-control">
-                                        <option value="-"> -</option>
-                                        <option value="0"> N0</option>
-                                        <option value="1"> N1</option>
-                                        <option value="2"> N2</option>
-                                        <option value="3"> N3</option>
-                                        <option value="X"> NX</option>
-                                    </select>
-
-                                    <label class="aria-hidden" for="rbpsm8m">M Status</label>
-                                    <select name="rbpsm8m" id="rbpsm8m" class="form-control">
-                                        <option value="-"> -</option>
-                                        <option value="0"> M0</option>
-                                        <option value="1ap"> M1a Pl Dissem</option>
-                                        <option value="1ac"> M1a Contr Nod</option>
-                                        <option value="1b"> M1b Single</option>
-                                        <option value="1c"> M1c Multi</option>
-                                        <option value="X"> MX</option>
-                                    </select>
-
-                                    {{ f.inlineCheckbox("rbpsx8m","y", "not applicable") }}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5" id="rbpsx8m-container">
-                            <div class="form-group">
-                                <label for="rbpsxs8m">Specify</label>
-                                <input name="rbpsxs8m" id="rbpsxs8m" class="form-control">
-                            </div>
                         </div>
                     </div>
 
@@ -2028,25 +1927,11 @@
             <hr/>
             {#  END Abnormalities tab#}
 
-            {# BEGIN Intervention tab#}
-            <div id="intervention">
-                <h3>Summary of interventions for this malignancy</h3>
-
-                <div class="row">
-                    <div class="col-sm-3 form-group">
-                        <label for="rbdos">First intervention</label>
-                        {{ f.datepicker("rbdos", "past") }}
-                    </div>
-                    <div class="col-sm-3 form-group">
-                        <label for="rbdmr">Most recent intervention</label>
-                        {{ f.datepicker("rbdmr", "past") }}
-                    </div>
-                </div>
-
+            {# BEGIN Follow-up tab#}
+            <div id="follow-up" style="padding-top:8px;">
                 {% with formPage=formPage %}
                     {% include '_followup.jinja2' %}
                 {% endwith %}
-
             </div>
             <hr/>
             {# END Intervention tab#}
@@ -2084,6 +1969,7 @@
                         rbcsx8s: {validators: {notEmpty: {message: 'Other clinical TNM status is required'}}},
                         rbcsxs8m: {validators: {notEmpty: {message: 'Other clinical TNM status is required'}}},
                         rbcsbos: {validators: {notEmpty: {message: 'Clinical staging basis is required.'}}},
+                        sbffr: {validators: {lessThan: {max: 100, message: 'Value must be less than or equal to 100'}}},
                         rbmdp: {validators: {phone: {message: 'Referring physician\'s phone is invalid', country: 'US'}}},
                         rbmdf: {validators: {phone: {message: 'Referring physician\'s fax is invalid', country: 'US'}}},
                         rbsumdp: {validators: {phone: {message: 'Treating physician\'s phone is invalid', country: 'US'}}},
@@ -2163,23 +2049,7 @@
                 fv.destroy();
             });
 
-            //hook for calculating Pulmonary function test percentage (FFR)
-            $("#sbfev1, #sbfvc").on('change', function () {
-                const fev1 = $("#sbfev1").val();
-                const fvc = $("#sbfvc").val();
-                const ffr = VAPALS.calculatePulmonaryFunction(fev1, fvc);
-                if (ffr > 0) {
-                    $("#sbffr").val(ffr);
-                    $("#ffr-value").text(ffr);
-                    $("#ffr-message").show();
-                } else {
-                    $("#sbffr").val("");
-                    $("#ffr-message").hide();
-                }
-            }).first().trigger('change');
-
             $("#rbcsx8").conditionallyEnable({enable: "#rbcsx8-container"});
-            $("#rbcsx8m").conditionallyEnable({enable: "#rbcsx8m-container"});
             $("[name=rbcsb]").conditionallyEnable({sourceValues: "o", enable: "#rbcsb-container"});
             $("[name=rbloc]").conditionallyEnable({sourceValues: "o", enable: "#rbloc-container"});
             $("[name=rbtri]").conditionallyEnable({sourceValues: "o", enable: "#rbtri-container"});
@@ -2187,7 +2057,7 @@
 
             //Surgical section
             $("[name=sbahpft]").conditionallyEnable({enable: "#sbahpft-container"});
-            $("[name=rbmep]").conditionallyDisplay({enable: "#mediastinoscopy-alert"});
+            $("[name=rbmep]").conditionallyDisplay({enable: "#mediastinoscopy-alert, #rbmep-container"});
             $("[name=rbrep]").conditionallyEnable({sourceValues: "n,r", enable: "#rbrep-container"});
             $("#rbtoso").conditionallyEnable({sourceValues: "o", enable: "#rbtoso-container"});
             $("[name=rbvto]").conditionallyEnable({enable: "#rbvto-container"});
@@ -2195,7 +2065,6 @@
             $("#rbino").conditionallyEnable({sourceValues: "o", enable: "#rbino-container"});
             $("[name=rbal]").conditionallyDisplay({enable: "#rbal-container"});
             $("[name=rbem]").conditionallyEnable({enable: "#rbem-container"});
-            $("[name=rbpsx8m]").conditionallyEnable({enable: "#rbpsx8m-container"});
             $("[name=rbpsx8]").conditionallyEnable({enable: "#rbpsx8-container"});
 
             //Radiation section
@@ -2222,6 +2091,7 @@
                 $("#surgery").toggle(val === 's');
                 $("#radiation").toggle(val === 'r');
                 $("#chemotherapy").toggle(val === 'c')
+                $("#treatment-start-label").toggle(val === 'r' || val === 'c')
             }).trigger('change');
 
             {# NB: Emphysema, Nodule Grid, Abnormalities, Followup JS functionality is in their own template files#}

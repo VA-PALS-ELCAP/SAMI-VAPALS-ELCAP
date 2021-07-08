@@ -33,6 +33,7 @@
                     <div>
                         {{ f.inlineRadio("bxp", "bxp-n", "n", "No", true) }}
                         {{ f.inlineRadio("bxp", "bxp-y", "y", "Yes") }}
+                        {{ f.inlineRadio("bxp", "bxp-c", "c", "Cancel") }}
                     </div>
                 </div>
             </div>
@@ -93,6 +94,8 @@
                             <label>Type of procedure</label>
                             {{ f.checkbox("bxtopc", "c", "Needle biopsy") }}
                             {{ f.checkbox("bxtopb", "b", "Bronchoscopy") }}
+                            {{ f.checkbox("bxtope", "e", "EBUS") }}
+                            {{ f.checkbox("bxtopm", "m", "Mediastinoscopy") }}
                             {{ f.checkbox("bxtopv", "v", "VAT") }}
                             {{ f.checkbox("bxtopt", "t", "Thoracotomy") }}
                             {{ f.checkbox("bxtopo", "o", "Other (specify)") }}
@@ -130,70 +133,6 @@
                     <div class="col-md-12 form-group">
                         <label for="bxpdt">Biopsy pathology details</label>
                         <textarea name="bxpdt" id="bxpdt" class="form-control"></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Mediastinoscopy</h3>
-            <div class="row">
-                <div class="col-md-3 form-group">
-                    <label class="control-label required">Was a mediastinoscopy performed?</label>
-                    <div>
-                        {{ f.inlineRadio("rbmep", "rbmep-n", "n", "No", true) }}
-                        {{ f.inlineRadio("rbmep", "rbmep-y", "y", "Yes") }}
-                    </div>
-                </div>
-            </div>
-            <div id="rbmep-container">
-                <div class="row">
-
-                    <div class="col-md-3 form-group">
-                        <label class="control-label required" for="rbmed">Procedure date</label>
-                        {{ f.datepicker("rbmed", "past") }}
-
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <label for="rbmel" class="control-label required">Where was the mediastinoscopy
-                            performed?</label>
-                        <input type=text id="rbmel" name="rbmel" class="form-control" required="required">
-                    </div>
-
-                </div>
-
-                <div class="row" style="padding-bottom: 10px;">
-                    <div class="col-md-4">
-                        <label class="control-label required">Lesion site</label>
-                        <div class="form-group">
-                            {{ f.checkbox("rbmllul", "lul", "LUL") }}
-                            {{ f.checkbox("rbmllll", "lll", "LLL") }}
-                            {{ f.checkbox("rbmllh", "lh", "L hilum") }}
-                            {{ f.checkbox("rbmllg", "lg", "L lingula") }}
-                            {{ f.checkbox("rbmlrul", "rul", "RUL") }}
-                            {{ f.checkbox("rbmlrml", "rml", "RML") }}
-                            {{ f.checkbox("rbmlrll", "rll", "RLL") }}
-                            {{ f.checkbox("rbmlrh", "rh", "R hilum") }}
-                            {{ f.checkbox("rbmle", "e", "Endobronchial") }}
-                            {{ f.checkbox("rbmlm", "m", "Mediastinum") }}
-                            {{ f.checkbox("rbmlp", "p", "Pleura") }}
-                            {{ f.checkbox("rbmlo", "o", "Other (specify)") }}
-                            <label for="rbmls" class="aria-hidden">Specify</label>
-                            <input type=text id="rbmls" name="rbmls" class="form-control input-sm" required="required">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4 form-group">
-                        <label class="required">Complications during procedure?</label>
-                        <div>
-                            {{ f.inlineRadio("rbmec", "rbmec-n", "n","No",true) }}
-                            {{ f.inlineRadio("rbmec", "rbmec-y", "y","Yes",true) }}
-                        </div>
-                    </div>
-                    <div class="col-md-4 form-group">
-                        <label for="rbmecos">Specify</label>
-                        <input type=text id="rbmecos" name="rbmecos" class="form-control input-sm"
-                               required="required">
                     </div>
                 </div>
             </div>
@@ -264,70 +203,53 @@
 
 {% block script %}
     <script>
+        function biopsyPerformed() {
+            return $("[name=bxp]:checked").val() === 'y';
+        }
+
         function createFormValidator() {
 
             const $form = $('#main-form');
-            const multiInputValidators = ['bxp', 'bxcp', 'rbmep', 'rbmec', 'rbmt', 'rbmte', 'rbmtk', 'rbmta', 'rbmto'];
-
+            const multiInputValidators = ['bxp', 'bxcp', 'rbmec', 'rbmt', 'rbmte', 'rbmtk', 'rbmta', 'rbmto'];
             $form.formValidation({
                     fields: {
                         //BIOPSY
                         bxp: {validators: {notEmpty: {message: 'Biopsy location is required'}}},
                         bxdos: {
                             validators: {
-                                notEmpty: {message: 'Procedure date is required'},
+                                notEmpty: {message: 'Procedure date is required', enabled: false},
                                 date: {
                                     max: VAPALS.todaysDate(),
-                                    message: 'Procedure date must be before today'
+                                    message: 'Procedure date must be before today', enabled: false
                                 }
                             }
                         },
-                        bxw: {validators: {notEmpty: {message: 'Biopsy performed is required'}}},
+                        bxw: {validators: {notEmpty: {message: 'Biopsy performed is required', enabled: false}}},
                         bxinds: { //use a real element name for the field so conditional plugins can toggle the field
                             selector: '[name^=bxind]',
-                            validators: {choice: {min: 1, message: 'Select one or more indications'}}
+                            validators: {choice: {min: 1, message: 'Select one or more indications', enabled: false}}
                         },
-                        bxind: {validators: {notEmpty: {message: 'Other indication is required'}}},
+                        bxind: {validators: {notEmpty: {message: 'Other indication is required', enabled: false}}},
                         bxloclul: { //use a real element name for the field so conditional plugins can toggle the field
                             selector: '[name^=bxloc]',
-                            validators: {choice: {min: 1, message: 'Select one or more sites'}}
+                            validators: {choice: {min: 1, message: 'Select one or more sites', enabled: false}}
                         },
-                        bxlocs: {validators: {notEmpty: {message: 'Other lesion site is required'}}},
+                        bxlocs: {validators: {notEmpty: {message: 'Other lesion site is required', enabled: false}}},
                         bxtosc: { //use a real element name for the field so conditional plugins can toggle the field
                             selector: '[name^=bxtos]',
-                            validators: {choice: {min: 1, message: 'Select one or more specimen types'}}
+                            validators: {choice: {min: 1, message: 'Select one or more specimen types', enabled: false}}
                         },
                         bxtopc: { //use a real element name for the field so conditional plugins can toggle the field
                             selector: '[name^=bxtop]',
-                            validators: {choice: {min: 1, message: 'Select one or more procedure types'}}
+                            validators: {choice: {min: 1, message: 'Select one or more procedure types', enabled: false}}
                         },
-                        bxtopos: {validators: {notEmpty: {message: 'Other type of procedure is required'}}},
-                        bxcp: {validators: {notEmpty: {message: 'Complications is required'}}},
+                        bxtopos: {validators: {notEmpty: {message: 'Other type of procedure is required', enabled: false}}},
+                        bxcp: {validators: {notEmpty: {message: 'Complications is required', enabled: false}}},
                         bxcpct: { //use a real element name for the field so conditional plugins can toggle the field
                             selector: '[name=bxcpct],[name=bxcppt],[name=bxcppn],[name=bxcpo]',
-                            validators: {choice: {min: 1, message: 'Select one or more complication'}}
+                            validators: {choice: {min: 1, message: 'Select one or more complication', enabled: false}}
                         },
-                        bxcpos: {validators: {notEmpty: {message: 'Other complication is required'}}},
-
-                        //Mediastinoscopy
-                        rbmep: {validators: {notEmpty: {message: 'Mediastinoscopy performed is required'}}},
-                        rbmed: {
-                            validators: {
-                                notEmpty: {message: 'Procedure date is required'},
-                                date: {
-                                    max: VAPALS.todaysDate(),
-                                    message: 'Procedure date must be before today'
-                                }
-                            }
-                        },
-                        rbmel: {validators: {notEmpty: {message: 'Mediastinoscopy location is required'}}},
-                        rbmllul: { //use a real element name for the field so conditional plugins can toggle the field
-                            selector: '[name^=rbml]',
-                            validators: {choice: {min: 1, message: 'Select one or more sites'}}
-                        },
-                        rbmls: {validators: {notEmpty: {message: 'Other lesion site is required'}}},
-                        rbmec: {validators: {notEmpty: {message: 'Complications is required'}}},
-                        rbmecos: {validators: {notEmpty: {message: 'Other complication is required'}}},
+                        bxcpos: {validators: {notEmpty: {message: 'Other complication is required', enabled: false}}},
 
                         //Molecular Testing
                         rbmt: {validators: {notEmpty: {message: 'Molecular testing is required'}}},
@@ -353,7 +275,7 @@
                                 if (multiInputValidators.indexOf(e.field) > -1) {
                                     $fg = $("#" + e.element.id).closest(".form-group");
                                     $c = $fg.find(".fv-plugins-message-container");
-                                    if ($c.length == 1) {
+                                    if ($c.length === 1) {
                                         $c.append(e.iconElement);
                                     } else {
                                         $fg.append(e.iconElement);
@@ -379,17 +301,11 @@
             });
 
             //Biopsy
-            $("[name='bxp']").conditionallyDisplay({enable: $("#bxp-container")}); //entire form
             $("#bxindo").conditionallyEnable({sourceValues: "o", enable: "#bxind"}); // other indication
             $("#bxloco").conditionallyEnable({sourceValues: "o", enable: "#bxlocs"}); //other lesion
             $("#bxtopo").conditionallyEnable({sourceValues: "o", enable: "#bxtopos"}); // other type of procedure
             $("[name='bxcp']").conditionallyEnable({enable: $("#bxcp-container")}); //procedure details
             $("#bxcpo").conditionallyEnable({sourceValues: "o", enable: "#bxcpos"}); // other complication
-
-            //Mediastinoscopy
-            $("[name='rbmep']").conditionallyDisplay({enable: $("#rbmep-container")}); //entire section
-            $("#rbmlo").conditionallyEnable({sourceValues: "o", enable: "#rbmls"}); //other lesion
-            $("[name=rbmec]").conditionallyEnable({enable: "#rbmecos"}); // complication specificity
 
             //Molecular Testing
             $("[name='rbmt']").conditionallyDisplay({enable: "#rbmt-container"}); //entire section
@@ -400,9 +316,26 @@
             });
 
             initNoduleGrid(fv);
+
+            const bxpValidators = [
+                'bxdos', 'bxw', 'bxinds', 'bxind', 'bxloclul', 'bxlocs', 'bxtosc', 'bxtopc', 'bxtopos', 'bxcp',
+                'bxcpct', 'bxcpos']
+
+            // When biopsy question is changed, toggle required asterisks and validators based on user selection
+            $("[name=bxp]").on("change", function () {
+                if (biopsyPerformed()) {
+                    $("#bxp-container").find(".not-required").removeClass("not-required").addClass("required");
+                    $.each(bxpValidators, function (i, fieldName) {
+                        fv.enableValidator(fieldName);
+                    })
+                } else {
+                    $("#bxp-container").find(".required").removeClass("required").addClass("not-required");
+                    $.each(bxpValidators, function (i, fieldName) {
+                        fv.disableValidator(fieldName);
+                    });
+                }
+            }).trigger("change");
         });
-
-
     </script>
 
 {% endblock %}

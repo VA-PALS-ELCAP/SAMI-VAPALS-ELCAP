@@ -4,725 +4,716 @@ FIELD NUM	QUESTION	NAME	TYPE	REQUIRED	PLACEHOLDER	VALUES	LABELS
 3	Clinical TNM status (8th edition)	rbcsm8	select-one	0		-;0;1ap;1ac;1b;1c;X	-;M0;M1a Pl Dissem;M1a Contr Nod;M1b Single;M1c Multi;MX
 4	Clinical TNM status (8th edition)	rbcsx8	checkbox	0		y	Not applicable (specify)
 5	Clinical TNM status (8th edition)	rbcsx8s	text	0			Specify
-6	Clinical TNM status (8th edition modified)	rbcst8m	select-one	0		-;0;is;1am;1as;1a1;1b;1c;2v;2c;2a;2b;3;3i;3s;4;4i;4n;x	-;T0;Tis;T1a mi;T1a SS;T1a;T1b;T1c;T2 Visc Pl;T2 Centr;T2a;T2b;T3;T3 Inv;T3 Satell;T4;T4 Inv;T4 Ipsi Nod;TX
-7	Clinical TNM status (8th edition modified)	rbcsn8m	select-one	0		-;0;1;2;3;X	-;N0;N1;N2;N3;NX
-8	Clinical TNM status (8th edition modified)	rbcsm8m	select-one	0		-;0;1ap;1ac;1b;1c;X	-;M0;M1a Pl Dissem;M1a Contr Nod;M1b Single;M1c Multi;MX
-9	Clinical TNM status (8th edition modified)	rbcsx8m	checkbox	0		y	Not applicable (specify)
-10	Clinical TNM status (8th edition modified)	rbcsxs8m	text	0			Specify
-11	Clinical staging based on	rbcsb	radio	0		c;p;b;o	only CT;only PET;both;other (specify)
-12	Clinical staging based on	rbcsbos	text	0			Specify
-13	Referring physician	rbmd	text	0			Referring physician
-14	Referring physician's phone	rbmdp	text	0			Referring physician's phone
-15	Referring physician's fax	rbmdf	text	0			Referring physician's fax
-16	Treating physician	rbsumd	text	0			Treating physician
-17	Treating physician's phone	rbsumdp	text	0			Treating physician's phone
-18	Treating physician's fax	rbsumdf	text	0			Treating physician's fax
-19	Lesion site	rbloc	select-one	0		-;lul;lll;rul;rml;rll;e;m;p;o	-;LUL;LLL;RUL;RML;RLL;Endobronchial;Mediastinum;Pleura;Other (specify)
-20	Lesion site	rblocs	text	0			Specify
-21	Indication for treatment	rbtri	select-one	0		-;f;r;n;o	-;First Lung Cancer;Recurrence;New Primary Lung Cancer;Other (specify)
-22	Specify/Comments	rbtric	text	0			Specify/Comments
-23	Treatment option	rbto	select-one	0		-;s;r;c;w;o	-;Surgery;Radiation Therapy;Chemotherapy;Watchful Waiting;Other
-24	Treatment date	rbsud	text	0			Treatment date
-25	Treatment option	rbtos	text	0			Specify
-26	Have you had a pulmonary function test?	sbahpft	radio	0		n;y	No;Yes
-27	Pulmonary function test	sbfev1	text	0			FEV1 (L/s)
-28	Pulmonary function test	sbfvc	text	0			FVC (L)
-29	Pulmonary function test	sbcop	text	0			Diffusion capacity (mL/min/mm Hg)
-30	Was mediastinoscopy performed?	rbmep	radio	0		n;y	No;Yes
-31	Surgical treament : Procedure date	rbmed	text	0			Procedure date
-32	Surgical treament : Specimen ID	rbmspid	text	0			Specimen ID
-33	Surgical treament : Location of procedure	rbmel	text	0			Location of procedure
-34	Surgical treament : Physician	rbmemd	text	0			Physician
-35	Surgical treament : Physician's phone	rbmemdp	text	0			Physician's phone
-36	Surgical treament: Physician's fax	rbmemdf	text	0			Physician's fax
-37	Was resection performed?	rbrep	radio	1		n;y;r;a;q	No;Yes;Refused;Aborted due to positive mediastinoscopy or other reasons;?
-38	"Resection : If no or refused, give date"	rbsurd	text	1			"If no or refused, give date"
-39	"Resection : If no or refused, give reason"	rbsurr	text	0			"If no or refused, give reason"
-40	Resection : Location of procedure	rbsul	text	0			Location of procedure
-41	Resection : Type of surgery	rbtosv	checkbox	0		v	VAT
-42	Resection : Type of surgery	rbtost	checkbox	0		t	Thoracotomy
-43	Resection : Type of surgery	rbtosr	checkbox	0		r	Robotic-assisted
-44	Resection : Type of surgery	rbtoso	checkbox	0		o	Other
-45	Resection : Type of surgery	rbtosos	text	0			Other (specify)
-46	Resection : Was there a conversion of VATS to open?	rbvto	radio	1		n;y	No;Yes
-47	Resection : Conversion of VATS to open : Extent of surgery	rbexs	select-one	0		-;w;s;l;b;p;o	-;Wedge resection;Segmentectomy;Lobectomy;Bilobectomy;Pneumonectomy;Other (specify)
-48	Resection : Conversion of VATS to open : Extent (specify)	rbexss	text	0			Extent (specify)
-49	Resection : Distance to the resection margin (mm):	rbsrm	text	0			Distance to the resection margin (mm):
-50	Resection : Method of margin measurement:	rbrmm	radio	1		g;m	Gross;Micro
-51	Resection : Which margin?	rbwm	radio	1		s;b;p;v;o	Staple Line;Bronchial;Parenchymal;Vascular;Other
-52	Resection : Margin comments	rbwmc	text	0			Margin comments
-53	Resection : Margin measured with staples:	rbrmws	radio	1		r;i;u	Removed;Intact;Unknown
-54	"Resection : If initial margin positive, was additional margin sent?"	rbrmam	radio	1		n;y;q	No;Yes;N/A
-55	Additional specimens sent?	rbrmas	text	0			Additional specimens sent?
-56	Specimen ID	rbspid	text	0			Specimen ID
-57	Additional surgery for same lesion?	rbras	radio	1		n;y	No;Yes
-58	Additional surgery for same lesion : Date	rbrasdt	text	0			Date
-59	Additional surgery for same lesion : Comments	rbrasc	textarea	0			Comments
-60	Complications during surgery?	rbrcs	radio	1		n;y	No;Yes
-61	Complications during surgery : Comments	rbrcsc	textarea	0			Comments
-62	Complications during hospital stay?	rbrch	radio	1		n;y	No;Yes
-63	Complications during hospital stay : Comments	rbrchc	textarea	0			Comments
-64	Date of chest tube removal	rbctrd	text	0			Date of chest tube removal
-65	60-day vital status	rb60dvs	textarea	0			60-day vital status
-66	Pathology tumor size (mm)	rbtsw	text	0			Width
-67	Pathology tumor size (mm)	rbtsh	text	0			Height
-68	Pathology tumor size :	rbtsn	checkbox	0		y	Not applicable (specify)
-69	Pathology tumor size : Specify	rbtsns	text	0			Specify
-70	Invasion of other structures	rbinv	radio	1		n;y	No;Yes
-71	Tumor : Location	rbinvv	checkbox	0		v	Major vascular
-72	Tumor : Location	rbinp	checkbox	0		p	Pleura
-73	Tumor : Location	rbina	checkbox	0		a	Angiolymphatic
-74	Tumor : Location	rbino	checkbox	0		o	Other (specify)
-75	Tumor : Location	rbinvls	text	0			Specify
-76	T2 Cen:Main bronchus (not carina)	rbinvt2b	checkbox	0		b	Main bronchus (not carina)
-77	T2 Cen:Atelectasis to hilum	rbinvt2a	checkbox	0		a	Atelectasis to hilum
-78	T3 Inv:Chest wall	rbinvc	checkbox	0		c	Chest wall
-79	T3 Inv: Pericardium	rbinvt3p	checkbox	0		p	Pericardium
-80	T3 Inv:Phrenic nerve	rbinvt3n	checkbox	0		p	Phrenic nerve
-81	T4 Inv:Mediastinum	rbinvm	checkbox	0		m	Mediastinum
-82	T4 Inv:Diaphragm	rbinvt4d	checkbox	0		d	Diaphragm
-83	T4 Inv:Heart	rbinvt4h	checkbox	0		h	Heart
-84	T4 Inv:Great vessels	rbinvt4g	checkbox	0		g	Great vessels
-85	T4 Inv:Recurrent laryngeal nerve	rbinvt4r	checkbox	0		r	Recurrent laryngeal nerve
-86	T4 Inv:Carina	rbinvt4c	checkbox	0		c	Carina
-87	T4 Inv:Trachea	rbinvt4t	checkbox	0		t	Trachea
-88	T4 Inv:Esophagus	rbinvt4e	checkbox	0		e	Esophagus
-89	T4 Inv:Spine	rbinvt4s	checkbox	0		s	Spine
-90	Node : N1 Resected	rbn1r	radio	0		n;y	No;Yes
-91	Node : N2R Resected	rbn2rr	radio	0		n;y	No;Yes
-92	Node : N2L Resected	rbn2lr	radio	0		n;y	No;Yes
-93	Node : N3 Resected	rbn3r	radio	0		n;y	No;Yes
-94	Node : N4R Resected	rbn4rr	radio	0		n;y	No;Yes
-95	Node : N4L Resected	rbn4lr	radio	0		n;y	No;Yes
-96	Node : N5 Resected	rbn5r	radio	0		n;y	No;Yes
-97	Node : N6 Resected	rbn6r	radio	0		n;y	No;Yes
-98	Node : N7 Resected	rbn7r	radio	0		n;y	No;Yes
-99	Node : N8 Resected	rbn8r	radio	0		n;y	No;Yes
-100	Node : N9 Resected	rbn9r	radio	0		n;y	No;Yes
-101	Node : N1 Number resected	rbn1t	text	0			
-102	Node : N2R Number resected	rbn2rt	text	0			
-103	Node : N2L Number resected	rbn2lt	text	0			
-104	Node : N3 Number resected	rbn3t	text	0			
-105	Node : N4R Number resected	rbn4rt	text	0			
-106	Node : N4L Number resected	rbn4lt	text	0			
-107	Node : N5 Number resected	rbn5t	text	0			
-108	Node : N6 Number resected	rbn6t	text	0			
-109	Node : N7 Number resected	rbn7t	text	0			
-110	Node : N8 Number resected	rbn8t	text	0			
-111	Node : N9 Number resected	rbn9t	text	0			
-112	Node : N1 Number positive	rbn1p	text	0			
-113	Node : N2R Number positive	rbn2rp	text	0			
-114	Node : N2L Number positive	rbn2lp	text	0			
-115	Node : N3 Number positive	rbn3p	text	0			
-116	Node : N4R Number positive	rbn4rp	text	0			
-117	Node : N4L Number positive	rbn4lp	text	0			
-118	Node : N5 Number positive	rbn5p	text	0			
-119	Node : N6 Number positive	rbn6p	text	0			
-120	Node : N7 Number positive	rbn7p	text	0			
-121	Node : N8 Number positive	rbn8p	text	0			
-122	Node : N9 Number positive	rbn9p	text	0			
-123	Node : N10R Resected	rbn10rr	radio	0		n;y	No;Yes
-124	Node : N10L Resected	rbn10lr	radio	0		n;y	No;Yes
-125	Node : N11R Resected	rbn11rr	radio	0		n;y	No;Yes
-126	Node : N11L Resected	rbn11lr	radio	0		n;y	No;Yes
-127	Node : N12R Resected	rbn12rr	radio	0		n;y	No;Yes
-128	Node : N12L Resected	rbn12lr	radio	0		n;y	No;Yes
-129	Node : N13R Resected	rbn13rr	radio	0		n;y	No;Yes
-130	Node : N13L Resected	rbn13lr	radio	0		n;y	No;Yes
-131	Node : N14R Resected	rbn14rr	radio	0		n;y	No;Yes
-132	Node : N14L Resected	rbn14lr	radio	0		n;y	No;Yes
-133	Node : Peribronchial lymph Nodes Resected	rbnpb	radio	0		n;y	No;Yes
-134	Node : Location unspecified Resected	rbnun	radio	0		n;y	No;Yes
-135	Node : N10R Number resected	rbn10rt	text	0			
-136	Node : N10L Number resected	rbn10lt	text	0			
-137	Node : N11R Number resected	rbn11rt	text	0			
-138	Node : N11L Number resected	rbn11lt	text	0			
-139	Node : N12R Number resected	rbn12rt	text	0			
-140	Node : N12L Number resected	rbn12lt	text	0			
-141	Node : N13R Number resected	rbn13rt	text	0			
-142	Node : N13L Number resected	rbn13lt	text	0			
-143	Node : N14R Number resected	rbn14rt	text	0			
-144	Node : N14L Number resected	rbn14lt	text	0			
-145	Node : Peribronchial lymph Nodes Number resected	rbnpbt	text	0			
-146	Node : Location unspecified Number resected	rbnunt	text	0			
-147	Node : N10R Number positive	rbn10rp	text	0			
-148	Node : N10L Number positive	rbn10lp	text	0			
-149	Node : N11R Number positive	rbn11rp	text	0			
-150	Node : N11L Number positive	rbn11lp	text	0			
-151	Node : N12R Number positive	rbn12rp	text	0			
-152	Node : N12L Number positive	rbn12lp	text	0			
-153	Node : N13R Number positive	rbn13rp	text	0			
-154	Node : N13L Number positive	rbn13lp	text	0			
-155	Node : N14R Number positive	rbn14rp	text	0			
-156	Node : N14L Number positive	rbn14lp	text	0			
-157	Node : Peribronchial lymph Nodes Number positive	rbnpbp	text	0			
-158	Node : Location unspecified Number positive	rbnunp	text	0			
-159	Node : Specify location	rbnuns	text	0			
-160	Additional lesions	rbal	radio	0		n;y	No;Yes
-161	Additional lesions : Number	rbaln	text	0			Number
-162	Lesion 1 : Location	rbal1lo	select-one	0		-;lul;lll;rul;rml;rll	-;LUL;LLL;RUL;RML;RLL
-163	Lesion 1 : Length (mm)	rbal1l	text	0			
-164	Lesion 1 : Width (mm)	rbal1w	text	0			
-165	Lesion 1 : Height (mm)	rbal1h	text	0			
-166	Lesion 1 : Pathologic diagnosis	rbal1pd	select-one	0		-;aa;ap;ba;ns;ad;as;la;sq;sm;ct;ca;be;bs;mf;os	-;AAH;Atyp bronch prolif;BAC;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Multifocal (specify);Other (specify)
-167	Lesion 1 : Specify	rbal1ps	text	0			
-168	Lesion 1 : Seen on CT	rbal1	radio	0		n;y;q	No;Yes;?
-169	Lesion 2 : Location	rbal2lo	select-one	0		-;lul;lll;rul;rml;rll	-;LUL;LLL;RUL;RML;RLL
-170	Lesion 2 : Length (mm)	rbal2l	text	0			
-171	Lesion 2 : Width (mm)	rbal2w	text	0			
-172	Lesion 2 : Height (mm)	rbal2h	text	0			
-173	Lesion 2 : Pathologic diagnosis	rbal2pd	select-one	0		-;aa;ap;ba;ns;ad;as;la;sq;sm;ct;ca;be;bs;mf;os	-;AAH;Atyp bronch prolif;BAC;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Multifocal (specify);Other (specify)
-174	Lesion 2 : Specify	rbal2ps	text	0			
-175	Lesion 2 : Seen on CT	rbal2	radio	0		n;y;q	No;Yes;?
-176	Lesion 3 : Location	rbal3lo	select-one	0		-;lul;lll;rul;rml;rll	-;LUL;LLL;RUL;RML;RLL
-177	Lesion 3 : Length (mm)	rbal3l	text	0			
-178	Lesion 3 : Width (mm)	rbal3w	text	0			
-179	Lesion 3 : Height (mm)	rbal3h	text	0			
-180	Lesion 3 : Pathologic diagnosis	rbal3pd	select-one	0		-;aa;ap;ba;ns;ad;as;la;sq;sm;ct;ca;be;bs;mf;os	-;AAH;Atyp bronch prolif;BAC;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Multifocal (specify);Other (specify)
-181	Lesion 3 : Specify	rbal3ps	text	0			
-182	Lesion 3 : Seen on CT	rbal3	radio	0		n;y;q	No;Yes;?
-183	Lesion 4 : Location	rbal4lo	select-one	0		-;lul;lll;rul;rml;rll	-;LUL;LLL;RUL;RML;RLL
-184	Lesion 4 : Length (mm)	rbal4l	text	0			
-185	Lesion 4 : Width (mm)	rbal4w	text	0			
-186	Lesion 4 : Height (mm)	rbal4h	text	0			
-187	Lesion 4 : Pathologic diagnosis	rbal4pd	select-one	0		-;aa;ap;ba;ns;ad;as;la;sq;sm;ct;ca;be;bs;mf;os	-;AAH;Atyp bronch prolif;BAC;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Multifocal (specify);Other (specify)
-188	Lesion 4 : Specify	rbal4ps	text	0			
-189	Lesion 4 : Seen on CT	rbal4	radio	0		n;y;q	No;Yes;?
-190	T3 Satell	rbalt3	checkbox	0		y	Yes
-191	T4 Ipsi Nod	rbalt4	checkbox	0		y	Yes
-192	Evidence of metastasis	rbem	radio	0		n;y	No;Yes
-193	Evidence of metastasis : Specify	rbems	text	0			Specify
-194	M staging (8th edition)	rbmst	select-one	0		-;M0;M1ap;M1an;M1b;M1c;X	-;M0;M1a Pl Dissem;M1a Contr Nod;M1b Single;M1c Multi;MX
-195	Post-surgical TNM status (8th Edition Modified)	rbpst8m	select-one	0		-;0;is;1am;1as;1a1;1b;1c;2v;2c;2a;2b;3;3i;3s;4;4i;4n;x	-;T0;Tis;T1a mi;T1a SS;T1a;T1b;T1c;T2 Visc Pl;T2 Centr;T2a;T2b;T3;T3 Inv;T3 Satell;T4;T4 Inv;T4 Ipsi Nod;TX
-196	Post-surgical TNM status (8th Edition Modified)	rbpsn8m	select-one	0		-;0;1;2;3;X	-;N0;N1;N2;N3;NX
-197	Post-surgical TNM status (8th Edition Modified)	rbpsm8m	select-one	0		-;0;1ap;1ac;1b;1c;X	-;M0;M1a Pl Dissem;M1a Contr Nod;M1b Single;M1c Multi;MX
-198	Post-surgical TNM status (8th Edition Modified)	rbpsx8m	checkbox	0		y	not applicable
-199	Post-surgical TNM status (8th Edition Modified) : Specify	rbpsxs8m	text	0			Specify
-200	Post-surgical TNM status (8th Edition)	rbpst8	select-one	0		-;0;is;1am;1as;1a1;1b;1c;2v;2c;2a;2b;3;3i;3s;4;4i;4n;x	-;T0;Tis;T1a mi;T1a SS;T1a;T1b;T1c;T2 Visc Pl;T2 Centr;T2a;T2b;T3;T3 Inv;T3 Satell;T4;T4 Inv;T4 Ipsi Nod;TX
-201	Post-surgical TNM status (8th Edition)	rbpsn8	select-one	0		-;0;1;2;3;X	-;N0;N1;N2;N3;NX
-202	Post-surgical TNM status (8th Edition)	rbpsm8	select-one	0		-;0;1ap;1ac;1b;1c;X	-;M0;M1a Pl Dissem;M1a Contr Nod;M1b Single;M1c Multi;MX
-203	Post-surgical TNM status (8th Edition)	rbpsx8	checkbox	0		y	not applicable
-204	Post-surgical TNM status (8th Edition) : Specify	rbpsxs8	text	0			Specify
-205	Other findings / comments	rbofc	textarea	0			Other findings / comments
-206	Radiation oncologist name	rtron	text	0			Radiation oncologist name
-207	First date of treatment	rtfdot	text	0			First date of treatment
-208	Last date of treatment	rtldot	text	0			Last date of treatment
-209	Total dose of radiation	rbrttdor	text	0			Total dose of radiation
-210	Dose per fraction of radiation	rbrtdpfr	text	0			Dose per fraction of radiation
-211	Number of fractions	rbrtnof	text	0			Number of fractions
-212	Frequency of radiation	rtfor	radio	0		d;od;w;o	daily;every other day;weekly;other
-213	Frequency of radiation : Specify	rtfors	text	0			Specify
-214	Lesion site	rtloc	select-one	0		-;lul;lll;rul;rml;rll;e;m;p;o	-;LUL;LLL;RUL;RML;RLL;Endobronchial;Mediastinum;Pleura;Other (specify)
-215	Lesion site : Specify	rtlocs	text	0			Specify
-216	Size of gross tumor volume	rtsogtv	text	0			Size of gross tumor volume
-217	Size of internal target volume	rtsoitv	text	0			Size of internal target volume
-218	Size of planning target volume	rtsoptv	text	0			Size of planning target volume
-219	Radiation dose delivery	rtrddt	radio	0		crt;imrt;vmat;carc;c;t;p;o	3D-CRT;IMRT;VMAT;conformal arc;cyberknife;tomotherapy;protons based;other (specify)
-220	Radiation dose delivery : Specify	rtrddto	text	0			
-221	Tumor motion control	rttmct	radio	0		n;s;r;b;o	none;4D-simulation and ITV;gated radiation;breath hold;other (specify)
-222	Tumor motion control : Specify	rttmcto	text	0			
-223	SBRT	rtsbrt	radio	0		n;y	No;Yes
-224	Patient positioning	rtpp	radio	0		a;s;o	alphacradle;stereotactic body frame;other (specify)
-225	Patient positioning : Specify	rtppo	text	0			
-226	Treatment verification	rttv	radio	0		i;c;o	kv images;cone beam CT;other (specify)
-227	Treatment verification : Specify	rttvo	text	0			
-228	V20 of ipsilateral lung (percentage)	rtilp	text	0			
-229	V20 of total lung (percentage)	rttlp	text	0			
-230	V30 of chest wall (cc)	rtcw	text	0			
-231	Maximum Esophageal Dose	rtmed	text	0			
-232	Maximum Distal Bronchus Dose	rtmdbd	text	0			
-233	Maximum Mainstem Bronchus Dose	rtmmbd	text	0			
-234	D95 of PTV (in Gray)	rtptv	text	0			
-235	Brachial plexus max [32 Gy]	rtbpm	text	0			
-236	Heart/pericardium receiving 32Gy [15cc]	rthpr	text	0			
-237	Max skin dose &lt; 32Gy	rtmsd	text	0			
-238	Ration of Rx isodose vol to PTV &lt; 1.5	rtrorx	text	0			
-239	V100 %	rtv100	text	0			
-240	Dmax %	rtdmax	text	0			
-241	D2cm max%	rtd2cm	text	0			
-242	V30 to rib	rtribv30	text	0			
-243	Highest dose to rib	rtribmax	text	0			
-244	Was the entire dose delivered to the participant?	rtedd	radio	0		n;y	No;Yes
-245	Specify	rtedds	text	0			
-246	Were there any unplanned interruptions or incomplete fractions?	rtcui	radio	0		n;y	No;Yes
-247	Specify	rtcuis	text	0			Specify
-248	Side effects	rtse	radio	0		n;mi;ma	none;minimal;marked
-249	Comments	rtsec	text	0			Comments
-250	Fatigue	rtsef	checkbox	0		f	Fatigue
-251	Side effects : Tightness in chest	rtsetc	checkbox	0		tc	Tightness in chest
-252	Side effects :Chest wall pain	rtsecwp	checkbox	0		cwp	Chest wall pain
-253	Side effects :Cough	rtsecgh	checkbox	0		c	Cough
-254	Side effects :Shortness of breath	rtsesob	checkbox	0		sob	Shortness of breath
-255	Side effects :Dyspnea	rtsed	checkbox	0		d	Dyspnea
-256	Side effects :Decreased appetite/weight loss	rtsedawl	checkbox	0		dawl	Decreased appetite/weight loss
-257	Side effects :Nausea/vomiting	rtsenv	checkbox	0		nv	Nausea/vomiting
-258	Side effects :Diarrhea	rtseda	checkbox	0		da	Diarrhea
-259	Side effects :Other	rtseo	checkbox	0		o	Other
-260	Side effects :Specify	rtseos	text	0			Specify
-261	Treating physician name	chmd	text	0			Treating physician name
-262	First date of treatment	chfdot	text	0			First date of treatment
-263	Last date of treatment	chldot	text	0			Last date of treatment
-264	Frequency of chemotherapy	chf	radio	0		d;od;w;o	daily;every other day;weekly;other
-265	Specify	chfs	text	0			Specify
-266	Lesion Site	rbrtchls	select-one	0		-;lul;lll;rul;rml;rll;e;m;p;o	-;LUL;LLL;RUL;RML;RLL;Endobronchial;Mediastinum;Pleura;Other (specify)
-267	Specify	rbrtchlo	text	0			Specify
-268	Describe treatment	rbchdt	text	0			Describe treatment
-269	Subsequent treatments	rbchst	text	0			Subsequent treatments
-270	Drugs used	rbchdr	text	0			Drugs used
-271	Number of rounds	rbchnt	text	0			Number of rounds
-272	Was the entire dose delivered to the participant?	chedd	radio	0		n;y	No;Yes
-273	Specify	chedds	text	0			Specify
-274	Were there complications associated with treatment?	chc	radio	0		n;y	No;Yes
-275	Specify	chcs	text	0			Specify
-276	Side effects	chse	radio	0		n;mi;ma	none;minimal;marked
-277	Comments	chsec	text	0			Comments
-278	Treatment side effects : Fatigue	chsef	checkbox	0		f	Fatigue
-279	Treatment side effects : Tightness in chest	chsetc	checkbox	0		tc	Tightness in chest
-280	Treatment side effects : Chest wall pain	chsecwp	checkbox	0		cwp	Chest wall pain
-281	Treatment side effects : Cough	chsecgh	checkbox	0		c	Cough
-282	Treatment side effects : Shortness of breath	chsesob	checkbox	0		sob	Shortness of breath
-283	Treatment side effects : Dyspnea	chsed	checkbox	0		d	Dyspnea
-284	Treatment side effects : Decreased appetite	chsedawl	checkbox	0		dawl	Decreased appetite/weight loss
-285	Treatment side effects : Nausea/vomiting	chsenv	checkbox	0		nv	Nausea/vomiting
-286	Treatment side effects : Diarrhea	chseda	checkbox	0		da	Diarrhea
-287	Treatment side effects : Other	chseo	checkbox	0		o	Other
-288	Treatment side effects : Specify	chseos	text	0			Specify
-289	Baseline CT date	sidoe	text	1			Baseline CT
-290	CT study date	cedos	text	1			Most recent CT
-291	Total number of non-calcified nodules	cenncn	text	0			Total number of non-calcified nodules
-292	Is it a new nodule? Nodule 1	cect1ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-293	Is it a new nodule? Nodule 2	cect2ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-294	Is it a new nodule? Nodule 3	cect3ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-295	Is it a new nodule? Nodule 4	cect4ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-296	Is it a new nodule? Nodule 5	cect5ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-297	Is it a new nodule? Nodule 6	cect6ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-298	Is it a new nodule? Nodule 7	cect7ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-299	Is it a new nodule? Nodule 8	cect8ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-300	Is it a new nodule? Nodule 9	cect9ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-301	Is it a new nodule? Nodule 10	cect10ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-302	Endobronchial? Nodule 1	cect1en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-303	Endobronchial? Nodule 2	cect2en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-304	Endobronchial? Nodule 3	cect3en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-305	Endobronchial? Nodule 4	cect4en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-306	Endobronchial? Nodule 5	cect5en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-307	Endobronchial? Nodule 6	cect6en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-308	Endobronchial? Nodule 7	cect7en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-309	Endobronchial? Nodule 8	cect8en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-310	Endobronchial? Nodule 9	cect9en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-311	Endobronchial? Nodule 10	cect10en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-312	Most likely location? Nodule 1	cect1ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-313	Most likely location? Nodule 2	cect2ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-314	Most likely location? Nodule 3	cect3ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-315	Most likely location? Nodule 4	cect4ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-316	Most likely location? Nodule 5	cect5ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-317	Most likely location? Nodule 6	cect6ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-318	Most likely location? Nodule 7	cect7ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-319	Most likely location? Nodule 8	cect8ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-320	Most likely location? Nodule 9	cect9ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-321	Most likely location? Nodule 10	cect10ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-322	CT Series Number Nodule 1	cect1sn	text	1			CT Series Number
-323	CT Series Number Nodule 2	cect2sn	text	1			CT Series Number
-324	CT Series Number Nodule 3	cect3sn	text	1			CT Series Number
-325	CT Series Number Nodule 4	cect4sn	text	1			CT Series Number
-326	CT Series Number Nodule 5	cect5sn	text	1			CT Series Number
-327	CT Series Number Nodule 6	cect6sn	text	1			CT Series Number
-328	CT Series Number Nodule 7	cect7sn	text	1			CT Series Number
-329	CT Series Number Nodule 8	cect8sn	text	1			CT Series Number
-330	CT Series Number Nodule 9	cect9sn	text	1			CT Series Number
-331	CT Series Number Nodule 10	cect10sn	text	1			CT Series Number
-332	Nodule seen in images CT number LOW Nodule 1	cect1inl	text	1			CT Image Number (Low)
-333	Nodule seen in images CT number HIGH Nodule 1	cect1inh	text	1			CT Image Number (High)
-334	Nodule seen in images CT number LOW Nodule 2	cect2inl	text	1			CT Image Number (Low)
-335	Nodule seen in images CT number HIGH Nodule 2	cect2inh	text	1			CT Image Number (High)
-336	Nodule seen in images CT number LOW Nodule 3	cect3inl	text	1			CT Image Number (Low)
-337	Nodule seen in images CT number HIGH Nodule 3	cect3inh	text	1			CT Image Number (High)
-338	Nodule seen in images CT number LOW Nodule 4	cect4inl	text	1			CT Image Number (Low)
-339	Nodule seen in images CT number HIGH Nodule 4	cect4inh	text	1			CT Image Number (High)
-340	Nodule seen in images CT number LOW Nodule 5	cect5inl	text	1			CT Image Number (Low)
-341	Nodule seen in images CT number HIGH Nodule 5	cect5inh	text	1			CT Image Number (High)
-342	Nodule seen in images CT number LOW Nodule 6	cect6inl	text	1			CT Image Number (Low)
-343	Nodule seen in images CT number HIGH Nodule 6	cect6inh	text	1			CT Image Number (High)
-344	Nodule seen in images CT number LOW Nodule 7	cect7inl	text	1			CT Image Number (Low)
-345	Nodule seen in images CT number HIGH Nodule 7	cect7inh	text	1			CT Image Number (High)
-346	Nodule seen in images CT number LOW Nodule 8	cect8inl	text	1			CT Image Number (Low)
-347	Nodule seen in images CT number HIGH Nodule 8	cect8inh	text	1			CT Image Number (High)
-348	Nodule seen in images CT number LOW Nodule 9	cect9inl	text	1			CT Image Number (Low)
-349	Nodule seen in images CT number HIGH Nodule 9	cect9inh	text	1			CT Image Number (High)
-350	Nodule seen in images CT number LOW Nodule 10	cect10inl	text	1			CT Image Number (Low)
-351	Nodule seen in images CT number HIGH Nodule 10	cect10inh	text	1			CT Image Number (High)
-352	Nodule status Nodule 1	cect1st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
-353	Nodule status Nodule 2	cect2st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
-354	Nodule status Nodule 3	cect3st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
-355	Nodule status Nodule 4	cect4st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
-356	Nodule status Nodule 5	cect5st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
-357	Nodule status Nodule 6	cect6st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
-358	Nodule status Nodule 7	cect7st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
-359	Nodule status Nodule 8	cect8st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
-360	Nodule status Nodule 9	cect9st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
-361	Nodule status Nodule 10	cect10st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
-362	Nodule consistency Nodule 1	cect1nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-363	Nodule consistency Nodule 2	cect2nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-364	Nodule consistency Nodule 3	cect3nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-365	Nodule consistency Nodule 4	cect4nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-366	Nodule consistency Nodule 5	cect5nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-367	Nodule consistency Nodule 6	cect6nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-368	Nodule consistency Nodule 7	cect7nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-369	Nodule consistency Nodule 8	cect8nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-370	Nodule consistency Nodule 9	cect9nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-371	Nodule consistency Nodule 10	cect10nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-372	Length (mm) Nodule 1	cect1sl	text	1			Length (mm)
-373	Length (mm) Nodule 2	cect2sl	text	1			Length (mm)
-374	Length (mm) Nodule 3	cect3sl	text	1			Length (mm)
-375	Length (mm) Nodule 4	cect4sl	text	1			Length (mm)
-376	Length (mm) Nodule 5	cect5sl	text	1			Length (mm)
-377	Length (mm) Nodule 6	cect6sl	text	1			Length (mm)
-378	Length (mm) Nodule 7	cect7sl	text	1			Length (mm)
-379	Length (mm) Nodule 8	cect8sl	text	1			Length (mm)
-380	Length (mm) Nodule 9	cect9sl	text	1			Length (mm)
-381	Length (mm) Nodule 10	cect10sl	text	1			Length (mm)
-382	Maximum width (mm) Nodule 1	cect1sw	text	1			Maximum Width
-383	Maximum width (mm) Nodule 2	cect2sw	text	1			Maximum Width
-384	Maximum width (mm) Nodule 3	cect3sw	text	1			Maximum Width
-385	Maximum width (mm) Nodule 4	cect4sw	text	1			Maximum Width
-386	Maximum width (mm) Nodule 5	cect5sw	text	1			Maximum Width
-387	Maximum width (mm) Nodule 6	cect6sw	text	1			Maximum Width
-388	Maximum width (mm) Nodule 7	cect7sw	text	1			Maximum Width
-389	Maximum width (mm) Nodule 8	cect8sw	text	1			Maximum Width
-390	Maximum width (mm) Nodule 9	cect9sw	text	1			Maximum Width
-391	Maximum width (mm) Nodule 10	cect10sw	text	1			Maximum Width
-392	Height (mm) Nodule 1	cect1sh	text	0			Height
-393	Height (mm) Nodule 2	cect2sh	text	0			Height
-394	Height (mm) Nodule 3	cect3sh	text	0			Height
-395	Height (mm) Nodule 4	cect4sh	text	0			Height
-396	Height (mm) Nodule 5	cect5sh	text	0			Height
-397	Height (mm) Nodule 6	cect6sh	text	0			Height
-398	Height (mm) Nodule 7	cect7sh	text	0			Height
-399	Height (mm) Nodule 8	cect8sh	text	0			Height
-400	Height (mm) Nodule 9	cect9sh	text	0			Height
-401	Height (mm) Nodule 10	cect10sh	text	0			Height
-402	Volume (mm 3 ) Nodule 1	cect1sv	text	0			Volume
-403	Volume (mm 3 ) Nodule 2	cect2sv	text	0			Volume
-404	Volume (mm 3 ) Nodule 3	cect3sv	text	0			Volume
-405	Volume (mm 3 ) Nodule 4	cect4sv	text	0			Volume
-406	Volume (mm 3 ) Nodule 5	cect5sv	text	0			Volume
-407	Volume (mm 3 ) Nodule 6	cect6sv	text	0			Volume
-408	Volume (mm 3 ) Nodule 7	cect7sv	text	0			Volume
-409	Volume (mm 3 ) Nodule 8	cect8sv	text	0			Volume
-410	Volume (mm 3 ) Nodule 9	cect9sv	text	0			Volume
-411	Volume (mm 3 ) Nodule 10	cect10sv	text	0			Volume
-412	Solid comp. of part-solid. Nodule length. Nodule 1	cect1ssl	text	1			length
-413	Solid comp. of part-solid. Nodule width. Nodule 1	cect1ssw	text	1			width
-414	Solid comp. of part-solid. Nodule length. Nodule 2	cect2ssl	text	1			length
-415	Solid comp. of part-solid. Nodule width. Nodule 2	cect2ssw	text	1			width
-416	Solid comp. of part-solid. Nodule length. Nodule 3	cect3ssl	text	1			length
-417	Solid comp. of part-solid. Nodule width. Nodule 3	cect3ssw	text	1			width
-418	Solid comp. of part-solid. Nodule length. Nodule 4	cect4ssl	text	1			length
-419	Solid comp. of part-solid. Nodule width. Nodule 4	cect4ssw	text	1			width
-420	Solid comp. of part-solid. Nodule length. Nodule 5	cect5ssl	text	1			length
-421	Solid comp. of part-solid. Nodule width. Nodule 5	cect5ssw	text	1			width
-422	Solid comp. of part-solid. Nodule length. Nodule 6	cect6ssl	text	1			length
-423	Solid comp. of part-solid. Nodule width. Nodule 6	cect6ssw	text	1			width
-424	Solid comp. of part-solid. Nodule length. Nodule 7	cect7ssl	text	1			length
-425	Solid comp. of part-solid. Nodule width. Nodule 7	cect7ssw	text	1			width
-426	Solid comp. of part-solid. Nodule length. Nodule 8	cect8ssl	text	1			length
-427	Solid comp. of part-solid. Nodule width. Nodule 8	cect8ssw	text	1			width
-428	Solid comp. of part-solid. Nodule length. Nodule 9	cect9ssl	text	1			length
-429	Solid comp. of part-solid. Nodule width. Nodule 9	cect9ssw	text	1			width
-430	Solid comp. of part-solid. Nodule length. Nodule 10	cect10ssl	text	1			length
-431	Solid comp. of part-solid. Nodule width. Nodule 10	cect10ssw	text	1			width
-432	Smooth edges Nodule 1	cect1se	checkbox	0		y	Yes
-433	Smooth edges Nodule 2	cect2se	checkbox	0		y	Yes
-434	Smooth edges Nodule 3	cect3se	checkbox	0		y	Yes
-435	Smooth edges Nodule 4	cect4se	checkbox	0		y	Yes
-436	Smooth edges Nodule 5	cect5se	checkbox	0		y	Yes
-437	Smooth edges Nodule 6	cect6se	checkbox	0		y	Yes
-438	Smooth edges Nodule 7	cect7se	checkbox	0		y	Yes
-439	Smooth edges Nodule 8	cect8se	checkbox	0		y	Yes
-440	Smooth edges Nodule 9	cect9se	checkbox	0		y	Yes
-441	Smooth edges Nodule 10	cect10se	checkbox	0		y	Yes
-442	Calcifications Nodule 1	cect1ca	checkbox	0		y	Yes
-443	Calcifications Nodule 2	cect2ca	checkbox	0		y	Yes
-444	Calcifications Nodule 3	cect3ca	checkbox	0		y	Yes
-445	Calcifications Nodule 4	cect4ca	checkbox	0		y	Yes
-446	Calcifications Nodule 5	cect5ca	checkbox	0		y	Yes
-447	Calcifications Nodule 6	cect6ca	checkbox	0		y	Yes
-448	Calcifications Nodule 7	cect7ca	checkbox	0		y	Yes
-449	Calcifications Nodule 8	cect8ca	checkbox	0		y	Yes
-450	Calcifications Nodule 9	cect9ca	checkbox	0		y	Yes
-451	Calcifications Nodule 10	cect10ca	checkbox	0		y	Yes
-452	Index Nodule	cectin	checkbox	0		1	
-453	Spiculated Nodule 1	cect1sp	checkbox	0		y	Yes
-454	Spiculated Nodule 2	cect2sp	checkbox	0		y	Yes
-455	Spiculated Nodule 3	cect3sp	checkbox	0		y	Yes
-456	Spiculated Nodule 4	cect4sp	checkbox	0		y	Yes
-457	Spiculated Nodule 5	cect5sp	checkbox	0		y	Yes
-458	Spiculated Nodule 6	cect6sp	checkbox	0		y	Yes
-459	Spiculated Nodule 7	cect7sp	checkbox	0		y	Yes
-460	Spiculated Nodule 8	cect8sp	checkbox	0		y	Yes
-461	Spiculated Nodule 9	cect9sp	checkbox	0		y	Yes
-462	Spiculated Nodule 10	cect10sp	checkbox	0		y	Yes
-463	Distance from the costal pleura (mm)? Nodule 1	cect1pld	text	0			Distance
-464	Distance from the costal pleura (mm)? Nodule 2	cect2pld	text	0			Distance
-465	Distance from the costal pleura (mm)? Nodule 3	cect3pld	text	0			Distance
-466	Distance from the costal pleura (mm)? Nodule 4	cect4pld	text	0			Distance
-467	Distance from the costal pleura (mm)? Nodule 5	cect5pld	text	0			Distance
-468	Distance from the costal pleura (mm)? Nodule 6	cect6pld	text	0			Distance
-469	Distance from the costal pleura (mm)? Nodule 7	cect7pld	text	0			Distance
-470	Distance from the costal pleura (mm)? Nodule 8	cect8pld	text	0			Distance
-471	Distance from the costal pleura (mm)? Nodule 9	cect9pld	text	0			Distance
-472	Distance from the costal pleura (mm)? Nodule 10	cect10pld	text	0			Distance
-473	Action to take. Nodule 1	cect1ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-474	Action to take. Nodule 2	cect2ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-475	Action to take. Nodule 3	cect3ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-476	Action to take. Nodule 4	cect4ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-477	Action to take. Nodule 5	cect5ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-478	Action to take. Nodule 6	cect6ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-479	Action to take. Nodule 7	cect7ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-480	Action to take. Nodule 8	cect8ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-481	Action to take. Nodule 9	cect9ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-482	Action to take. Nodule 10	cect10ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-483	Comment on Nodule 1	cect1co	text	0			Comment
-484	Comment on Nodule 2	cect2co	text	0			Comment
-485	Comment on Nodule 3	cect3co	text	0			Comment
-486	Comment on Nodule 4	cect4co	text	0			Comment
-487	Comment on Nodule 5	cect5co	text	0			Comment
-488	Comment on Nodule 6	cect6co	text	0			Comment
-489	Comment on Nodule 7	cect7co	text	0			Comment
-490	Comment on Nodule 8	cect8co	text	0			Comment
-491	Comment on Nodule 9	cect9co	text	0			Comment
-492	Comment on Nodule 10	cect10co	text	0			Comment
-493	Pathologic diagnosis. Nodule 1	cect1pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-494	Pathologic diagnosis. Nodule 2	cect2pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-495	Pathologic diagnosis. Nodule 3	cect3pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-496	Pathologic diagnosis. Nodule 4	cect4pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-497	Pathologic diagnosis. Nodule 5	cect5pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-498	Pathologic diagnosis. Nodule 6	cect6pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-499	Pathologic diagnosis. Nodule 7	cect7pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-500	Pathologic diagnosis. Nodule 8	cect8pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-501	Pathologic diagnosis. Nodule 9	cect9pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-502	Pathologic diagnosis. Nodule 10	cect10pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-503	Small non-calcified nodules are present	cectancn	checkbox	0		1	Small non-calcified nodules are present
-504	Small calcified nodules are present	cectacn	checkbox	0		1	Small calcified nodules are present
-505	Surgical pathology details	rbpdt	textarea	0			Surgical pathology details
-506	Emphysema	ceem	radio	0		nv;no;mi;mo;se	Not visible;None;Mild;Moderate;Severe
-507	Coronary calcifications	ceccv	radio	0		n;m;d;s	None;Mild;Moderate;Severe
-508	Coronary calcifications. Left Main	cecclm	select-one	1		;no;mi;mo;ex	-;None;Minimal < â…“;Moderate;Extensive > â…”
-509	Coronary calcifications. LAD	ceccld	select-one	1		;no;mi;mo;ex	-;None;Minimal < â…“;Moderate;Extensive > â…”
-510	Coronary calcifications. Circumflex	cecccf	select-one	1		;no;mi;mo;ex	-;None;Minimal < â…“;Moderate;Extensive > â…”
-511	Coronary calcifications. RCA	ceccrc	select-one	1		;no;mi;mo;ex	-;None;Minimal < â…“;Moderate;Extensive > â…”
-512	Pulmonary artery width (mm)	cepaw	text	0			Pulmonary Artery Width
-513	Ascending aorta width (mm)	ceaow	text	0			Ascending Aorta Width
-514	Pulmonary Cysts	cecbc	checkbox	0		y	Yes
-515	Pulmonary Cysts RUL	cecbcl1	checkbox	0		rul	
-516	Pulmonary Cysts RML	cecbcl2	checkbox	0		rml	
-517	Pulmonary Cysts RLL	cecbcl3	checkbox	0		rll	
-518	Pulmonary Cysts LUL	cecbcl4	checkbox	0		lul	
-519	Pulmonary Cysts LLL	cecbcl5	checkbox	0		lll	
-520	Pulmonary Blebs/Bullae	cecbb	checkbox	0		y	Yes
-521	Pulmonary Blebs/Bullae RUL	cecbbl1	checkbox	0		rul	
-522	Pulmonary Blebs/Bullae RML	cecbbl2	checkbox	0		rml	
-523	Pulmonary Blebs/Bullae RLL	cecbbl3	checkbox	0		rll	
-524	Pulmonary Blebs/Bullae LUL	cecbbl4	checkbox	0		lul	
-525	Pulmonary Blebs/Bullae LLL	cecbbl5	checkbox	0		lll	
-526	Pulmonary Regional or diffuse consolidation	cerdc	checkbox	0		y	Yes
-527	Pulmonary Regional or diffuse consolidation. RUL	cerdcl1	checkbox	0		rul	
-528	Pulmonary Regional or diffuse consolidation. RML	cerdcl2	checkbox	0		rml	
-529	Pulmonary Regional or diffuse consolidation. RLL	cerdcl3	checkbox	0		rll	
-530	Pulmonary Regional or diffuse consolidation. LUL	cerdcl4	checkbox	0		lul	
-531	Pulmonary Regional or diffuse consolidation. LLL	cerdcl5	checkbox	0		lll	
-532	Pulmonary Scarring	cescr	checkbox	0		y	Yes
-533	Pulmonary Regional or diffuse consolidation. RUL	cescrl1	checkbox	0		rul	
-534	Pulmonary Regional or diffuse consolidation. RML	cescrl2	checkbox	0		rml	
-535	Pulmonary Regional or diffuse consolidation. RLL	cescrl3	checkbox	0		rll	
-536	Pulmonary Regional or diffuse consolidation. LUL	cescrl4	checkbox	0		lul	
-537	Pulmonary Regional or diffuse consolidation. LLL	cescrl5	checkbox	0		lll	
-538	Pulmonary Regional or diffuse consolidation. Unilateral	cescrl6	checkbox	0		au	Unilateral
-539	Pulmonary Regional or diffuse consolidation. Bilateral	cescrl7	checkbox	0		ab	Bilateral
-540	Pulmonary Bronchiectasis	cebrsb	checkbox	0		y	Yes
-541	Pulmonary Bronchiectasis. RUL	cebrsbl1	checkbox	0		rul	
-542	Pulmonary Bronchiectasis. RML	cebrsbl2	checkbox	0		rml	
-543	Pulmonary Bronchiectasis. RLL	cebrsbl3	checkbox	0		rll	
-544	Pulmonary Bronchiectasis. LUL	cebrsbl4	checkbox	0		lul	
-545	Pulmonary Bronchiectasis. LLL	cebrsbl5	checkbox	0		lll	
-546	Pulmonary Small airways disease	cebrss	checkbox	0		y	Yes
-547	Pulmonary Small airways disease. RUL	cebrssl1	checkbox	0		rul	
-548	Pulmonary Small airways disease. RML	cebrssl2	checkbox	0		rml	
-549	Pulmonary Small airways disease. RLL	cebrssl3	checkbox	0		rll	
-550	Pulmonary Small airways disease. LUL	cebrssl4	checkbox	0		lul	
-551	Pulmonary Small airways disease. LLL	cebrssl5	checkbox	0		lll	
-552	Pulmonary Post-surgical findings	cebs	radio	0		n;o;y;e	N/A;Normal;Abnormal;Not visible
-553	Pulmonary Post-surgical findings Right	cebsrt	checkbox	0		r	Right
-554	Pulmonary Post-surgical findings Left	cebslt	checkbox	0		l	Left
-555	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location	cerb	checkbox	0		y	Yes
-556	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location RUL	cerbl1	checkbox	0		rul	
-557	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location RML	cerbl2	checkbox	0		rml	
-558	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location RLL	cerbl3	checkbox	0		rll	
-559	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location LUL	cerbl4	checkbox	0		lul	
-560	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location LLL	cerbl5	checkbox	0		lll	
-561	Interstitial Lung Disease. Peripheral ground-glass opacities	cepgo	checkbox	0		y	Yes
-562	Interstitial Lung Disease. Peripheral ground-glass opacities RUL	cepgol1	checkbox	0		rul	
-563	Interstitial Lung Disease. Peripheral ground-glass opacities RML	cepgol2	checkbox	0		rml	
-564	Interstitial Lung Disease. Peripheral ground-glass opacities RLL	cepgol3	checkbox	0		rll	
-565	Interstitial Lung Disease. Peripheral ground-glass opacities LUL	cepgol4	checkbox	0		lul	
-566	Interstitial Lung Disease. Peripheral ground-glass opacities LLL	cepgol5	checkbox	0		lll	
-567	Interstitial Lung Disease. Reticulations	ceret	checkbox	0		y	Yes
-568	Interstitial Lung Disease. Reticulations RUL	ceretl1	checkbox	0		rul	
-569	Interstitial Lung Disease. Reticulations RML	ceretl2	checkbox	0		rml	
-570	Interstitial Lung Disease. Reticulations RLL	ceretl3	checkbox	0		rll	
-571	Interstitial Lung Disease. Reticulations LUL	ceretl4	checkbox	0		lul	
-572	Interstitial Lung Disease. Reticulations LLL	ceretl5	checkbox	0		lll	
-573	Interstitial Lung Disease. Honeycombing	cephc	checkbox	0		y	Yes
-574	Interstitial Lung Disease. Honeycombing RUL	cephcl1	checkbox	0		rul	
-575	Interstitial Lung Disease. Honeycombing RML	cephcl2	checkbox	0		rml	
-576	Interstitial Lung Disease. Honeycombing RLL	cephcl3	checkbox	0		rll	
-577	Interstitial Lung Disease. Honeycombing LUL	cephcl4	checkbox	0		lul	
-578	Interstitial Lung Disease. Honeycombing LLL	cephcl5	checkbox	0		lll	
-579	Additional comments on pulmonary abnormalities	ceoppa	textarea	0			Additional comments on pulmonary abnormalities
-580	Additional comments on pulmonary abnormalities. Include on Impression.	ceoppai	checkbox	0		y	Include in impression
-581	Pleural or pleural-related. Pleural thickening/plaques	cept	checkbox	0		y	Yes
-582	Pleural or pleural-related. Pleural thickening/plaques. Right	ceptrt	checkbox	0		r	Right
-583	Pleural or pleural-related. Pleural thickening/plaques. Left	ceptlt	checkbox	0		l	Left
-584	Pleural or pleural-related. Pleural thickening/plaques. Calcification	ceptct	checkbox	0		c	Calcification
-585	Pleural or pleural-related. Rounded atelectasis	cebatr	checkbox	0		y	Yes
-586	Pleural or pleural-related. Rounded atelectasis. RUL	cebatrl1	checkbox	0		rul	
-587	Pleural or pleural-related. Rounded atelectasis. RML	cebatrl2	checkbox	0		rml	
-588	Pleural or pleural-related. Rounded atelectasis. RLL	cebatrl3	checkbox	0		rll	
-589	Pleural or pleural-related. Rounded atelectasis. LUL	cebatrl4	checkbox	0		lul	
-590	Pleural or pleural-related. Rounded atelectasis. LLL	cebatrl5	checkbox	0		lll	
-591	Pleural or pleural-related. Pleural effusion	cepev	checkbox	0		y	Yes
-592	Pleural or pleural-related. Pleural effusion. Right	ceper	select-one	1		-;no;sm;mo;lg	-;None;Small;Moderate;Large
-593	Pleural or pleural-related. Pleural effusion. Left	cepel	select-one	1		-;no;sm;mo;lg	-;None;Small;Moderate;Large
-594	Pleural or pleural-related. Pleural tumor.	cepu	checkbox	0		y	Yes
-595	Additional comments on pleural abnormalities	ceoppab	textarea	0			Additional comments on pleural abnormalities
-596	Additional comments on pleural abnormalities. Include on impression.	ceoppabi	checkbox	0		y	Include in impression
-597	Cardiac and Aoritic abnormalities. Aortic calcifications	cecca	select-one	0		-;no;mi;mo;ex	-;None;Minimal < â…“;Moderate;Extensive > â…”
-598	Cardiac and Aoritic abnormalities. Pericardial effusion severity	ceprevm	select-one	0		-;no;mi;mo;ex	-;None;Minimal;Moderate;Extensive
-599	Cardiac and Aoritic abnormalities. Additional comments on cardiac abnormalities	cecommca	textarea	0			Additional comments on cardiac abnormalities
-600	Cardiac and Aoritic abnormalities. Additional comments on cardiac abnormalities. Include on impression	cecommcai	checkbox	0		y	Include in impression
-601	Neck and mediastinal abnormalities. Thyroid	ceata	checkbox	0		y	Yes
-602	Neck and mediastinal abnormalities. Thyroid calcification.	ceatc	checkbox	0		c	Calcification
-603	Neck and mediastinal abnormalities. Thyroid Cyst/nodule < 15 mm	ceaty	checkbox	0		y	Cyst/nodule < 15 mm
-604	Neck and mediastinal abnormalities. Thyroid Mass	ceatm	checkbox	0		m	Mass
-605	Neck and mediastinal abnormalities. Thyroid Other	ceato	checkbox	0		o	Other
-606	Neck and mediastinal abnormalities. Throid Specifiy	ceatos	text	1			Specify
-607	Neck and mediastinal abnormalities. Thymus	ceaya	checkbox	0		y	Yes
-608	Neck and mediastinal abnormalities. Thymus calcification.	ceayc	checkbox	0		c	Calcification
-609	Neck and mediastinal abnormalities. Thymus Cyst	ceayy	checkbox	0		y	Cyst
-610	Neck and mediastinal abnormalities. Thymus Mass	ceaym	checkbox	0		m	Mass
-611	Neck and mediastinal abnormalities. Thymus. Other	ceayo	checkbox	0		o	Other
-612	Neck and mediastinal abnormalities. Thymus Speicfy	ceayos	text	1			Specify
-613	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes.	cemln	checkbox	0		y	Yes
-614	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N1: Low cervical; supraclavicular; and sternal notch nodes	cemlnl1	checkbox	0		N1	"N1: Low cervical, supraclavicular, and sternal notch nodes"
-615	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N2R: Upper paratracheal (right)	cemlnl2r	checkbox	0		N2R	N2R: Upper paratracheal (right)
-616	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N2L: Upper paratracheal (left)	cemlnl2l	checkbox	0		N2L	N2L: Upper paratracheal (left)
-617	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N3A: Prevascular	cemlnl3a	checkbox	0		N3A	N3A: Prevascular
-618	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes N3P: Retrotracheal	cemlnl3p	checkbox	0		N3P	N3P: Retrotracheal
-619	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N4R: Lower paratracheal (right)	cemlnl4r	checkbox	0		N4R	N4R: Lower paratracheal (right)
-620	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N4L: Lower paratracheal (left)	cemlnl4l	checkbox	0		N4L	N4L: Lower paratracheal (left)
-621	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N5: Subaortic	cemlnl5	checkbox	0		N5	N5: Subaortic
-622	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N6: Para-aortic (ascending aorta or phrenic)	cemlnl6	checkbox	0		N6	N6: Para-aortic (ascending aorta or phrenic)
-623	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N7: Subcarinal	cemlnl7	checkbox	0		N7	N7: Subcarinal
-624	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N8: Paraesophageal (below carina)	cemlnl8	checkbox	0		N8	N8: Paraesophageal (below carina)
-625	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N9: Pulmonary ligament	cemlnl9	checkbox	0		N9	N9: Pulmonary ligament
-626	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N10: Hilar	cemlnl10	checkbox	0		N10	N10: Hilar
-627	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N11: Interlobar	cemlnl11	checkbox	0		N11	N11: Interlobar
-628	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N12: Lobar	cemlnl12	checkbox	0		N12	N12: Lobar
-629	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N13: Segmental	cemlnl13	checkbox	0		N13	N13: Segmental
-630	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N14: Subsegmental	cemlnl14	checkbox	0		N14	N14: Subsegmental
-631	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any calcified hilar or mediastinal lymph nodes	cemlncab	checkbox	0		y	Yes
-632	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Abnormal axillary lymph nodes.	ceagaln	checkbox	0		y	Yes
-633	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Abnormal axillary lymph nodes. Right	ceagalnrt	checkbox	0		r	Right
-634	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Abnormal axillary lymph nodes. Left	ceagalnlt	checkbox	0		l	Left
-635	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Abnormal axillary lymph nodes. Specify	ceagalns	text	1			Specify
-636	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Other Vascular Abnormalities	cemva	checkbox	0		y	Yes
-637	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Other Vascular Abnormalities. Aorta	cemvaa	checkbox	0		a	Aorta
-638	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Other Vascular Abnormalities. Pulmonary arteries	cemvap	checkbox	0		w	Pulmonary arteries
-639	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Other Vascular Abnormalities. Other.	cemvao	checkbox	0		o	Other
-640	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Other Vascular Abnormalities. Speicify	cemvaos	text	1			Specify
-641	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal	cemeln	checkbox	0		y	Yes
-642	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal Air-fluid level	cemelna	checkbox	0		a	Air-fluid level
-643	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal Wall thickening	cemelnw	checkbox	0		w	Wall thickening
-644	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Mass	cemelnm	checkbox	0		m	Mass
-645	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other	cemvlno	checkbox	0		o	Other
-646	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other Specify	cemelnos	text	1			Specify
-647	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Hiatal hernia	cehhn	checkbox	0		y	Yes
-648	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Hiatal hernia. Other Specify	cehhnos	text	1			Specify
-649	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses.	ceomm	checkbox	0		y	Yes
-650	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses. Calcification	ceamc	checkbox	0		v	Calcification
-651	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses. Cyst	ceamy	checkbox	0		y	Cyst
-652	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses. Mass	ceamm	checkbox	0		m	Mass
-653	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses. Other	ceamo	checkbox	0		o	Other
-654	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses. Other specify	ceommos	text	1			Specify
-655	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Additional comments on neck and mediastinal abnormalities	ceotabnm	textarea	0			Additional comments on neck and mediastinal abnormalities
-656	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Additional comments on neck and mediastinal abnormalities. Other Specify	ceotabnmi	checkbox	0		y	Include in impression
-657	Breast. Right breast	ceara	checkbox	0		y	Yes
-658	Breast. Right breast. Calcification	ceobarc	checkbox	0		c	Calcification
-659	Breast. Right breast. Cyst	ceobary	checkbox	0		y	Cyst
-660	Breast. Right breast. Mass	ceobarm	checkbox	0		m	Mass
-661	Breast. Right breast. Other	ceobaro	checkbox	0		o	Other
-662	Breast. Right breast. Other Specify.	ceobaros	text	1			Specify
-663	Breast. Right breast. Density Calibration (BIORADS)	ceobard	select-one	0		-;1;2;3;4	-;1 - Almost entirely fatty;2 - Scattered areas of fibroglandular density;3 - Heterogeneously dense;4 - Extremely dense
-664	Breast. Left breast	ceafa	checkbox	0		y	Yes
-665	Breast. Left breast. Calcification	ceobafc	checkbox	0		c	Calcification
-666	Breast. Left breast. Cyst	ceobafy	checkbox	0		y	Cyst
-667	Breast. Left breast. Mass	ceobafm	checkbox	0		m	Mass
-668	Breast. Left breast. Other	ceobafo	checkbox	0		o	Other
-669	Breast. Left breast. Other Specify.	ceobafos	text	1			Specify
-670	Breast. Left breast. Density Calibration (BIORADS)	ceobald	select-one	0		-;1;2;3;4	-;1 - Almost entirely fatty;2 - Scattered areas of fibroglandular density;3 - Heterogeneously dense;4 - Extremely dense
-671	Breast. Additional comments on breast abnormalities	ceobrc	textarea	0			Additional comments on breast abnormalities
-672	Breast. Additional comments on breast abnormalities. Include in impression.	ceobrci	checkbox	0		y	Include in impression
-673	Bone. Specify bone abnormalities	ceaoabb	textarea	0			Specify bone abnormalities
-674	Bone. Specify bone abnormalities. Include in impression	ceaoabbi	checkbox	0		y	Include in impression
-675	Abdominal abnormalities. Gallbladder	ceaga	checkbox	0		y	Yes
-676	Abdominal abnormalities. Gallbladder. Cholescystectomy	ceagh	checkbox	0		h	Cholecystectomy
-677	Abdominal abnormalities. Gallbladder. Stones	ceags	checkbox	0		s	Stones
-678	Abdominal abnormalities. Gallbladder. Sludge	ceagl	checkbox	0		l	Sludge
-679	Abdominal abnormalities. Gallbladder. Other	ceago	checkbox	0		y	Other
-680	Abdominal abnormalities. Gallbladder. Other specify.	ceagos	text	1			Specify
-681	Abdominal abnormalities. Spleen.	ceasa	checkbox	0		y	Yes
-682	Abdominal abnormalities. Spleen. Calcification	ceasc	checkbox	0		y	Calcification
-683	Abdominal abnormalities. Spleen. Cyst	ceasy	checkbox	0		y	Cyst
-684	Abdominal abnormalities. Spleen. Mass	ceasm	checkbox	0		m	Mass
-685	Abdominal abnormalities. Spleen. Other.	ceaso	checkbox	0		y	Other
-686	Abdominal abnormalities. Spleen. Other specify	ceasos	text	1			Specify
-687	Abdominal abnormalities. Liver.	ceala	checkbox	0		y	Yes
-688	Abdominal abnormalities. Liver. Calcification	cealc	checkbox	0		y	Calcification
-689	Abdominal abnormalities. Liver. Cyst	cealy	checkbox	0		y	Cyst
-690	Abdominal abnormalities. Liver. Mass	cealm	checkbox	0		m	Mass
-691	Abdominal abnormalities. Liver. HU < 40	cealh	checkbox	0		h	HU < 40
-692	Abdominal abnormalities. Liver. Other.	cealo	checkbox	0		y	Other
-693	Abdominal abnormalities. Liver. Other specify.	cealos	text	1			Specify
-694	Abdominal abnormalities. Pancreas.	ceapa	checkbox	0		y	Yes
-695	Abdominal abnormalities. Pancreas. Calcification	ceapc	checkbox	0		y	Calcification
-696	Abdominal abnormalities. Pancreas. Cyst	ceapy	checkbox	0		y	Cyst
-697	Abdominal abnormalities. Pancreas. Mass	ceapm	checkbox	0		m	Mass
-698	Abdominal abnormalities. Pancreas. Other	ceapo	checkbox	0		y	Other
-699	Abdominal abnormalities. Pancreas. Other specify	ceapos	text	1			Specify
-700	Abdominal abnormalities. Adrenals.	ceaaa	checkbox	0		y	Yes
-701	Abdominal abnormalities. Adrenals. Calcification	ceaac	checkbox	0		y	Calcification
-702	Abdominal abnormalities. Adrenals. Cyst	ceaay	checkbox	0		y	Cyst
-703	Abdominal abnormalities. Adrenals. Mass	ceaam	checkbox	0		m	Mass
-704	Abdominal abnormalities. Adrenals. Other	ceaao	checkbox	0		y	Other
-705	Abdominal abnormalities. Adrenals. Other specify	ceaaos	text	1			Specify
-706	Abdominal abnormalities. Kidney.	ceaka	checkbox	0		y	Yes
-707	Abdominal abnormalities. Kidney. Calcification	ceakc	checkbox	0		y	Calcification
-708	Abdominal abnormalities. Kidney. Cyst	ceaky	checkbox	0		y	Cyst
-709	Abdominal abnormalities. Kidney. Mass	ceakm	checkbox	0		m	Mass
-710	Abdominal abnormalities. Kidney. Other	ceako	checkbox	0		y	Other
-711	Abdominal abnormalities. Kidney. Other specify	ceakos	text	1			Specify
-712	Additional comments on abdominal abnormalities	ceaoab	textarea	0			Additional comments on abdominal abnormalities
-713	Additional comments on abdominal abnormalities. Include in impression.	ceaoabi	checkbox	0		y	Include in impression
-714	First intervention	rbdos	text	0			First intervention
-715	Most recent intervention	rbdmr	text	0			Most recent intervention
-716	Follow-up 1 year	cefuw	checkbox	0		1y	Annual repeat
-717	Follow-up Approximate follow-up date	cefud	text	0			Approximate follow-up date:
-718	Other follow-up. Antibiotics	cefuaf	checkbox	0		y	Antibiotics
-719	Other follow-up. Contrast CT	cefucc	checkbox	0		y	Contrast CT
-720	Other follow-up. PET	cefupe	checkbox	0		y	PET
-721	Other follow-up Percutaneous biopsy	cefufn	checkbox	0		y	Percutaneous biopsy
-722	Other follow-up Bronchoscopy	cefubr	checkbox	0		y	Bronchoscopy
-723	Other follow-up Pulmonary consultation	cefupc	checkbox	0		y	Pulmonary consultation
-724	Other follow-up Refer to tumor board	cefutb	checkbox	0		y	Refer to tumor board
-725	Other follow-up No other follow-up	cefunf	checkbox	0		y	No other further follow-up
-726	Other follow-up Other and Specify (* ? error)	cefuo	checkbox	0		y	Other
-727	Other follow-up Other and Specify (* ? error)	cefuo	text	1			
+6	Clinical staging based on	rbcsb	radio	0		c;p;b;o	only CT;only PET;both;other (specify)
+7	Clinical staging based on	rbcsbos	text	0			Specify
+8	Pulmonary function test	sbfev1	text	0			FEV1 (L/s)
+9	Pulmonary function test	sbfvc	text	0			FVC (L)
+10	Pulmonary function test	sbffr	text	0			FEV1/FVC %
+11	Referring physician	rbmd	text	0			Referring physician
+12	Referring physician's phone	rbmdp	text	0			Referring physician's phone
+13	Referring physician's fax	rbmdf	text	0			Referring physician's fax
+14	Treating physician	rbsumd	text	0			Treating physician
+15	Treating physician's phone	rbsumdp	text	0			Treating physician's phone
+16	Treating physician's fax	rbsumdf	text	0			Treating physician's fax
+17	Lesion site	rbloc	select-one	0		-;lul;lll;rul;rml;rll;e;m;p;o	-;LUL;LLL;RUL;RML;RLL;Endobronchial;Mediastinum;Pleura;Other (specify)
+18	Lesion site	rblocs	text	0			Specify
+19	Indication for treatment	rbtri	select-one	0		-;f;r;n;o	-;First Lung Cancer;Recurrence;New Primary Lung Cancer;Other (specify)
+20	Specify/Comments	rbtric	text	0			Specify/Comments
+21	Treatment option	rbto	select-one	0		-;s;r;c;w;o	-;Surgery;Radiation Therapy;Chemotherapy;Watchful Waiting;Other
+22	Treatment date	rbsud	text	0			Treatment date
+23	Treatment option	rbtos	text	0			Specify
+24	Have you had a pulmonary function test?	sbahpft	radio	0		n;y	No;Yes
+25	Pulmonary function test	sbcop	text	0			Diffusion capacity (mL/min/mm Hg)
+26	Was mediastinoscopy performed?	rbmep	radio	0		n;y	No;Yes
+27	Surgical treatment : Procedure date	rbmed	text	0			Procedure date
+28	Surgical treatment : Specimen ID	rbmspid	text	0			Specimen ID
+29	Surgical treatment : Location of procedure	rbmel	text	0			Location of procedure
+30	Surgical treatment : Physician	rbmemd	text	0			Physician
+31	Surgical treatment : Physician's phone	rbmemdp	text	0			Physician's phone
+32	Surgical treatment: Physician's fax	rbmemdf	text	0			Physician's fax
+33	Was resection performed?	rbrep	radio	1		n;y;r;a;q	No;Yes;Refused;Aborted due to positive mediastinoscopy or other reasons;?
+34	"Resection : If no or refused, give date"	rbsurd	text	1			"If no or refused, give date"
+35	"Resection : If no or refused, give reason"	rbsurr	text	0			"If no or refused, give reason"
+36	Resection : Location of procedure	rbsul	text	0			Location of procedure
+37	Resection : Type of surgery	rbtosv	checkbox	0		v	VAT
+38	Resection : Type of surgery	rbtost	checkbox	0		t	Thoracotomy
+39	Resection : Type of surgery	rbtosr	checkbox	0		r	Robotic-assisted
+40	Resection : Type of surgery	rbtoso	checkbox	0		o	Other
+41	Resection : Type of surgery	rbtosos	text	0			Other (specify)
+42	Resection : Conversion of VATS to open : Extent of surgery	rbexs	select-one	0		-;w;s;l;b;p;o	-;Wedge resection;Segmentectomy;Lobectomy;Bilobectomy;Pneumonectomy;Other (specify)
+43	Resection : Conversion of VATS to open : Extent (specify)	rbexss	text	0			Extent (specify)
+44	Resection : Was there a conversion of VATS to open?	rbvto	radio	1		n;y	No;Yes
+45	Comments	rbvtoc	text	0			Comments
+46	Resection : Distance to the resection margin (mm):	rbsrm	text	0			Distance to the resection margin (mm):
+47	Resection : Method of margin measurement:	rbrmm	radio	1		g;m	Gross;Micro
+48	Resection : Which margin?	rbwm	radio	1		s;b;p;v;o	Staple Line;Bronchial;Parenchymal;Vascular;Other
+49	Resection : Margin comments	rbwmc	text	0			Margin comments
+50	Resection : Margin measured with staples:	rbrmws	radio	1		r;i;u	Removed;Intact;Unknown
+51	"Resection : If initial margin positive, was additional margin sent?"	rbrmam	radio	1		n;y;q	No;Yes;N/A
+52	Additional specimens sent?	rbrmas	text	0			Additional specimens sent?
+53	Specimen ID	rbspid	text	0			Specimen ID
+54	Additional surgery for same lesion?	rbras	radio	1		n;y	No;Yes
+55	Additional surgery for same lesion : Date	rbrasdt	text	0			Date
+56	Additional surgery for same lesion : Comments	rbrasc	textarea	0			Comments
+57	Complications during surgery?	rbrcs	radio	1		n;y	No;Yes
+58	Complications during surgery : Comments	rbrcsc	textarea	0			Comments
+59	Complications during hospital stay?	rbrch	radio	1		n;y	No;Yes
+60	Complications during hospital stay : Comments	rbrchc	textarea	0			Comments
+61	Date of chest tube removal	rbctrd	text	0			Date of chest tube removal
+62	60-day vital status	rb60dvs	textarea	0			60-day vital status
+63	Pathology tumor size (mm)	rbtsl	text	0			Length
+64	Pathology tumor size (mm)	rbtsw	text	0			Width
+65	Pathology tumor size (mm)	rbtsh	text	0			Height
+66	Pathology tumor size :	rbtsn	checkbox	0		y	Not applicable (specify)
+67	Pathology tumor size : Specify	rbtsns	text	0			Specify
+68	Invasion of other structures	rbinv	radio	1		n;y	No;Yes
+69	Tumor : Location	rbinvv	checkbox	0		v	Major vascular
+70	Tumor : Location	rbinp	checkbox	0		p	Pleura
+71	Tumor : Location	rbina	checkbox	0		a	Angiolymphatic
+72	Tumor : Location	rbino	checkbox	0		o	Other (specify)
+73	Tumor : Location	rbinvls	text	0			Specify
+74	T2 Cen:Main bronchus (not carina)	rbinvt2b	checkbox	0		b	Main bronchus (not carina)
+75	T2 Cen:Atelectasis to hilum	rbinvt2a	checkbox	0		a	Atelectasis to hilum
+76	T3 Inv:Chest wall	rbinvc	checkbox	0		c	Chest wall
+77	T3 Inv: Pericardium	rbinvt3p	checkbox	0		p	Pericardium
+78	T3 Inv:Phrenic nerve	rbinvt3n	checkbox	0		p	Phrenic nerve
+79	T4 Inv:Mediastinum	rbinvm	checkbox	0		m	Mediastinum
+80	T4 Inv:Diaphragm	rbinvt4d	checkbox	0		d	Diaphragm
+81	T4 Inv:Heart	rbinvt4h	checkbox	0		h	Heart
+82	T4 Inv:Great vessels	rbinvt4g	checkbox	0		g	Great vessels
+83	T4 Inv:Recurrent laryngeal nerve	rbinvt4r	checkbox	0		r	Recurrent laryngeal nerve
+84	T4 Inv:Carina	rbinvt4c	checkbox	0		c	Carina
+85	T4 Inv:Trachea	rbinvt4t	checkbox	0		t	Trachea
+86	T4 Inv:Esophagus	rbinvt4e	checkbox	0		e	Esophagus
+87	T4 Inv:Spine	rbinvt4s	checkbox	0		s	Spine
+88	Node : N1 Resected	rbn1r	radio	0		n;y	No;Yes
+89	Node : N2R Resected	rbn2rr	radio	0		n;y	No;Yes
+90	Node : N2L Resected	rbn2lr	radio	0		n;y	No;Yes
+91	Node : N3 Resected	rbn3r	radio	0		n;y	No;Yes
+92	Node : N4R Resected	rbn4rr	radio	0		n;y	No;Yes
+93	Node : N4L Resected	rbn4lr	radio	0		n;y	No;Yes
+94	Node : N5 Resected	rbn5r	radio	0		n;y	No;Yes
+95	Node : N6 Resected	rbn6r	radio	0		n;y	No;Yes
+96	Node : N7 Resected	rbn7r	radio	0		n;y	No;Yes
+97	Node : N8 Resected	rbn8r	radio	0		n;y	No;Yes
+98	Node : N9 Resected	rbn9r	radio	0		n;y	No;Yes
+99	Node : N1 Number resected	rbn1t	text	0			
+100	Node : N2R Number resected	rbn2rt	text	0			
+101	Node : N2L Number resected	rbn2lt	text	0			
+102	Node : N3 Number resected	rbn3t	text	0			
+103	Node : N4R Number resected	rbn4rt	text	0			
+104	Node : N4L Number resected	rbn4lt	text	0			
+105	Node : N5 Number resected	rbn5t	text	0			
+106	Node : N6 Number resected	rbn6t	text	0			
+107	Node : N7 Number resected	rbn7t	text	0			
+108	Node : N8 Number resected	rbn8t	text	0			
+109	Node : N9 Number resected	rbn9t	text	0			
+110	Node : N1 Number positive	rbn1p	text	0			
+111	Node : N2R Number positive	rbn2rp	text	0			
+112	Node : N2L Number positive	rbn2lp	text	0			
+113	Node : N3 Number positive	rbn3p	text	0			
+114	Node : N4R Number positive	rbn4rp	text	0			
+115	Node : N4L Number positive	rbn4lp	text	0			
+116	Node : N5 Number positive	rbn5p	text	0			
+117	Node : N6 Number positive	rbn6p	text	0			
+118	Node : N7 Number positive	rbn7p	text	0			
+119	Node : N8 Number positive	rbn8p	text	0			
+120	Node : N9 Number positive	rbn9p	text	0			
+121	Node : N10R Resected	rbn10rr	radio	0		n;y	No;Yes
+122	Node : N10L Resected	rbn10lr	radio	0		n;y	No;Yes
+123	Node : N11R Resected	rbn11rr	radio	0		n;y	No;Yes
+124	Node : N11L Resected	rbn11lr	radio	0		n;y	No;Yes
+125	Node : N12R Resected	rbn12rr	radio	0		n;y	No;Yes
+126	Node : N12L Resected	rbn12lr	radio	0		n;y	No;Yes
+127	Node : N13R Resected	rbn13rr	radio	0		n;y	No;Yes
+128	Node : N13L Resected	rbn13lr	radio	0		n;y	No;Yes
+129	Node : N14R Resected	rbn14rr	radio	0		n;y	No;Yes
+130	Node : N14L Resected	rbn14lr	radio	0		n;y	No;Yes
+131	Node : Peribronchial lymph Nodes Resected	rbnpb	radio	0		n;y	No;Yes
+132	Node : Location unspecified Resected	rbnun	radio	0		n;y	No;Yes
+133	Node : N10R Number resected	rbn10rt	text	0			
+134	Node : N10L Number resected	rbn10lt	text	0			
+135	Node : N11R Number resected	rbn11rt	text	0			
+136	Node : N11L Number resected	rbn11lt	text	0			
+137	Node : N12R Number resected	rbn12rt	text	0			
+138	Node : N12L Number resected	rbn12lt	text	0			
+139	Node : N13R Number resected	rbn13rt	text	0			
+140	Node : N13L Number resected	rbn13lt	text	0			
+141	Node : N14R Number resected	rbn14rt	text	0			
+142	Node : N14L Number resected	rbn14lt	text	0			
+143	Node : Peribronchial lymph Nodes Number resected	rbnpbt	text	0			
+144	Node : Location unspecified Number resected	rbnunt	text	0			
+145	Node : N10R Number positive	rbn10rp	text	0			
+146	Node : N10L Number positive	rbn10lp	text	0			
+147	Node : N11R Number positive	rbn11rp	text	0			
+148	Node : N11L Number positive	rbn11lp	text	0			
+149	Node : N12R Number positive	rbn12rp	text	0			
+150	Node : N12L Number positive	rbn12lp	text	0			
+151	Node : N13R Number positive	rbn13rp	text	0			
+152	Node : N13L Number positive	rbn13lp	text	0			
+153	Node : N14R Number positive	rbn14rp	text	0			
+154	Node : N14L Number positive	rbn14lp	text	0			
+155	Node : Peribronchial lymph Nodes Number positive	rbnpbp	text	0			
+156	Node : Location unspecified Number positive	rbnunp	text	0			
+157	Node : Specify location	rbnuns	text	0			
+158	Additional lesions	rbal	radio	0		n;y	No;Yes
+159	Additional lesions : Number	rbaln	text	0			Number
+160	Lesion 1 : Location	rbal1lo	select-one	0		-;lul;lll;rul;rml;rll	-;LUL;LLL;RUL;RML;RLL
+161	Lesion 1 : Length (mm)	rbal1l	text	0			
+162	Lesion 1 : Width (mm)	rbal1w	text	0			
+163	Lesion 1 : Height (mm)	rbal1h	text	0			
+164	Lesion 1 : Pathologic diagnosis	rbal1pd	select-one	0		-;aa;ap;ba;ns;ad;as;la;sq;sm;ct;ca;be;bs;mf;os	-;AAH;Atyp bronch prolif;BAC;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Multifocal (specify);Other (specify)
+165	Lesion 1 : Specify	rbal1ps	text	0			
+166	Lesion 1 : Seen on CT	rbal1	radio	0		n;y;q	No;Yes;?
+167	Lesion 2 : Location	rbal2lo	select-one	0		-;lul;lll;rul;rml;rll	-;LUL;LLL;RUL;RML;RLL
+168	Lesion 2 : Length (mm)	rbal2l	text	0			
+169	Lesion 2 : Width (mm)	rbal2w	text	0			
+170	Lesion 2 : Height (mm)	rbal2h	text	0			
+171	Lesion 2 : Pathologic diagnosis	rbal2pd	select-one	0		-;aa;ap;ba;ns;ad;as;la;sq;sm;ct;ca;be;bs;mf;os	-;AAH;Atyp bronch prolif;BAC;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Multifocal (specify);Other (specify)
+172	Lesion 2 : Specify	rbal2ps	text	0			
+173	Lesion 2 : Seen on CT	rbal2	radio	0		n;y;q	No;Yes;?
+174	Lesion 3 : Location	rbal3lo	select-one	0		-;lul;lll;rul;rml;rll	-;LUL;LLL;RUL;RML;RLL
+175	Lesion 3 : Length (mm)	rbal3l	text	0			
+176	Lesion 3 : Width (mm)	rbal3w	text	0			
+177	Lesion 3 : Height (mm)	rbal3h	text	0			
+178	Lesion 3 : Pathologic diagnosis	rbal3pd	select-one	0		-;aa;ap;ba;ns;ad;as;la;sq;sm;ct;ca;be;bs;mf;os	-;AAH;Atyp bronch prolif;BAC;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Multifocal (specify);Other (specify)
+179	Lesion 3 : Specify	rbal3ps	text	0			
+180	Lesion 3 : Seen on CT	rbal3	radio	0		n;y;q	No;Yes;?
+181	Lesion 4 : Location	rbal4lo	select-one	0		-;lul;lll;rul;rml;rll	-;LUL;LLL;RUL;RML;RLL
+182	Lesion 4 : Length (mm)	rbal4l	text	0			
+183	Lesion 4 : Width (mm)	rbal4w	text	0			
+184	Lesion 4 : Height (mm)	rbal4h	text	0			
+185	Lesion 4 : Pathologic diagnosis	rbal4pd	select-one	0		-;aa;ap;ba;ns;ad;as;la;sq;sm;ct;ca;be;bs;mf;os	-;AAH;Atyp bronch prolif;BAC;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Multifocal (specify);Other (specify)
+186	Lesion 4 : Specify	rbal4ps	text	0			
+187	Lesion 4 : Seen on CT	rbal4	radio	0		n;y;q	No;Yes;?
+188	T3 Satell	rbalt3	checkbox	0		y	Yes
+189	T4 Ipsi Nod	rbalt4	checkbox	0		y	Yes
+190	Evidence of metastasis	rbem	radio	0		n;y	No;Yes
+191	Evidence of metastasis : Specify	rbems	text	0			Specify
+192	M staging (8th edition)	rbmst	select-one	0		-;M0;M1ap;M1an;M1b;M1c;X	-;M0;M1a Pl Dissem;M1a Contr Nod;M1b Single;M1c Multi;MX
+193	Post-surgical TNM status (8th Edition)	rbpst8	select-one	0		-;0;is;1am;1as;1a1;1b;1c;2v;2c;2a;2b;3;3i;3s;4;4i;4n;x	-;T0;Tis;T1a mi;T1a SS;T1a;T1b;T1c;T2 Visc Pl;T2 Centr;T2a;T2b;T3;T3 Inv;T3 Satell;T4;T4 Inv;T4 Ipsi Nod;TX
+194	Post-surgical TNM status (8th Edition)	rbpsn8	select-one	0		-;0;1;2;3;X	-;N0;N1;N2;N3;NX
+195	Post-surgical TNM status (8th Edition)	rbpsm8	select-one	0		-;0;1ap;1ac;1b;1c;X	-;M0;M1a Pl Dissem;M1a Contr Nod;M1b Single;M1c Multi;MX
+196	Post-surgical TNM status (8th Edition)	rbpsx8	checkbox	0		y	not applicable
+197	Post-surgical TNM status (8th Edition) : Specify	rbpsxs8	text	0			Specify
+198	Other findings / comments	rbofc	textarea	0			Other findings / comments
+199	Radiation oncologist name	rtron	text	0			Radiation oncologist name
+200	First date of treatment	rtfdot	text	0			First date of treatment
+201	Last date of treatment	rtldot	text	0			Last date of treatment
+202	Total dose of radiation	rbrttdor	text	0			Total dose of radiation
+203	Dose per fraction of radiation	rbrtdpfr	text	0			Dose per fraction of radiation
+204	Number of fractions	rbrtnof	text	0			Number of fractions
+205	Frequency of radiation	rtfor	radio	0		d;od;w;o	daily;every other day;weekly;other
+206	Frequency of radiation : Specify	rtfors	text	0			Specify
+207	Lesion site	rtloc	select-one	0		-;lul;lll;rul;rml;rll;e;m;p;o	-;LUL;LLL;RUL;RML;RLL;Endobronchial;Mediastinum;Pleura;Other (specify)
+208	Lesion site : Specify	rtlocs	text	0			Specify
+209	Size of gross tumor volume	rtsogtv	text	0			Size of gross tumor volume
+210	Size of internal target volume	rtsoitv	text	0			Size of internal target volume
+211	Size of planning target volume	rtsoptv	text	0			Size of planning target volume
+212	Radiation dose delivery	rtrddt	radio	0		crt;imrt;vmat;carc;c;t;p;o	3D-CRT;IMRT;VMAT;conformal arc;cyberknife;tomotherapy;protons based;other (specify)
+213	Radiation dose delivery : Specify	rtrddto	text	0			
+214	Tumor motion control	rttmct	radio	0		n;s;r;b;o	none;4D-simulation and ITV;gated radiation;breath hold;other (specify)
+215	Tumor motion control : Specify	rttmcto	text	0			
+216	SBRT	rtsbrt	radio	0		n;y	No;Yes
+217	Patient positioning	rtpp	radio	0		a;s;o	alphacradle;stereotactic body frame;other (specify)
+218	Patient positioning : Specify	rtppo	text	0			
+219	Treatment verification	rttv	radio	0		i;c;o	kv images;cone beam CT;other (specify)
+220	Treatment verification : Specify	rttvo	text	0			
+221	V20 of ipsilateral lung (percentage)	rtilp	text	0			
+222	V20 of total lung (percentage)	rttlp	text	0			
+223	V30 of chest wall (cc)	rtcw	text	0			
+224	Maximum Esophageal Dose	rtmed	text	0			
+225	Maximum Distal Bronchus Dose	rtmdbd	text	0			
+226	Maximum Mainstem Bronchus Dose	rtmmbd	text	0			
+227	D95 of PTV (in Gray)	rtptv	text	0			
+228	Brachial plexus max [32 Gy]	rtbpm	text	0			
+229	Heart/pericardium receiving 32Gy [15cc]	rthpr	text	0			
+230	Max skin dose &lt; 32Gy	rtmsd	text	0			
+231	Ration of Rx isodose vol to PTV &lt; 1.5	rtrorx	text	0			
+232	V100 %	rtv100	text	0			
+233	Dmax %	rtdmax	text	0			
+234	D2cm max%	rtd2cm	text	0			
+235	V30 to rib	rtribv30	text	0			
+236	Highest dose to rib	rtribmax	text	0			
+237	Was the entire dose delivered to the participant?	rtedd	radio	0		n;y	No;Yes
+238	Specify	rtedds	text	0			
+239	Were there any unplanned interruptions or incomplete fractions?	rtcui	radio	0		n;y	No;Yes
+240	Specify	rtcuis	text	0			Specify
+241	Side effects	rtse	radio	0		n;mi;ma	none;minimal;marked
+242	Comments	rtsec	text	0			Comments
+243	Fatigue	rtsef	checkbox	0		f	Fatigue
+244	Side effects : Tightness in chest	rtsetc	checkbox	0		tc	Tightness in chest
+245	Side effects :Chest wall pain	rtsecwp	checkbox	0		cwp	Chest wall pain
+246	Side effects :Cough	rtsecgh	checkbox	0		c	Cough
+247	Side effects :Shortness of breath	rtsesob	checkbox	0		sob	Shortness of breath
+248	Side effects :Dyspnea	rtsed	checkbox	0		d	Dyspnea
+249	Side effects :Decreased appetite/weight loss	rtsedawl	checkbox	0		dawl	Decreased appetite/weight loss
+250	Side effects :Nausea/vomiting	rtsenv	checkbox	0		nv	Nausea/vomiting
+251	Side effects :Diarrhea	rtseda	checkbox	0		da	Diarrhea
+252	Side effects :Other	rtseo	checkbox	0		o	Other
+253	Side effects :Specify	rtseos	text	0			Specify
+254	Treating physician name	chmd	text	0			Treating physician name
+255	First date of treatment	chfdot	text	0			First date of treatment
+256	Last date of treatment	chldot	text	0			Last date of treatment
+257	Frequency of chemotherapy	chf	radio	0		d;od;w;o	daily;every other day;weekly;other
+258	Specify	chfs	text	0			Specify
+259	Lesion Site	rbrtchls	select-one	0		-;lul;lll;rul;rml;rll;e;m;p;o	-;LUL;LLL;RUL;RML;RLL;Endobronchial;Mediastinum;Pleura;Other (specify)
+260	Specify	rbrtchlo	text	0			Specify
+261	Describe treatment	rbchdt	text	0			Describe treatment
+262	Subsequent treatments	rbchst	text	0			Subsequent treatments
+263	Drugs used	rbchdr	text	0			Drugs used
+264	Number of rounds	rbchnt	text	0			Number of rounds
+265	Was the entire dose delivered to the participant?	chedd	radio	0		n;y	No;Yes
+266	Specify	chedds	text	0			Specify
+267	Were there complications associated with treatment?	chc	radio	0		n;y	No;Yes
+268	Specify	chcs	text	0			Specify
+269	Side effects	chse	radio	0		n;mi;ma	none;minimal;marked
+270	Comments	chsec	text	0			Comments
+271	Treatment side effects : Fatigue	chsef	checkbox	0		f	Fatigue
+272	Treatment side effects : Tightness in chest	chsetc	checkbox	0		tc	Tightness in chest
+273	Treatment side effects : Chest wall pain	chsecwp	checkbox	0		cwp	Chest wall pain
+274	Treatment side effects : Cough	chsecgh	checkbox	0		c	Cough
+275	Treatment side effects : Shortness of breath	chsesob	checkbox	0		sob	Shortness of breath
+276	Treatment side effects : Dyspnea	chsed	checkbox	0		d	Dyspnea
+277	Treatment side effects : Decreased appetite	chsedawl	checkbox	0		dawl	Decreased appetite/weight loss
+278	Treatment side effects : Nausea/vomiting	chsenv	checkbox	0		nv	Nausea/vomiting
+279	Treatment side effects : Diarrhea	chseda	checkbox	0		da	Diarrhea
+280	Treatment side effects : Other	chseo	checkbox	0		o	Other
+281	Treatment side effects : Specify	chseos	text	0			Specify
+282	Baseline CT date	sidoe	text	1			Baseline CT
+283	CT study date	cedos	text	1			Most recent CT
+284	Total number of non-calcified nodules	cenncn	text	0			Total number of non-calcified nodules
+285	Is it a new nodule? Nodule 1	cect1ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+286	Is it a new nodule? Nodule 2	cect2ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+287	Is it a new nodule? Nodule 3	cect3ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+288	Is it a new nodule? Nodule 4	cect4ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+289	Is it a new nodule? Nodule 5	cect5ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+290	Is it a new nodule? Nodule 6	cect6ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+291	Is it a new nodule? Nodule 7	cect7ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+292	Is it a new nodule? Nodule 8	cect8ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+293	Is it a new nodule? Nodule 9	cect9ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+294	Is it a new nodule? Nodule 10	cect10ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+295	Endobronchial? Nodule 1	cect1en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+296	Endobronchial? Nodule 2	cect2en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+297	Endobronchial? Nodule 3	cect3en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+298	Endobronchial? Nodule 4	cect4en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+299	Endobronchial? Nodule 5	cect5en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+300	Endobronchial? Nodule 6	cect6en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+301	Endobronchial? Nodule 7	cect7en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+302	Endobronchial? Nodule 8	cect8en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+303	Endobronchial? Nodule 9	cect9en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+304	Endobronchial? Nodule 10	cect10en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+305	Most likely location? Nodule 1	cect1ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+306	Most likely location? Nodule 2	cect2ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+307	Most likely location? Nodule 3	cect3ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+308	Most likely location? Nodule 4	cect4ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+309	Most likely location? Nodule 5	cect5ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+310	Most likely location? Nodule 6	cect6ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+311	Most likely location? Nodule 7	cect7ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+312	Most likely location? Nodule 8	cect8ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+313	Most likely location? Nodule 9	cect9ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+314	Most likely location? Nodule 10	cect10ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+315	CT Series Number Nodule 1	cect1sn	text	1			CT Series Number
+316	CT Series Number Nodule 2	cect2sn	text	1			CT Series Number
+317	CT Series Number Nodule 3	cect3sn	text	1			CT Series Number
+318	CT Series Number Nodule 4	cect4sn	text	1			CT Series Number
+319	CT Series Number Nodule 5	cect5sn	text	1			CT Series Number
+320	CT Series Number Nodule 6	cect6sn	text	1			CT Series Number
+321	CT Series Number Nodule 7	cect7sn	text	1			CT Series Number
+322	CT Series Number Nodule 8	cect8sn	text	1			CT Series Number
+323	CT Series Number Nodule 9	cect9sn	text	1			CT Series Number
+324	CT Series Number Nodule 10	cect10sn	text	1			CT Series Number
+325	Nodule seen in images CT number LOW Nodule 1	cect1inl	text	1			CT Image Number (Low)
+326	Nodule seen in images CT number HIGH Nodule 1	cect1inh	text	1			CT Image Number (High)
+327	Nodule seen in images CT number LOW Nodule 2	cect2inl	text	1			CT Image Number (Low)
+328	Nodule seen in images CT number HIGH Nodule 2	cect2inh	text	1			CT Image Number (High)
+329	Nodule seen in images CT number LOW Nodule 3	cect3inl	text	1			CT Image Number (Low)
+330	Nodule seen in images CT number HIGH Nodule 3	cect3inh	text	1			CT Image Number (High)
+331	Nodule seen in images CT number LOW Nodule 4	cect4inl	text	1			CT Image Number (Low)
+332	Nodule seen in images CT number HIGH Nodule 4	cect4inh	text	1			CT Image Number (High)
+333	Nodule seen in images CT number LOW Nodule 5	cect5inl	text	1			CT Image Number (Low)
+334	Nodule seen in images CT number HIGH Nodule 5	cect5inh	text	1			CT Image Number (High)
+335	Nodule seen in images CT number LOW Nodule 6	cect6inl	text	1			CT Image Number (Low)
+336	Nodule seen in images CT number HIGH Nodule 6	cect6inh	text	1			CT Image Number (High)
+337	Nodule seen in images CT number LOW Nodule 7	cect7inl	text	1			CT Image Number (Low)
+338	Nodule seen in images CT number HIGH Nodule 7	cect7inh	text	1			CT Image Number (High)
+339	Nodule seen in images CT number LOW Nodule 8	cect8inl	text	1			CT Image Number (Low)
+340	Nodule seen in images CT number HIGH Nodule 8	cect8inh	text	1			CT Image Number (High)
+341	Nodule seen in images CT number LOW Nodule 9	cect9inl	text	1			CT Image Number (Low)
+342	Nodule seen in images CT number HIGH Nodule 9	cect9inh	text	1			CT Image Number (High)
+343	Nodule seen in images CT number LOW Nodule 10	cect10inl	text	1			CT Image Number (Low)
+344	Nodule seen in images CT number HIGH Nodule 10	cect10inh	text	1			CT Image Number (High)
+345	Nodule status Nodule 1	cect1st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
+346	Nodule status Nodule 2	cect2st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
+347	Nodule status Nodule 3	cect3st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
+348	Nodule status Nodule 4	cect4st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
+349	Nodule status Nodule 5	cect5st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
+350	Nodule status Nodule 6	cect6st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
+351	Nodule status Nodule 7	cect7st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
+352	Nodule status Nodule 8	cect8st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
+353	Nodule status Nodule 9	cect9st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
+354	Nodule status Nodule 10	cect10st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;"
+355	Nodule consistency Nodule 1	cect1nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+356	Nodule consistency Nodule 2	cect2nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+357	Nodule consistency Nodule 3	cect3nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+358	Nodule consistency Nodule 4	cect4nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+359	Nodule consistency Nodule 5	cect5nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+360	Nodule consistency Nodule 6	cect6nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+361	Nodule consistency Nodule 7	cect7nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+362	Nodule consistency Nodule 8	cect8nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+363	Nodule consistency Nodule 9	cect9nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+364	Nodule consistency Nodule 10	cect10nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+365	Length (mm) Nodule 1	cect1sl	text	1			Length (mm)
+366	Length (mm) Nodule 2	cect2sl	text	1			Length (mm)
+367	Length (mm) Nodule 3	cect3sl	text	1			Length (mm)
+368	Length (mm) Nodule 4	cect4sl	text	1			Length (mm)
+369	Length (mm) Nodule 5	cect5sl	text	1			Length (mm)
+370	Length (mm) Nodule 6	cect6sl	text	1			Length (mm)
+371	Length (mm) Nodule 7	cect7sl	text	1			Length (mm)
+372	Length (mm) Nodule 8	cect8sl	text	1			Length (mm)
+373	Length (mm) Nodule 9	cect9sl	text	1			Length (mm)
+374	Length (mm) Nodule 10	cect10sl	text	1			Length (mm)
+375	Maximum width (mm) Nodule 1	cect1sw	text	1			Maximum Width
+376	Maximum width (mm) Nodule 2	cect2sw	text	1			Maximum Width
+377	Maximum width (mm) Nodule 3	cect3sw	text	1			Maximum Width
+378	Maximum width (mm) Nodule 4	cect4sw	text	1			Maximum Width
+379	Maximum width (mm) Nodule 5	cect5sw	text	1			Maximum Width
+380	Maximum width (mm) Nodule 6	cect6sw	text	1			Maximum Width
+381	Maximum width (mm) Nodule 7	cect7sw	text	1			Maximum Width
+382	Maximum width (mm) Nodule 8	cect8sw	text	1			Maximum Width
+383	Maximum width (mm) Nodule 9	cect9sw	text	1			Maximum Width
+384	Maximum width (mm) Nodule 10	cect10sw	text	1			Maximum Width
+385	Height (mm) Nodule 1	cect1sh	text	0			Height
+386	Height (mm) Nodule 2	cect2sh	text	0			Height
+387	Height (mm) Nodule 3	cect3sh	text	0			Height
+388	Height (mm) Nodule 4	cect4sh	text	0			Height
+389	Height (mm) Nodule 5	cect5sh	text	0			Height
+390	Height (mm) Nodule 6	cect6sh	text	0			Height
+391	Height (mm) Nodule 7	cect7sh	text	0			Height
+392	Height (mm) Nodule 8	cect8sh	text	0			Height
+393	Height (mm) Nodule 9	cect9sh	text	0			Height
+394	Height (mm) Nodule 10	cect10sh	text	0			Height
+395	Volume (mm 3 ) Nodule 1	cect1sv	text	0			Volume
+396	Volume (mm 3 ) Nodule 2	cect2sv	text	0			Volume
+397	Volume (mm 3 ) Nodule 3	cect3sv	text	0			Volume
+398	Volume (mm 3 ) Nodule 4	cect4sv	text	0			Volume
+399	Volume (mm 3 ) Nodule 5	cect5sv	text	0			Volume
+400	Volume (mm 3 ) Nodule 6	cect6sv	text	0			Volume
+401	Volume (mm 3 ) Nodule 7	cect7sv	text	0			Volume
+402	Volume (mm 3 ) Nodule 8	cect8sv	text	0			Volume
+403	Volume (mm 3 ) Nodule 9	cect9sv	text	0			Volume
+404	Volume (mm 3 ) Nodule 10	cect10sv	text	0			Volume
+405	Solid comp. of part-solid. Nodule length. Nodule 1	cect1ssl	text	1			length
+406	Solid comp. of part-solid. Nodule width. Nodule 1	cect1ssw	text	1			width
+407	Solid comp. of part-solid. Nodule length. Nodule 2	cect2ssl	text	1			length
+408	Solid comp. of part-solid. Nodule width. Nodule 2	cect2ssw	text	1			width
+409	Solid comp. of part-solid. Nodule length. Nodule 3	cect3ssl	text	1			length
+410	Solid comp. of part-solid. Nodule width. Nodule 3	cect3ssw	text	1			width
+411	Solid comp. of part-solid. Nodule length. Nodule 4	cect4ssl	text	1			length
+412	Solid comp. of part-solid. Nodule width. Nodule 4	cect4ssw	text	1			width
+413	Solid comp. of part-solid. Nodule length. Nodule 5	cect5ssl	text	1			length
+414	Solid comp. of part-solid. Nodule width. Nodule 5	cect5ssw	text	1			width
+415	Solid comp. of part-solid. Nodule length. Nodule 6	cect6ssl	text	1			length
+416	Solid comp. of part-solid. Nodule width. Nodule 6	cect6ssw	text	1			width
+417	Solid comp. of part-solid. Nodule length. Nodule 7	cect7ssl	text	1			length
+418	Solid comp. of part-solid. Nodule width. Nodule 7	cect7ssw	text	1			width
+419	Solid comp. of part-solid. Nodule length. Nodule 8	cect8ssl	text	1			length
+420	Solid comp. of part-solid. Nodule width. Nodule 8	cect8ssw	text	1			width
+421	Solid comp. of part-solid. Nodule length. Nodule 9	cect9ssl	text	1			length
+422	Solid comp. of part-solid. Nodule width. Nodule 9	cect9ssw	text	1			width
+423	Solid comp. of part-solid. Nodule length. Nodule 10	cect10ssl	text	1			length
+424	Solid comp. of part-solid. Nodule width. Nodule 10	cect10ssw	text	1			width
+425	Smooth edges Nodule 1	cect1se	checkbox	0		y	Yes
+426	Smooth edges Nodule 2	cect2se	checkbox	0		y	Yes
+427	Smooth edges Nodule 3	cect3se	checkbox	0		y	Yes
+428	Smooth edges Nodule 4	cect4se	checkbox	0		y	Yes
+429	Smooth edges Nodule 5	cect5se	checkbox	0		y	Yes
+430	Smooth edges Nodule 6	cect6se	checkbox	0		y	Yes
+431	Smooth edges Nodule 7	cect7se	checkbox	0		y	Yes
+432	Smooth edges Nodule 8	cect8se	checkbox	0		y	Yes
+433	Smooth edges Nodule 9	cect9se	checkbox	0		y	Yes
+434	Smooth edges Nodule 10	cect10se	checkbox	0		y	Yes
+435	Calcifications Nodule 1	cect1ca	checkbox	0		y	Yes
+436	Calcifications Nodule 2	cect2ca	checkbox	0		y	Yes
+437	Calcifications Nodule 3	cect3ca	checkbox	0		y	Yes
+438	Calcifications Nodule 4	cect4ca	checkbox	0		y	Yes
+439	Calcifications Nodule 5	cect5ca	checkbox	0		y	Yes
+440	Calcifications Nodule 6	cect6ca	checkbox	0		y	Yes
+441	Calcifications Nodule 7	cect7ca	checkbox	0		y	Yes
+442	Calcifications Nodule 8	cect8ca	checkbox	0		y	Yes
+443	Calcifications Nodule 9	cect9ca	checkbox	0		y	Yes
+444	Calcifications Nodule 10	cect10ca	checkbox	0		y	Yes
+445	Index Nodule	cectin	checkbox	0		1	
+446	Spiculated Nodule 1	cect1sp	checkbox	0		y	Yes
+447	Spiculated Nodule 2	cect2sp	checkbox	0		y	Yes
+448	Spiculated Nodule 3	cect3sp	checkbox	0		y	Yes
+449	Spiculated Nodule 4	cect4sp	checkbox	0		y	Yes
+450	Spiculated Nodule 5	cect5sp	checkbox	0		y	Yes
+451	Spiculated Nodule 6	cect6sp	checkbox	0		y	Yes
+452	Spiculated Nodule 7	cect7sp	checkbox	0		y	Yes
+453	Spiculated Nodule 8	cect8sp	checkbox	0		y	Yes
+454	Spiculated Nodule 9	cect9sp	checkbox	0		y	Yes
+455	Spiculated Nodule 10	cect10sp	checkbox	0		y	Yes
+456	Distance from the costal pleura (mm)? Nodule 1	cect1pld	text	0			Distance
+457	Distance from the costal pleura (mm)? Nodule 2	cect2pld	text	0			Distance
+458	Distance from the costal pleura (mm)? Nodule 3	cect3pld	text	0			Distance
+459	Distance from the costal pleura (mm)? Nodule 4	cect4pld	text	0			Distance
+460	Distance from the costal pleura (mm)? Nodule 5	cect5pld	text	0			Distance
+461	Distance from the costal pleura (mm)? Nodule 6	cect6pld	text	0			Distance
+462	Distance from the costal pleura (mm)? Nodule 7	cect7pld	text	0			Distance
+463	Distance from the costal pleura (mm)? Nodule 8	cect8pld	text	0			Distance
+464	Distance from the costal pleura (mm)? Nodule 9	cect9pld	text	0			Distance
+465	Distance from the costal pleura (mm)? Nodule 10	cect10pld	text	0			Distance
+466	Action to take. Nodule 1	cect1ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+467	Action to take. Nodule 2	cect2ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+468	Action to take. Nodule 3	cect3ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+469	Action to take. Nodule 4	cect4ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+470	Action to take. Nodule 5	cect5ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+471	Action to take. Nodule 6	cect6ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+472	Action to take. Nodule 7	cect7ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+473	Action to take. Nodule 8	cect8ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+474	Action to take. Nodule 9	cect9ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+475	Action to take. Nodule 10	cect10ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+476	Comment on Nodule 1	cect1co	text	0			Comment
+477	Comment on Nodule 2	cect2co	text	0			Comment
+478	Comment on Nodule 3	cect3co	text	0			Comment
+479	Comment on Nodule 4	cect4co	text	0			Comment
+480	Comment on Nodule 5	cect5co	text	0			Comment
+481	Comment on Nodule 6	cect6co	text	0			Comment
+482	Comment on Nodule 7	cect7co	text	0			Comment
+483	Comment on Nodule 8	cect8co	text	0			Comment
+484	Comment on Nodule 9	cect9co	text	0			Comment
+485	Comment on Nodule 10	cect10co	text	0			Comment
+486	Pathologic diagnosis. Nodule 1	cect1pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+487	Pathologic diagnosis. Nodule 2	cect2pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+488	Pathologic diagnosis. Nodule 3	cect3pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+489	Pathologic diagnosis. Nodule 4	cect4pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+490	Pathologic diagnosis. Nodule 5	cect5pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+491	Pathologic diagnosis. Nodule 6	cect6pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+492	Pathologic diagnosis. Nodule 7	cect7pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+493	Pathologic diagnosis. Nodule 8	cect8pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+494	Pathologic diagnosis. Nodule 9	cect9pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+495	Pathologic diagnosis. Nodule 10	cect10pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+496	Small non-calcified nodules are present	cectancn	checkbox	0		1	Small non-calcified nodules are present
+497	Small calcified nodules are present	cectacn	checkbox	0		1	Small calcified nodules are present
+498	Surgical pathology details	rbpdt	textarea	0			Surgical pathology details
+499	Emphysema	ceem	radio	0		nv;no;mi;mo;se	Not visible;None;Mild;Moderate;Severe
+500	Coronary calcifications	ceccv	radio	0		n;m;d;s	None;Mild;Moderate;Severe
+501	Coronary calcifications. Left Main	cecclm	select-one	1		;no;mi;mo;ex	-;None;Minimal < â…“;Moderate;Extensive > â…”
+502	Coronary calcifications. LAD	ceccld	select-one	1		;no;mi;mo;ex	-;None;Minimal < â…“;Moderate;Extensive > â…”
+503	Coronary calcifications. Circumflex	cecccf	select-one	1		;no;mi;mo;ex	-;None;Minimal < â…“;Moderate;Extensive > â…”
+504	Coronary calcifications. RCA	ceccrc	select-one	1		;no;mi;mo;ex	-;None;Minimal < â…“;Moderate;Extensive > â…”
+505	Pulmonary artery width (mm)	cepaw	text	0			Pulmonary Artery Width
+506	Ascending aorta width (mm)	ceaow	text	0			Ascending Aorta Width
+507	Pulmonary Cysts	cecbc	checkbox	0		y	Yes
+508	Pulmonary Cysts RUL	cecbcl1	checkbox	0		rul	
+509	Pulmonary Cysts RML	cecbcl2	checkbox	0		rml	
+510	Pulmonary Cysts RLL	cecbcl3	checkbox	0		rll	
+511	Pulmonary Cysts LUL	cecbcl4	checkbox	0		lul	
+512	Pulmonary Cysts LLL	cecbcl5	checkbox	0		lll	
+513	Pulmonary Blebs/Bullae	cecbb	checkbox	0		y	Yes
+514	Pulmonary Blebs/Bullae RUL	cecbbl1	checkbox	0		rul	
+515	Pulmonary Blebs/Bullae RML	cecbbl2	checkbox	0		rml	
+516	Pulmonary Blebs/Bullae RLL	cecbbl3	checkbox	0		rll	
+517	Pulmonary Blebs/Bullae LUL	cecbbl4	checkbox	0		lul	
+518	Pulmonary Blebs/Bullae LLL	cecbbl5	checkbox	0		lll	
+519	Pulmonary Regional or diffuse consolidation	cerdc	checkbox	0		y	Yes
+520	Pulmonary Regional or diffuse consolidation. RUL	cerdcl1	checkbox	0		rul	
+521	Pulmonary Regional or diffuse consolidation. RML	cerdcl2	checkbox	0		rml	
+522	Pulmonary Regional or diffuse consolidation. RLL	cerdcl3	checkbox	0		rll	
+523	Pulmonary Regional or diffuse consolidation. LUL	cerdcl4	checkbox	0		lul	
+524	Pulmonary Regional or diffuse consolidation. LLL	cerdcl5	checkbox	0		lll	
+525	Pulmonary Scarring	cescr	checkbox	0		y	Yes
+526	Pulmonary Regional or diffuse consolidation. RUL	cescrl1	checkbox	0		rul	
+527	Pulmonary Regional or diffuse consolidation. RML	cescrl2	checkbox	0		rml	
+528	Pulmonary Regional or diffuse consolidation. RLL	cescrl3	checkbox	0		rll	
+529	Pulmonary Regional or diffuse consolidation. LUL	cescrl4	checkbox	0		lul	
+530	Pulmonary Regional or diffuse consolidation. LLL	cescrl5	checkbox	0		lll	
+531	Pulmonary Regional or diffuse consolidation. Unilateral	cescrl6	checkbox	0		au	Unilateral
+532	Pulmonary Regional or diffuse consolidation. Bilateral	cescrl7	checkbox	0		ab	Bilateral
+533	Pulmonary Bronchiectasis	cebrsb	checkbox	0		y	Yes
+534	Pulmonary Bronchiectasis. RUL	cebrsbl1	checkbox	0		rul	
+535	Pulmonary Bronchiectasis. RML	cebrsbl2	checkbox	0		rml	
+536	Pulmonary Bronchiectasis. RLL	cebrsbl3	checkbox	0		rll	
+537	Pulmonary Bronchiectasis. LUL	cebrsbl4	checkbox	0		lul	
+538	Pulmonary Bronchiectasis. LLL	cebrsbl5	checkbox	0		lll	
+539	Pulmonary Small airways disease	cebrss	checkbox	0		y	Yes
+540	Pulmonary Small airways disease. RUL	cebrssl1	checkbox	0		rul	
+541	Pulmonary Small airways disease. RML	cebrssl2	checkbox	0		rml	
+542	Pulmonary Small airways disease. RLL	cebrssl3	checkbox	0		rll	
+543	Pulmonary Small airways disease. LUL	cebrssl4	checkbox	0		lul	
+544	Pulmonary Small airways disease. LLL	cebrssl5	checkbox	0		lll	
+545	Pulmonary Post-surgical findings	cebs	radio	0		n;o;y;e	N/A;Normal;Abnormal;Not visible
+546	Pulmonary Post-surgical findings Right	cebsrt	checkbox	0		r	Right
+547	Pulmonary Post-surgical findings Left	cebslt	checkbox	0		l	Left
+548	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location	cerb	checkbox	0		y	Yes
+549	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location RUL	cerbl1	checkbox	0		rul	
+550	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location RML	cerbl2	checkbox	0		rml	
+551	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location RLL	cerbl3	checkbox	0		rll	
+552	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location LUL	cerbl4	checkbox	0		lul	
+553	Interstitial Lung Disease. Traction bronchiectasis in a peripheral location LLL	cerbl5	checkbox	0		lll	
+554	Interstitial Lung Disease. Peripheral ground-glass opacities	cepgo	checkbox	0		y	Yes
+555	Interstitial Lung Disease. Peripheral ground-glass opacities RUL	cepgol1	checkbox	0		rul	
+556	Interstitial Lung Disease. Peripheral ground-glass opacities RML	cepgol2	checkbox	0		rml	
+557	Interstitial Lung Disease. Peripheral ground-glass opacities RLL	cepgol3	checkbox	0		rll	
+558	Interstitial Lung Disease. Peripheral ground-glass opacities LUL	cepgol4	checkbox	0		lul	
+559	Interstitial Lung Disease. Peripheral ground-glass opacities LLL	cepgol5	checkbox	0		lll	
+560	Interstitial Lung Disease. Reticulations	ceret	checkbox	0		y	Yes
+561	Interstitial Lung Disease. Reticulations RUL	ceretl1	checkbox	0		rul	
+562	Interstitial Lung Disease. Reticulations RML	ceretl2	checkbox	0		rml	
+563	Interstitial Lung Disease. Reticulations RLL	ceretl3	checkbox	0		rll	
+564	Interstitial Lung Disease. Reticulations LUL	ceretl4	checkbox	0		lul	
+565	Interstitial Lung Disease. Reticulations LLL	ceretl5	checkbox	0		lll	
+566	Interstitial Lung Disease. Honeycombing	cephc	checkbox	0		y	Yes
+567	Interstitial Lung Disease. Honeycombing RUL	cephcl1	checkbox	0		rul	
+568	Interstitial Lung Disease. Honeycombing RML	cephcl2	checkbox	0		rml	
+569	Interstitial Lung Disease. Honeycombing RLL	cephcl3	checkbox	0		rll	
+570	Interstitial Lung Disease. Honeycombing LUL	cephcl4	checkbox	0		lul	
+571	Interstitial Lung Disease. Honeycombing LLL	cephcl5	checkbox	0		lll	
+572	Additional comments on pulmonary abnormalities	ceoppa	textarea	0			Additional comments on pulmonary abnormalities
+573	Additional comments on pulmonary abnormalities. Include on Impression.	ceoppai	checkbox	0		y	Include in impression
+574	Pleural or pleural-related. Pleural thickening/plaques	cept	checkbox	0		y	Yes
+575	Pleural or pleural-related. Pleural thickening/plaques. Right	ceptrt	checkbox	0		r	Right
+576	Pleural or pleural-related. Pleural thickening/plaques. Left	ceptlt	checkbox	0		l	Left
+577	Pleural or pleural-related. Pleural thickening/plaques. Calcification	ceptct	checkbox	0		c	Calcification
+578	Pleural or pleural-related. Rounded atelectasis	cebatr	checkbox	0		y	Yes
+579	Pleural or pleural-related. Rounded atelectasis. RUL	cebatrl1	checkbox	0		rul	
+580	Pleural or pleural-related. Rounded atelectasis. RML	cebatrl2	checkbox	0		rml	
+581	Pleural or pleural-related. Rounded atelectasis. RLL	cebatrl3	checkbox	0		rll	
+582	Pleural or pleural-related. Rounded atelectasis. LUL	cebatrl4	checkbox	0		lul	
+583	Pleural or pleural-related. Rounded atelectasis. LLL	cebatrl5	checkbox	0		lll	
+584	Pleural or pleural-related. Pleural effusion	cepev	checkbox	0		y	Yes
+585	Pleural or pleural-related. Pleural effusion. Right	ceper	select-one	1		-;no;sm;mo;lg	-;None;Small;Moderate;Large
+586	Pleural or pleural-related. Pleural effusion. Left	cepel	select-one	1		-;no;sm;mo;lg	-;None;Small;Moderate;Large
+587	Pleural or pleural-related. Pleural tumor.	cepu	checkbox	0		y	Yes
+588	Additional comments on pleural abnormalities	ceoppab	textarea	0			Additional comments on pleural abnormalities
+589	Additional comments on pleural abnormalities. Include on impression.	ceoppabi	checkbox	0		y	Include in impression
+590	Cardiac and Aoritic abnormalities. Aortic calcifications	cecca	select-one	0		-;no;mi;mo;ex	-;None;Minimal < â…“;Moderate;Extensive > â…”
+591	Cardiac and Aoritic abnormalities. Pericardial effusion severity	ceprevm	select-one	0		-;no;mi;mo;ex	-;None;Minimal;Moderate;Extensive
+592	Cardiac and Aoritic abnormalities. Additional comments on cardiac abnormalities	cecommca	textarea	0			Additional comments on cardiac abnormalities
+593	Cardiac and Aoritic abnormalities. Additional comments on cardiac abnormalities. Include on impression	cecommcai	checkbox	0		y	Include in impression
+594	Neck and mediastinal abnormalities. Thyroid	ceata	checkbox	0		y	Yes
+595	Neck and mediastinal abnormalities. Thyroid calcification.	ceatc	checkbox	0		c	Calcification
+596	Neck and mediastinal abnormalities. Thyroid Cyst/nodule < 15 mm	ceaty	checkbox	0		y	Cyst/nodule < 15 mm
+597	Neck and mediastinal abnormalities. Thyroid Mass	ceatm	checkbox	0		m	Mass
+598	Neck and mediastinal abnormalities. Thyroid Other	ceato	checkbox	0		o	Other
+599	Neck and mediastinal abnormalities. Throid Specifiy	ceatos	text	1			Specify
+600	Neck and mediastinal abnormalities. Thymus	ceaya	checkbox	0		y	Yes
+601	Neck and mediastinal abnormalities. Thymus calcification.	ceayc	checkbox	0		c	Calcification
+602	Neck and mediastinal abnormalities. Thymus Cyst	ceayy	checkbox	0		y	Cyst
+603	Neck and mediastinal abnormalities. Thymus Mass	ceaym	checkbox	0		m	Mass
+604	Neck and mediastinal abnormalities. Thymus. Other	ceayo	checkbox	0		o	Other
+605	Neck and mediastinal abnormalities. Thymus Speicfy	ceayos	text	1			Specify
+606	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes.	cemln	checkbox	0		y	Yes
+607	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N1: Low cervical; supraclavicular; and sternal notch nodes	cemlnl1	checkbox	0		N1	"N1: Low cervical, supraclavicular, and sternal notch nodes"
+608	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N2R: Upper paratracheal (right)	cemlnl2r	checkbox	0		N2R	N2R: Upper paratracheal (right)
+609	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N2L: Upper paratracheal (left)	cemlnl2l	checkbox	0		N2L	N2L: Upper paratracheal (left)
+610	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N3A: Prevascular	cemlnl3a	checkbox	0		N3A	N3A: Prevascular
+611	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes N3P: Retrotracheal	cemlnl3p	checkbox	0		N3P	N3P: Retrotracheal
+612	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N4R: Lower paratracheal (right)	cemlnl4r	checkbox	0		N4R	N4R: Lower paratracheal (right)
+613	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N4L: Lower paratracheal (left)	cemlnl4l	checkbox	0		N4L	N4L: Lower paratracheal (left)
+614	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N5: Subaortic	cemlnl5	checkbox	0		N5	N5: Subaortic
+615	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N6: Para-aortic (ascending aorta or phrenic)	cemlnl6	checkbox	0		N6	N6: Para-aortic (ascending aorta or phrenic)
+616	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N7: Subcarinal	cemlnl7	checkbox	0		N7	N7: Subcarinal
+617	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N8: Paraesophageal (below carina)	cemlnl8	checkbox	0		N8	N8: Paraesophageal (below carina)
+618	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N9: Pulmonary ligament	cemlnl9	checkbox	0		N9	N9: Pulmonary ligament
+619	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N10: Hilar	cemlnl10	checkbox	0		N10	N10: Hilar
+620	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N11: Interlobar	cemlnl11	checkbox	0		N11	N11: Interlobar
+621	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N12: Lobar	cemlnl12	checkbox	0		N12	N12: Lobar
+622	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N13: Segmental	cemlnl13	checkbox	0		N13	N13: Segmental
+623	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any enlarged or growing hilar or mediastinal lymph nodes. N14: Subsegmental	cemlnl14	checkbox	0		N14	N14: Subsegmental
+624	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Any calcified hilar or mediastinal lymph nodes	cemlncab	checkbox	0		y	Yes
+625	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Abnormal axillary lymph nodes.	ceagaln	checkbox	0		y	Yes
+626	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Abnormal axillary lymph nodes. Right	ceagalnrt	checkbox	0		r	Right
+627	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Abnormal axillary lymph nodes. Left	ceagalnlt	checkbox	0		l	Left
+628	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Abnormal axillary lymph nodes. Specify	ceagalns	text	1			Specify
+629	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Other Vascular Abnormalities	cemva	checkbox	0		y	Yes
+630	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Other Vascular Abnormalities. Aorta	cemvaa	checkbox	0		a	Aorta
+631	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Other Vascular Abnormalities. Pulmonary arteries	cemvap	checkbox	0		w	Pulmonary arteries
+632	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Other Vascular Abnormalities. Other.	cemvao	checkbox	0		o	Other
+633	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Other Vascular Abnormalities. Speicify	cemvaos	text	1			Specify
+634	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal	cemeln	checkbox	0		y	Yes
+635	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal Air-fluid level	cemelna	checkbox	0		a	Air-fluid level
+636	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal Wall thickening	cemelnw	checkbox	0		w	Wall thickening
+637	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Mass	cemelnm	checkbox	0		m	Mass
+638	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other	cemvlno	checkbox	0		o	Other
+639	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other Specify	cemelnos	text	1			Specify
+640	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Hiatal hernia	cehhn	checkbox	0		y	Yes
+641	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Hiatal hernia. Other Specify	cehhnos	text	1			Specify
+642	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses.	ceomm	checkbox	0		y	Yes
+643	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses. Calcification	ceamc	checkbox	0		v	Calcification
+644	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses. Cyst	ceamy	checkbox	0		y	Cyst
+645	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses. Mass	ceamm	checkbox	0		m	Mass
+646	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses. Other	ceamo	checkbox	0		o	Other
+647	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Other mediastinal masses. Other specify	ceommos	text	1			Specify
+648	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Additional comments on neck and mediastinal abnormalities	ceotabnm	textarea	0			Additional comments on neck and mediastinal abnormalities
+649	Neck and mediastinal abnormalities. Lymph Nodes (w/o central fat). Esophogeal. Additional comments on neck and mediastinal abnormalities. Other Specify	ceotabnmi	checkbox	0		y	Include in impression
+650	Breast. Right breast	ceara	checkbox	0		y	Yes
+651	Breast. Right breast. Calcification	ceobarc	checkbox	0		c	Calcification
+652	Breast. Right breast. Cyst	ceobary	checkbox	0		y	Cyst
+653	Breast. Right breast. Mass	ceobarm	checkbox	0		m	Mass
+654	Breast. Right breast. Other	ceobaro	checkbox	0		o	Other
+655	Breast. Right breast. Other Specify.	ceobaros	text	1			Specify
+656	Breast. Right breast. Density Calibration (BIORADS)	ceobard	select-one	0		-;1;2;3;4	-;1 - Almost entirely fatty;2 - Scattered areas of fibroglandular density;3 - Heterogeneously dense;4 - Extremely dense
+657	Breast. Left breast	ceafa	checkbox	0		y	Yes
+658	Breast. Left breast. Calcification	ceobafc	checkbox	0		c	Calcification
+659	Breast. Left breast. Cyst	ceobafy	checkbox	0		y	Cyst
+660	Breast. Left breast. Mass	ceobafm	checkbox	0		m	Mass
+661	Breast. Left breast. Other	ceobafo	checkbox	0		o	Other
+662	Breast. Left breast. Other Specify.	ceobafos	text	1			Specify
+663	Breast. Left breast. Density Calibration (BIORADS)	ceobald	select-one	0		-;1;2;3;4	-;1 - Almost entirely fatty;2 - Scattered areas of fibroglandular density;3 - Heterogeneously dense;4 - Extremely dense
+664	Breast. Additional comments on breast abnormalities	ceobrc	textarea	0			Additional comments on breast abnormalities
+665	Breast. Additional comments on breast abnormalities. Include in impression.	ceobrci	checkbox	0		y	Include in impression
+666	Bone. Specify bone abnormalities	ceaoabb	textarea	0			Specify bone abnormalities
+667	Bone. Specify bone abnormalities. Include in impression	ceaoabbi	checkbox	0		y	Include in impression
+668	Abdominal abnormalities. Gallbladder	ceaga	checkbox	0		y	Yes
+669	Abdominal abnormalities. Gallbladder. Cholescystectomy	ceagh	checkbox	0		h	Cholecystectomy
+670	Abdominal abnormalities. Gallbladder. Stones	ceags	checkbox	0		s	Stones
+671	Abdominal abnormalities. Gallbladder. Sludge	ceagl	checkbox	0		l	Sludge
+672	Abdominal abnormalities. Gallbladder. Other	ceago	checkbox	0		y	Other
+673	Abdominal abnormalities. Gallbladder. Other specify.	ceagos	text	1			Specify
+674	Abdominal abnormalities. Spleen.	ceasa	checkbox	0		y	Yes
+675	Abdominal abnormalities. Spleen. Calcification	ceasc	checkbox	0		y	Calcification
+676	Abdominal abnormalities. Spleen. Cyst	ceasy	checkbox	0		y	Cyst
+677	Abdominal abnormalities. Spleen. Mass	ceasm	checkbox	0		m	Mass
+678	Abdominal abnormalities. Spleen. Other.	ceaso	checkbox	0		y	Other
+679	Abdominal abnormalities. Spleen. Other specify	ceasos	text	1			Specify
+680	Abdominal abnormalities. Liver.	ceala	checkbox	0		y	Yes
+681	Abdominal abnormalities. Liver. Calcification	cealc	checkbox	0		y	Calcification
+682	Abdominal abnormalities. Liver. Cyst	cealy	checkbox	0		y	Cyst
+683	Abdominal abnormalities. Liver. Mass	cealm	checkbox	0		m	Mass
+684	Abdominal abnormalities. Liver. HU < 40	cealh	checkbox	0		h	HU < 40
+685	Abdominal abnormalities. Liver. Other.	cealo	checkbox	0		y	Other
+686	Abdominal abnormalities. Liver. Other specify.	cealos	text	1			Specify
+687	Abdominal abnormalities. Pancreas.	ceapa	checkbox	0		y	Yes
+688	Abdominal abnormalities. Pancreas. Calcification	ceapc	checkbox	0		y	Calcification
+689	Abdominal abnormalities. Pancreas. Cyst	ceapy	checkbox	0		y	Cyst
+690	Abdominal abnormalities. Pancreas. Mass	ceapm	checkbox	0		m	Mass
+691	Abdominal abnormalities. Pancreas. Other	ceapo	checkbox	0		y	Other
+692	Abdominal abnormalities. Pancreas. Other specify	ceapos	text	1			Specify
+693	Abdominal abnormalities. Adrenals.	ceaaa	checkbox	0		y	Yes
+694	Abdominal abnormalities. Adrenals. Calcification	ceaac	checkbox	0		y	Calcification
+695	Abdominal abnormalities. Adrenals. Cyst	ceaay	checkbox	0		y	Cyst
+696	Abdominal abnormalities. Adrenals. Mass	ceaam	checkbox	0		m	Mass
+697	Abdominal abnormalities. Adrenals. Other	ceaao	checkbox	0		y	Other
+698	Abdominal abnormalities. Adrenals. Other specify	ceaaos	text	1			Specify
+699	Abdominal abnormalities. Kidney.	ceaka	checkbox	0		y	Yes
+700	Abdominal abnormalities. Kidney. Calcification	ceakc	checkbox	0		y	Calcification
+701	Abdominal abnormalities. Kidney. Cyst	ceaky	checkbox	0		y	Cyst
+702	Abdominal abnormalities. Kidney. Mass	ceakm	checkbox	0		m	Mass
+703	Abdominal abnormalities. Kidney. Other	ceako	checkbox	0		y	Other
+704	Abdominal abnormalities. Kidney. Other specify	ceakos	text	1			Specify
+705	Additional comments on abdominal abnormalities	ceaoab	textarea	0			Additional comments on abdominal abnormalities
+706	Additional comments on abdominal abnormalities. Include in impression.	ceaoabi	checkbox	0		y	Include in impression
+707	Follow-up 1 year	cefuw	checkbox	0		1y	Annual repeat
+708	Follow-up Approximate follow-up date	cefud	text	0			Approximate follow-up date:
+709	Other follow-up. Antibiotics	cefuaf	checkbox	0		y	Antibiotics
+710	Other follow-up. Contrast CT	cefucc	checkbox	0		y	Contrast CT
+711	Other follow-up. PET	cefupe	checkbox	0		y	PET
+712	Other follow-up Percutaneous biopsy	cefufn	checkbox	0		y	Percutaneous biopsy
+713	Other follow-up Bronchoscopy	cefubr	checkbox	0		y	Bronchoscopy
+714	Other follow-up Pulmonary consultation	cefupc	checkbox	0		y	Pulmonary consultation
+715	Other follow-up Refer to tumor board	cefutb	checkbox	0		y	Refer to tumor board
+716	Other follow-up No other follow-up	cefunf	checkbox	0		y	No other further follow-up
+717	Other follow-up Other and Specify (* ? error)	cefuo	checkbox	0		y	Other
+718	Other follow-up Other and Specify (* ? error)	cefuo	text	1			

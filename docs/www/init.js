@@ -8,9 +8,26 @@
  */
 
 function numericHandlerKeydown(e) {
-    //console.log("k:" + e.keyCode + " s:" + e.shiftKey + " m:" + e.metaKey + " c:" + e.ctrlKey)
-    // Allow: backspace, delete, tab, escape, enter, . (decimal) (add 173 for - key)
+    //console.log("numericHandlerKeydown() k:" + e.keyCode + " s:" + e.shiftKey + " m:" + e.metaKey + " c:" + e.ctrlKey)
+    // Allow: backspace, delete, tab, escape, enter, . (decimal {110 and 190}) (add 173 for - key)
     if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+        // Allow: Ctrl+A,C,V,X
+        ($.inArray(e.keyCode, [65, 67, 86, 88]) !== -1 && (e.ctrlKey === true || e.metaKey === true)) ||
+        // Allow: home, end, left, right
+        (e.keyCode >= 35 && e.keyCode <= 39)) {
+        // let it happen, don't do anything
+        return;
+    }
+    // Ensure that it is a number and stop the keypress
+    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+        e.preventDefault();
+    }
+}
+
+function wholeNumberHandlerKeydown(e) {
+    console.log("wholeNumberHandlerKeydown() k:" + e.keyCode + " s:" + e.shiftKey + " m:" + e.metaKey + " c:" + e.ctrlKey)
+    // Allow: backspace, delete, tab, escape, enter, (add 173 for - key)
+    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
         // Allow: Ctrl+A,C,V,X
         ($.inArray(e.keyCode, [65, 67, 86, 88]) !== -1 && (e.ctrlKey === true || e.metaKey === true)) ||
         // Allow: home, end, left, right
@@ -45,11 +62,11 @@ function validateDatePickerOnChange(e) {
 }
 
 /*
-    Sets up a checkbox with the given name to behave as an "exclusive" selection, that is: 
+    Sets up a checkbox with the given name to behave as an "exclusive" selection, that is:
     - Only one of the checkboxes that have this name can be selected at a time
-    - The selected checkbox can be unchecked. 
+    - The selected checkbox can be unchecked.
 
-    To a large extent the behavior of an exclusive checkbox is similar to that of a 
+    To a large extent the behavior of an exclusive checkbox is similar to that of a
     radio button; however, the difference is that in a radio button, at least one of the radios
     is selected, where for an exclusive checkbox, all checkboxes could be unselected
 
@@ -100,6 +117,7 @@ function notDash(fvInput) {
 //global application handlers
 $(function () {
     $("body").on('keydown', 'input.numeric', numericHandlerKeydown);
+    $("body").on('keydown', 'input.whole-number', wholeNumberHandlerKeydown);
 
     $.each($(".datepicker"), function (i, el) {
         var $input = $(el).find("input").addBack("input"); //find the actual input control

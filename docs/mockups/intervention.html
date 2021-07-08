@@ -209,8 +209,8 @@
         </a>
        </li>
        <li>
-        <a href="#intervention">
-         Intervention &amp; Follow-Up
+        <a href="#follow-up">
+         Follow-Up
         </a>
        </li>
       </ul>
@@ -366,144 +366,6 @@
      </div>
      <div class="row">
       <div class="col-md-6">
-       <label for="rbcst8m">
-        Clinical TNM status
-        <small>
-         (8th edition modified)
-        </small>
-       </label>
-       <div class="form-group form-inline">
-        <label class="aria-hidden" for="rbcst8m">
-         T status
-        </label>
-        <select class="form-control" id="rbcst8m" name="rbcst8m">
-         <option value="-">
-          -
-         </option>
-         <option value="0">
-          T0
-         </option>
-         <option value="is">
-          Tis
-         </option>
-         <option value="1am">
-          T1a mi
-         </option>
-         <option value="1as">
-          T1a SS
-         </option>
-         <option value="1a1">
-          T1a
-         </option>
-         <option value="1b">
-          T1b
-         </option>
-         <option value="1c">
-          T1c
-         </option>
-         <option value="2v">
-          T2 Visc Pl
-         </option>
-         <option value="2c">
-          T2 Centr
-         </option>
-         <option value="2a">
-          T2a
-         </option>
-         <option value="2b">
-          T2b
-         </option>
-         <option value="3">
-          T3
-         </option>
-         <option value="3i">
-          T3 Inv
-         </option>
-         <option value="3s">
-          T3 Satell
-         </option>
-         <option value="4">
-          T4
-         </option>
-         <option value="4i">
-          T4 Inv
-         </option>
-         <option value="4n">
-          T4 Ipsi Nod
-         </option>
-         <option value="x">
-          TX
-         </option>
-        </select>
-        <label class="aria-hidden" for="rbcsn8m">
-         N status
-        </label>
-        <select class="form-control" id="rbcsn8m" name="rbcsn8m">
-         <option value="-">
-          -
-         </option>
-         <option value="0">
-          N0
-         </option>
-         <option value="1">
-          N1
-         </option>
-         <option value="2">
-          N2
-         </option>
-         <option value="3">
-          N3
-         </option>
-         <option value="X">
-          NX
-         </option>
-        </select>
-        <label class="aria-hidden" for="rbcsm8m">
-         M status
-        </label>
-        <select class="form-control" id="rbcsm8m" name="rbcsm8m">
-         <option value="-">
-          -
-         </option>
-         <option value="0">
-          M0
-         </option>
-         <option value="1ap">
-          M1a Pl Dissem
-         </option>
-         <option value="1ac">
-          M1a Contr Nod
-         </option>
-         <option value="1b">
-          M1b Single
-         </option>
-         <option value="1c">
-          M1c Multi
-         </option>
-         <option value="X">
-          MX
-         </option>
-        </select>
-        <div class="checkbox">
-         <label>
-          <input name="rbcsx8m" type="hidden" value=""/>
-          <input id="rbcsx8m" name="rbcsx8m" type="checkbox" value="y"/>
-          Not applicable (specify)
-         </label>
-        </div>
-       </div>
-      </div>
-      <div class="col-md-6" id="rbcsx8m-container">
-       <div class="form-group">
-        <label for="rbcsxs8m">
-         Specify
-        </label>
-        <input class="form-control" id="rbcsxs8m" name="rbcsxs8m"/>
-       </div>
-      </div>
-     </div>
-     <div class="row">
-      <div class="col-md-6">
        <label for="rbcsb">
         Clinical staging based on
        </label>
@@ -532,6 +394,31 @@
          Specify
         </label>
         <input class="form-control" id="rbcsbos" name="rbcsbos" type="text"/>
+       </div>
+      </div>
+     </div>
+     <div class="row">
+      <div class="form-group col-md-2">
+       <label for="sbfev1">
+        FEV1 (L/s)
+       </label>
+       <input class="form-control input-sm numeric" id="sbfev1" name="sbfev1" size="4" type="text"/>
+      </div>
+      <div class="form-group col-md-2">
+       <label for="sbfvc">
+        FVC (L)
+       </label>
+       <input class="form-control input-sm numeric" id="sbfvc" name="sbfvc" size="4" type="text"/>
+      </div>
+      <div class="form-group col-md-2">
+       <label for="sbfvc">
+        FEV1/FVC
+       </label>
+       <div class="input-group">
+        <input class="form-control input-sm whole-number" id="sbffr" maxlength="3" name="sbffr" size="3" type="text"/>
+        <span class="input-group-addon">
+         %
+        </span>
        </div>
       </div>
      </div>
@@ -613,6 +500,9 @@
           Other (specify)
          </option>
         </select>
+        <span class="form-text text-muted">
+         If multiple sites, select other and specify
+        </span>
        </div>
       </div>
       <div class="col-md-6" id="rbloc-container">
@@ -687,7 +577,11 @@
        </div>
        <div class="form-group col-md-3">
         <label for="rbsud">
-         Treatment date
+         Treatment
+         <span id="treatment-start-label">
+          start
+         </span>
+         date
         </label>
         <div class="input-group datepicker">
          <input aria-describedby="rbsud-addon" class="form-control" data-restriction="past" id="rbsud" name="rbsud"/>
@@ -717,7 +611,7 @@
        Surgical Treatment Information
       </h2>
       <div class="row">
-       <div class="col-sm-6 col-md-4">
+       <div class="col-sm-6 col-md-3">
         <div class="form-group">
          <label>
           Have you had a pulmonary function test?
@@ -733,33 +627,13 @@
          </label>
         </div>
        </div>
-       <div class="col-sm-12 col-md-8 form-inline" id="sbahpft-container">
-        <div class="form-group">
-         <label for="sbfev1">
-          FEV1 (L/s)
-         </label>
-         <input class="form-control input-sm numeric" id="sbfev1" name="sbfev1" size="4" type="text"/>
-        </div>
-        <div class="form-group">
-         <label for="sbfvc">
-          FVC (L)
-         </label>
-         <input class="form-control input-sm numeric" id="sbfvc" name="sbfvc" size="4" type="text"/>
-        </div>
+       <div class="col-sm-6 col-md-3" id="sbahpft-container">
         <div class="form-group">
          <label for="sbcop">
           Diffusion capacity (mL/min/mm Hg)
          </label>
          <input class="form-control input-sm numeric" id="sbcop" name="sbcop" size="4" type="text"/>
         </div>
-        <div class="alert alert-info" id="ffr-message" style="display: none; margin-top:5px;">
-         FEV1/FVC (%) is
-         <strong>
-          <span id="ffr-value">
-          </span>
-         </strong>
-        </div>
-        <input id="sbffr" name="sbffr" type="hidden"/>
        </div>
       </div>
       <div class="row">
@@ -791,65 +665,69 @@
         </div>
        </div>
       </div>
-      <div class="row">
-       <div class="col-md-6">
-        <div class="row">
-         <div class="form-group col-md-6">
-          <label for="rbmed">
-           Procedure date
-          </label>
-          <div class="input-group datepicker">
-           <input aria-describedby="rbmed-addon" class="form-control" data-restriction="past" id="rbmed" name="rbmed"/>
-           <div class="input-group-addon">
-            <div class="input-group-text" id="rbmed-addon">
-             <i aria-hidden="true" class="fa fa-calendar">
-             </i>
+      <div id="rbmep-container">
+       <div class="row">
+        <div class="col-md-6">
+         <div class="row">
+          <div class="form-group col-md-6">
+           <label for="rbmed">
+            Procedure date
+           </label>
+           <div class="input-group datepicker">
+            <input aria-describedby="rbmed-addon" class="form-control" data-restriction="past" id="rbmed" name="rbmed"/>
+            <div class="input-group-addon">
+             <div class="input-group-text" id="rbmed-addon">
+              <i aria-hidden="true" class="fa fa-calendar">
+              </i>
+             </div>
             </div>
            </div>
+           <small class="form-text text-muted">
+            MM/DD/YYYY
+           </small>
           </div>
-          <small class="form-text text-muted">
-           MM/DD/YYYY
-          </small>
-         </div>
-         <div class="form-group col-md-6">
-          <label for="rbmspid">
-           Specimen ID
-          </label>
-          <input class="form-control" id="rbmspid" name="rbmspid" size="24"/>
+          <div class="form-group col-md-6">
+           <label for="rbmspid">
+            Specimen ID
+           </label>
+           <input class="form-control" id="rbmspid" name="rbmspid" size="24"/>
+          </div>
          </div>
         </div>
        </div>
-       <div class="col-md-6">
-        <div class="form-group">
-         <label for="rbmel">
-          Location of procedure
-         </label>
-         <input class="form-control" id="rbmel" name="rbmel"/>
-        </div>
-       </div>
-      </div>
-      <div class="row">
-       <div class="col-md-6">
-        <div class="form-group">
-         <label for="rbmemd">
-          Physician
-         </label>
-         <input class="form-control" id="rbmemd" name="rbmemd"/>
-        </div>
-       </div>
-       <div class="col-md-6">
-        <div class="row">
-         <div class="form-group col-md-6">
-          <label for="rbmemdp">
-           Physician's phone
+       <div class="row">
+        <div class="col-md-6">
+         <div class="form-group">
+          <label for="rbmel">
+           Location of procedure
           </label>
-          <input class="form-control" id="rbmemdp" name="rbmemdp"/>
+          <input class="form-control" id="rbmel" name="rbmel"/>
          </div>
-         <div class="form-group col-md-6">
-          <label for="rbmemdf">
-           Physician's fax
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <div class="form-group">
+          <label for="rbmemd">
+           Physician
           </label>
-          <input class="form-control" id="rbmemdf" name="rbmemdf"/>
+          <input class="form-control" id="rbmemd" name="rbmemd"/>
+         </div>
+        </div>
+        <div class="col-md-6">
+         <div class="row">
+          <div class="form-group col-md-6">
+           <label for="rbmemdp">
+            Physician's phone
+           </label>
+           <input class="form-control" id="rbmemdp" name="rbmemdp"/>
+          </div>
+          <div class="form-group col-md-6">
+           <label for="rbmemdf">
+            Physician's fax
+           </label>
+           <input class="form-control" id="rbmemdf" name="rbmemdf"/>
+          </div>
          </div>
         </div>
        </div>
@@ -971,23 +849,8 @@
        </div>
       </div>
       <div class="row">
-       <div class="col-md-6">
-        <label>
-         Was there a conversion of VATS to open?
-        </label>
-        <div class="form-group form-inline">
-         <label class="radio-inline" for="rbvto-n">
-          <input id="rbvto-n" name="rbvto" required="required" type="radio" value="n"/>
-          No
-         </label>
-         <label class="radio-inline" for="rbvto-y">
-          <input id="rbvto-y" name="rbvto" required="required" type="radio" value="y"/>
-          Yes
-         </label>
-        </div>
-       </div>
-       <div id="rbvto-container">
-        <div class="col-md-2">
+       <div>
+        <div class="col-md-3">
          <div class="form-group">
           <label for="rbexs">
            Extent of surgery
@@ -1017,13 +880,38 @@
           </select>
          </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3 col-md-offset-3">
          <div class="form-group">
           <label for="rbexss">
            Extent (specify)
           </label>
           <input class="form-control" id="rbexss" name="rbexss" size="24" type="text"/>
          </div>
+        </div>
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-md-6">
+        <label>
+         Was there a conversion of VATS to open?
+        </label>
+        <div class="form-group form-inline">
+         <label class="radio-inline" for="rbvto-n">
+          <input id="rbvto-n" name="rbvto" required="required" type="radio" value="n"/>
+          No
+         </label>
+         <label class="radio-inline" for="rbvto-y">
+          <input id="rbvto-y" name="rbvto" required="required" type="radio" value="y"/>
+          Yes
+         </label>
+        </div>
+       </div>
+       <div class="col-md-6">
+        <div class="form-group">
+         <label for="rbrasc">
+          Comments
+         </label>
+         <textarea class="form-control" cols="64" id="rbvtoc" name="rbvtoc" rows="3"></textarea>
         </div>
        </div>
       </div>
@@ -1286,6 +1174,10 @@
          Pathology tumor size (mm)
         </label>
         <div class="form-group form-inline">
+         <label for="rbtsl">
+          Length
+         </label>
+         <input class="form-control numeric" id="rbtsl" name="rbtsl" size="4"/>
          <label for="rbtsw">
           Width
          </label>
@@ -3132,138 +3024,6 @@
           MX
          </option>
         </select>
-       </div>
-      </div>
-      <div class="row">
-       <div class="col-md-7">
-        <div class="form-group">
-         <label for="rbpst8m">
-          Post-surgical TNM status (8th Edition Modified)
-         </label>
-         <div class="form-inline">
-          <select class="form-control" id="rbpst8m" name="rbpst8m">
-           <option value="-">
-            -
-           </option>
-           <option value="0">
-            T0
-           </option>
-           <option value="is">
-            Tis
-           </option>
-           <option value="1am">
-            T1a mi
-           </option>
-           <option value="1as">
-            T1a SS
-           </option>
-           <option value="1a1">
-            T1a
-           </option>
-           <option value="1b">
-            T1b
-           </option>
-           <option value="1c">
-            T1c
-           </option>
-           <option value="2v">
-            T2 Visc Pl
-           </option>
-           <option value="2c">
-            T2 Centr
-           </option>
-           <option value="2a">
-            T2a
-           </option>
-           <option value="2b">
-            T2b
-           </option>
-           <option value="3">
-            T3
-           </option>
-           <option value="3i">
-            T3 Inv
-           </option>
-           <option value="3s">
-            T3 Satell
-           </option>
-           <option value="4">
-            T4
-           </option>
-           <option value="4i">
-            T4 Inv
-           </option>
-           <option value="4n">
-            T4 Ipsi Nod
-           </option>
-           <option value="x">
-            TX
-           </option>
-          </select>
-          <label class="aria-hidden" for="rbpsn8m">
-           N Status
-          </label>
-          <select class="form-control" id="rbpsn8m" name="rbpsn8m">
-           <option value="-">
-            -
-           </option>
-           <option value="0">
-            N0
-           </option>
-           <option value="1">
-            N1
-           </option>
-           <option value="2">
-            N2
-           </option>
-           <option value="3">
-            N3
-           </option>
-           <option value="X">
-            NX
-           </option>
-          </select>
-          <label class="aria-hidden" for="rbpsm8m">
-           M Status
-          </label>
-          <select class="form-control" id="rbpsm8m" name="rbpsm8m">
-           <option value="-">
-            -
-           </option>
-           <option value="0">
-            M0
-           </option>
-           <option value="1ap">
-            M1a Pl Dissem
-           </option>
-           <option value="1ac">
-            M1a Contr Nod
-           </option>
-           <option value="1b">
-            M1b Single
-           </option>
-           <option value="1c">
-            M1c Multi
-           </option>
-           <option value="X">
-            MX
-           </option>
-          </select>
-          <label class="checkbox-inline">
-           <input name="rbpsx8m" type="hidden" value=""/>
-           <input id="rbpsx8m" name="rbpsx8m" type="checkbox" value="y"/>
-           not applicable
-          </label>
-         </div>
-        </div>
-       </div>
-       <div class="col-md-5" id="rbpsx8m-container">
-        <div class="form-group">
-         <label for="rbpsxs8m">
-          Specify
-         </label>
-         <input class="form-control" id="rbpsxs8m" name="rbpsxs8m"/>
-        </div>
        </div>
       </div>
       <div class="row">
@@ -12574,46 +12334,7 @@
      </script>
     </div>
     <hr/>
-    <div id="intervention">
-     <h3>
-      Summary of interventions for this malignancy
-     </h3>
-     <div class="row">
-      <div class="col-sm-3 form-group">
-       <label for="rbdos">
-        First intervention
-       </label>
-       <div class="input-group datepicker">
-        <input aria-describedby="rbdos-addon" class="form-control" data-restriction="past" id="rbdos" name="rbdos"/>
-        <div class="input-group-addon">
-         <div class="input-group-text" id="rbdos-addon">
-          <i aria-hidden="true" class="fa fa-calendar">
-          </i>
-         </div>
-        </div>
-       </div>
-       <small class="form-text text-muted">
-        MM/DD/YYYY
-       </small>
-      </div>
-      <div class="col-sm-3 form-group">
-       <label for="rbdmr">
-        Most recent intervention
-       </label>
-       <div class="input-group datepicker">
-        <input aria-describedby="rbdmr-addon" class="form-control" data-restriction="past" id="rbdmr" name="rbdmr"/>
-        <div class="input-group-addon">
-         <div class="input-group-text" id="rbdmr-addon">
-          <i aria-hidden="true" class="fa fa-calendar">
-          </i>
-         </div>
-        </div>
-       </div>
-       <small class="form-text text-muted">
-        MM/DD/YYYY
-       </small>
-      </div>
-     </div>
+    <div id="follow-up" style="padding-top:8px;">
      <h3>
       Follow-Up
       <label class="small required">
@@ -13048,6 +12769,7 @@
                         rbcsx8s: {validators: {notEmpty: {message: 'Other clinical TNM status is required'}}},
                         rbcsxs8m: {validators: {notEmpty: {message: 'Other clinical TNM status is required'}}},
                         rbcsbos: {validators: {notEmpty: {message: 'Clinical staging basis is required.'}}},
+                        sbffr: {validators: {lessThan: {max: 100, message: 'Value must be less than or equal to 100'}}},
                         rbmdp: {validators: {phone: {message: 'Referring physician\'s phone is invalid', country: 'US'}}},
                         rbmdf: {validators: {phone: {message: 'Referring physician\'s fax is invalid', country: 'US'}}},
                         rbsumdp: {validators: {phone: {message: 'Treating physician\'s phone is invalid', country: 'US'}}},
@@ -13127,23 +12849,7 @@
                 fv.destroy();
             });
 
-            //hook for calculating Pulmonary function test percentage (FFR)
-            $("#sbfev1, #sbfvc").on('change', function () {
-                const fev1 = $("#sbfev1").val();
-                const fvc = $("#sbfvc").val();
-                const ffr = VAPALS.calculatePulmonaryFunction(fev1, fvc);
-                if (ffr > 0) {
-                    $("#sbffr").val(ffr);
-                    $("#ffr-value").text(ffr);
-                    $("#ffr-message").show();
-                } else {
-                    $("#sbffr").val("");
-                    $("#ffr-message").hide();
-                }
-            }).first().trigger('change');
-
             $("#rbcsx8").conditionallyEnable({enable: "#rbcsx8-container"});
-            $("#rbcsx8m").conditionallyEnable({enable: "#rbcsx8m-container"});
             $("[name=rbcsb]").conditionallyEnable({sourceValues: "o", enable: "#rbcsb-container"});
             $("[name=rbloc]").conditionallyEnable({sourceValues: "o", enable: "#rbloc-container"});
             $("[name=rbtri]").conditionallyEnable({sourceValues: "o", enable: "#rbtri-container"});
@@ -13151,7 +12857,7 @@
 
             //Surgical section
             $("[name=sbahpft]").conditionallyEnable({enable: "#sbahpft-container"});
-            $("[name=rbmep]").conditionallyDisplay({enable: "#mediastinoscopy-alert"});
+            $("[name=rbmep]").conditionallyDisplay({enable: "#mediastinoscopy-alert, #rbmep-container"});
             $("[name=rbrep]").conditionallyEnable({sourceValues: "n,r", enable: "#rbrep-container"});
             $("#rbtoso").conditionallyEnable({sourceValues: "o", enable: "#rbtoso-container"});
             $("[name=rbvto]").conditionallyEnable({enable: "#rbvto-container"});
@@ -13159,7 +12865,6 @@
             $("#rbino").conditionallyEnable({sourceValues: "o", enable: "#rbino-container"});
             $("[name=rbal]").conditionallyDisplay({enable: "#rbal-container"});
             $("[name=rbem]").conditionallyEnable({enable: "#rbem-container"});
-            $("[name=rbpsx8m]").conditionallyEnable({enable: "#rbpsx8m-container"});
             $("[name=rbpsx8]").conditionallyEnable({enable: "#rbpsx8-container"});
 
             //Radiation section
@@ -13186,6 +12891,7 @@
                 $("#surgery").toggle(val === 's');
                 $("#radiation").toggle(val === 'r');
                 $("#chemotherapy").toggle(val === 'c')
+                $("#treatment-start-label").toggle(val === 'r' || val === 'c')
             }).trigger('change');
 
             

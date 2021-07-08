@@ -25,261 +25,245 @@ FIELD NUM	QUESTION	NAME	TYPE	REQUIRED	PLACEHOLDER	VALUES	LABELS
 24	Type of specimen - Histology	bxtosh	checkbox	0		h	Histology
 25	Type of procedure - Needle biopsy	bxtopc	checkbox	0		c	Needle biopsy
 26	Type of procedure - Bronchoscopy	bxtopb	checkbox	0		b	Bronchoscopy
-27	Type of procedure - VAT	bxtopv	checkbox	0		v	VAT
-28	Type of procedure - Thoracotomy	bxtopt	checkbox	0		t	Thoracotomy
-29	Type of procedure -  Other	bxtopo	checkbox	0		o	Other (specify)
-30	Type of procedure - Other specify	bxtopos	text	1			Other
-31	Complications during biopsy	bxcp	radio	1		n;y	No;Yes
-32	Type of complication - Chest tube	bxcpct	checkbox	0		c	Chest tube
-33	Type of complication - Pneumothorax	bxcppt	checkbox	0		pt	Pneumothorax
-34	Type of complication - Pneumonectasis	bxcppn	checkbox	0		pn	Pneumonectasis
-35	Type of complication - Other	bxcpo	checkbox	0		o	Other
-36	Type of complication - Other specify	bxcpos	text	1			Other (specify)
-37	Biopsy pathology details	bxpdt	textarea	0			Biopsy pathology details
-38	Was a mediastinoscopy performed	rbmep	radio	1		n;y	No;Yes
-39	Mediastinoscopy date	rbmed	text	0			Procedure date
-40	Where was the mediastinoscopy performed	rbmel	text				Where was the mediastinoscopy performed?
-41	Mediastinoscopy lesion site - LUL	rbmllul	checkbox	0		lul	LUL
-42	Mediastinoscopy lesion site - LLL	rbmllll	checkbox	0		lll	LLL
-43	Mediastinoscopy lesion site - L hilum	rbmllh	checkbox	0		lh	L hilum
-44	Mediastinoscopy lesion site - L lingula	rbmllg	checkbox	0		lg	L lingula
-45	Mediastinoscopy lesion site - RUL	rbmlrul	checkbox	0		rul	RUL
-46	Mediastinoscopy lesion site - RML	rbmlrml	checkbox	0		rml	RML
-47	Mediastinoscopy lesion site - RLL	rbmlrll	checkbox	0		rll	RLL
-48	Mediastinoscopy lesion site - R hilum	rbmlrh	checkbox	0		rh	R hilum
-49	Mediastinoscopy lesion site - Endobronchial	rbmle	checkbox	0		e	Endobronchial
-50	Mediastinoscopy lesion site - Mediastinum	rbmlm	checkbox	0		m	Mediastinum
-51	Mediastinoscopy lesion site - Pleura	rbmlp	checkbox	0		p	Pleura
-52	Mediastinoscopy lesion site - Other	rbmlo	checkbox	0		o	Other
-53	Mediastinoscopy lesion site - Other specify	rbmls	text	1			Other (specify)
-54	Mediastinoscopy Complications during procedure	rbmec	radio	1		n;y	No;Yes
-55	Mediastinoscopy Complications during procedure specify	rbmecos	text	1			Specify
-56	Molecular Testing	rbmt	radio	1		n;y	No;Yes
-57	Molecular Testing - EGFR	rbmte	radio	1		n;neg;pos	No;Negative;Positive
-58	Molecular Testing - K-Ras	rbmtk	radio	1		n;neg;pos	No;Negative;Positive
-59	Molecular Testing - ALK	rbmta	radio	1		n;neg;pos	No;Negative;Positive
-60	Molecular Testing - Other specify	rbmtos	text	0			specify
-61	Molecular Testing - Other	rbmto	radio	1		n;neg;pos	No;Negative;Positive
-62	Is it a new nodule?  Nodule 1	cect1ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-63	Is it a new nodule?  Nodule 2	cect2ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-64	Is it a new nodule?  Nodule 3	cect3ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-65	Is it a new nodule?  Nodule 4	cect4ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-66	Is it a new nodule?  Nodule 5	cect5ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-67	Is it a new nodule?  Nodule 6	cect6ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-68	Is it a new nodule?  Nodule 7	cect7ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-69	Is it a new nodule?  Nodule 8	cect8ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-70	Is it a new nodule?  Nodule 9	cect9ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-71	Is it a new nodule?  Nodule 10	cect10ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
-72	Endobronchial? Nodule 1	cect1en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-73	Endobronchial? Nodule 2	cect2en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-74	Endobronchial? Nodule 3	cect3en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-75	Endobronchial? Nodule 4	cect4en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-76	Endobronchial? Nodule 5	cect5en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-77	Endobronchial? Nodule 6	cect6en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-78	Endobronchial? Nodule 7	cect7en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-79	Endobronchial? Nodule 8	cect8en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-80	Endobronchial? Nodule 9	cect9en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-81	Endobronchial? Nodule 10	cect10en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
-82	Most likely location? Nodule 1	cect1ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-83	Most likely location? Nodule 2	cect2ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-84	Most likely location? Nodule 3	cect3ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-85	Most likely location? Nodule 4	cect4ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-86	Most likely location? Nodule 5	cect5ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-87	Most likely location? Nodule 6	cect6ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-88	Most likely location? Nodule 7	cect7ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-89	Most likely location? Nodule 8	cect8ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-90	Most likely location? Nodule 9	cect9ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-91	Most likely location? Nodule 10	cect10ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
-92	CT Series Number Nodule 1	cect1sn	text	1			CT Series Number
-93	CT Series Number Nodule 2	cect2sn	text	1			CT Series Number
-94	CT Series Number Nodule 3	cect3sn	text	1			CT Series Number
-95	CT Series Number Nodule 4	cect4sn	text	1			CT Series Number
-96	CT Series Number Nodule 5	cect5sn	text	1			CT Series Number
-97	CT Series Number Nodule 6	cect6sn	text	1			CT Series Number
-98	CT Series Number Nodule 7	cect7sn	text	1			CT Series Number
-99	CT Series Number Nodule 8	cect8sn	text	1			CT Series Number
-100	CT Series Number Nodule 9	cect9sn	text	1			CT Series Number
-101	CT Series Number Nodule 10	cect10sn	text	1			CT Series Number
-102	Nodule seen in images CT number LOW Nodule 1	cect1inl	text	1			CT Image Number (Low)
-103	Nodule seen in images CT number HIGH Nodule 1	cect1inh	text	1			CT Image Number (High)
-104	Nodule seen in images CT number LOW Nodule 2	cect2inl	text	1			CT Image Number (Low)
-105	Nodule seen in images CT number HIGH Nodule 2	cect2inh	text	1			CT Image Number (High)
-106	Nodule seen in images CT number LOW Nodule 3	cect3inl	text	1			CT Image Number (Low)
-107	Nodule seen in images CT number HIGH Nodule 3	cect3inh	text	1			CT Image Number (High)
-108	Nodule seen in images CT number LOW Nodule 4	cect4inl	text	1			CT Image Number (Low)
-109	Nodule seen in images CT number HIGH Nodule 4	cect4inh	text	1			CT Image Number (High)
-110	Nodule seen in images CT number LOW Nodule 5	cect5inl	text	1			CT Image Number (Low)
-111	Nodule seen in images CT number HIGH Nodule 5	cect5inh	text	1			CT Image Number (High)
-112	Nodule seen in images CT number LOW Nodule 6	cect6inl	text	1			CT Image Number (Low)
-113	Nodule seen in images CT number HIGH Nodule 6	cect6inh	text	1			CT Image Number (High)
-114	Nodule seen in images CT number LOW Nodule 7	cect7inl	text	1			CT Image Number (Low)
-115	Nodule seen in images CT number HIGH Nodule 7	cect7inh	text	1			CT Image Number (High)
-116	Nodule seen in images CT number LOW Nodule 8	cect8inl	text	1			CT Image Number (Low)
-117	Nodule seen in images CT number HIGH Nodule 8	cect8inh	text	1			CT Image Number (High)
-118	Nodule seen in images CT number LOW Nodule 9	cect9inl	text	1			CT Image Number (Low)
-119	Nodule seen in images CT number HIGH Nodule 9	cect9inh	text	1			CT Image Number (High)
-120	Nodule seen in images CT number LOW Nodule 10	cect10inl	text	1			CT Image Number (Low)
-121	Nodule seen in images CT number HIGH Nodule 10	cect10inh	text	1			CT Image Number (High)
-122	Nodule status Nodule 1	cect1st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
-123	Nodule status Nodule 2	cect2st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
-124	Nodule status Nodule 3	cect3st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
-125	Nodule status Nodule 4	cect4st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
-126	Nodule status Nodule 5	cect5st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
-127	Nodule status Nodule 6	cect6st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
-128	Nodule status Nodule 7	cect7st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
-129	Nodule status Nodule 8	cect8st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
-130	Nodule status Nodule 9	cect9st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
-131	Nodule status Nodule 10	cect10st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
-132	Nodule consistency Nodule 1	cect1nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-133	Nodule consistency Nodule 2	cect2nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-134	Nodule consistency Nodule 3	cect3nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-135	Nodule consistency Nodule 4	cect4nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-136	Nodule consistency Nodule 5	cect5nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-137	Nodule consistency Nodule 6	cect6nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-138	Nodule consistency Nodule 7	cect7nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-139	Nodule consistency Nodule 8	cect8nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-140	Nodule consistency Nodule 9	cect9nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-141	Nodule consistency Nodule 10	cect10nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
-142	Length (mm) Nodule 1	cect1sl	text	1			Length (mm)
-143	Length (mm) Nodule 2	cect2sl	text	1			Length (mm)
-144	Length (mm) Nodule 3	cect3sl	text	1			Length (mm)
-145	Length (mm) Nodule 4	cect4sl	text	1			Length (mm)
-146	Length (mm) Nodule 5	cect5sl	text	1			Length (mm)
-147	Length (mm) Nodule 6	cect6sl	text	1			Length (mm)
-148	Length (mm) Nodule 7	cect7sl	text	1			Length (mm)
-149	Length (mm) Nodule 8	cect8sl	text	1			Length (mm)
-150	Length (mm) Nodule 9	cect9sl	text	1			Length (mm)
-151	Length (mm) Nodule 10	cect10sl	text	1			Length (mm)
-152	Maximum width (mm)  Nodule 1	cect1sw	text	1			Maximum Width
-153	Maximum width (mm)  Nodule 2	cect2sw	text	1			Maximum Width
-154	Maximum width (mm)  Nodule 3	cect3sw	text	1			Maximum Width
-155	Maximum width (mm)  Nodule 4	cect4sw	text	1			Maximum Width
-156	Maximum width (mm)  Nodule 5	cect5sw	text	1			Maximum Width
-157	Maximum width (mm)  Nodule 6	cect6sw	text	1			Maximum Width
-158	Maximum width (mm)  Nodule 7	cect7sw	text	1			Maximum Width
-159	Maximum width (mm)  Nodule 8	cect8sw	text	1			Maximum Width
-160	Maximum width (mm)  Nodule 9	cect9sw	text	1			Maximum Width
-161	Maximum width (mm)  Nodule 10	cect10sw	text	1			Maximum Width
-162	Height (mm) Nodule 1	cect1sh	text	0			Height
-163	Height (mm) Nodule 2	cect2sh	text	0			Height
-164	Height (mm) Nodule 3	cect3sh	text	0			Height
-165	Height (mm) Nodule 4	cect4sh	text	0			Height
-166	Height (mm) Nodule 5	cect5sh	text	0			Height
-167	Height (mm) Nodule 6	cect6sh	text	0			Height
-168	Height (mm) Nodule 7	cect7sh	text	0			Height
-169	Height (mm) Nodule 8	cect8sh	text	0			Height
-170	Height (mm) Nodule 9	cect9sh	text	0			Height
-171	Height (mm) Nodule 10	cect10sh	text	0			Height
-172	Volume (mm 3 ) Nodule 1	cect1sv	text	0			Volume
-173	Volume (mm 3 ) Nodule 2	cect2sv	text	0			Volume
-174	Volume (mm 3 ) Nodule 3	cect3sv	text	0			Volume
-175	Volume (mm 3 ) Nodule 4	cect4sv	text	0			Volume
-176	Volume (mm 3 ) Nodule 5	cect5sv	text	0			Volume
-177	Volume (mm 3 ) Nodule 6	cect6sv	text	0			Volume
-178	Volume (mm 3 ) Nodule 7	cect7sv	text	0			Volume
-179	Volume (mm 3 ) Nodule 8	cect8sv	text	0			Volume
-180	Volume (mm 3 ) Nodule 9	cect9sv	text	0			Volume
-181	Volume (mm 3 ) Nodule 10	cect10sv	text	0			Volume
-182	Solid comp. of part-solid. Nodule length. Nodule 1	cect1ssl	text	1	length		length
-183	Solid comp. of part-solid. Nodule width. Nodule 1	cect1ssw	text	1	width		width
-184	Solid comp. of part-solid. Nodule length. Nodule 2	cect2ssl	text	1			length
-185	Solid comp. of part-solid. Nodule width. Nodule 2	cect2ssw	text	1			width
-186	Solid comp. of part-solid. Nodule length. Nodule 3	cect3ssl	text	1			length
-187	Solid comp. of part-solid. Nodule width. Nodule 3	cect3ssw	text	1			width
-188	Solid comp. of part-solid. Nodule length. Nodule 4	cect4ssl	text	1			length
-189	Solid comp. of part-solid. Nodule width. Nodule 4	cect4ssw	text	1			width
-190	Solid comp. of part-solid. Nodule length. Nodule 5	cect5ssl	text	1			length
-191	Solid comp. of part-solid. Nodule width. Nodule 5	cect5ssw	text	1			width
-192	Solid comp. of part-solid. Nodule length. Nodule 6	cect6ssl	text	1			length
-193	Solid comp. of part-solid. Nodule width. Nodule 6	cect6ssw	text	1			width
-194	Solid comp. of part-solid. Nodule length. Nodule 7	cect7ssl	text	1			length
-195	Solid comp. of part-solid. Nodule width. Nodule 7	cect7ssw	text	1			width
-196	Solid comp. of part-solid. Nodule length. Nodule 8	cect8ssl	text	1			length
-197	Solid comp. of part-solid. Nodule width. Nodule 8	cect8ssw	text	1			width
-198	Solid comp. of part-solid. Nodule length. Nodule 9	cect9ssl	text	1			length
-199	Solid comp. of part-solid. Nodule width. Nodule 9	cect9ssw	text	1			width
-200	Solid comp. of part-solid. Nodule length. Nodule 10	cect10ssl	text	1			length
-201	Solid comp. of part-solid. Nodule width. Nodule 10	cect10ssw	text	1			width
-202	Smooth edges Nodule 1	cect1se	checkbox	0		y	Yes
-203	Smooth edges Nodule 2	cect2se	checkbox	0		y	Yes
-204	Smooth edges Nodule 3	cect3se	checkbox	0		y	Yes
-205	Smooth edges Nodule 4	cect4se	checkbox	0		y	Yes
-206	Smooth edges Nodule 5	cect5se	checkbox	0		y	Yes
-207	Smooth edges Nodule 6	cect6se	checkbox	0		y	Yes
-208	Smooth edges Nodule 7	cect7se	checkbox	0		y	Yes
-209	Smooth edges Nodule 8	cect8se	checkbox	0		y	Yes
-210	Smooth edges Nodule 9	cect9se	checkbox	0		y	Yes
-211	Smooth edges Nodule 10	cect10se	checkbox	0		y	Yes
-212	Calcifications Nodule 1	cect1ca	checkbox	0		y	Yes
-213	Calcifications Nodule 2	cect2ca	checkbox	0		y	Yes
-214	Calcifications Nodule 3	cect3ca	checkbox	0		y	Yes
-215	Calcifications Nodule 4	cect4ca	checkbox	0		y	Yes
-216	Calcifications Nodule 5	cect5ca	checkbox	0		y	Yes
-217	Calcifications Nodule 6	cect6ca	checkbox	0		y	Yes
-218	Calcifications Nodule 7	cect7ca	checkbox	0		y	Yes
-219	Calcifications Nodule 8	cect8ca	checkbox	0		y	Yes
-220	Calcifications Nodule 9	cect9ca	checkbox	0		y	Yes
-221	Calcifications Nodule 10	cect10ca	checkbox	0		y	Yes
-222	Index Nodule	cectin	checkbox	0		1
-223	Index Nodule Nodule 1	cect1in	checkbox	0		y	Yes
-224	Index Nodule Nodule 2	cect2in	checkbox	0		y	Yes
-225	Index Nodule Nodule 3	cect3in	checkbox	0		y	Yes
-226	Index Nodule Nodule 4	cect4in	checkbox	0		y	Yes
-227	Index Nodule Nodule 5	cect5in	checkbox	0		y	Yes
-228	Index Nodule Nodule 6	cect6in	checkbox	0		y	Yes
-229	Index Nodule Nodule 7	cect7in	checkbox	0		y	Yes
-230	Index Nodule Nodule 8	cect8in	checkbox	0		y	Yes
-231	Index Nodule Nodule 9	cect9in	checkbox	0		y	Yes
-232	Index Nodule Nodule 10	cect10in	checkbox	0		y	Yes
-233	Spiculated Nodule 1	cect1sp	checkbox	0		y	Yes
-234	Spiculated Nodule 2	cect2sp	checkbox	0		y	Yes
-235	Spiculated Nodule 3	cect3sp	checkbox	0		y	Yes
-236	Spiculated Nodule 4	cect4sp	checkbox	0		y	Yes
-237	Spiculated Nodule 5	cect5sp	checkbox	0		y	Yes
-238	Spiculated Nodule 6	cect6sp	checkbox	0		y	Yes
-239	Spiculated Nodule 7	cect7sp	checkbox	0		y	Yes
-240	Spiculated Nodule 8	cect8sp	checkbox	0		y	Yes
-241	Spiculated Nodule 9	cect9sp	checkbox	0		y	Yes
-242	Spiculated Nodule 10	cect10sp	checkbox	0		y	Yes
-243	Distance from the costal pleura (mm)? Nodule 1	cect1pld	text	0			Distance
-244	Distance from the costal pleura (mm)? Nodule 2	cect2pld	text	0			Distance
-245	Distance from the costal pleura (mm)? Nodule 3	cect3pld	text	0			Distance
-246	Distance from the costal pleura (mm)? Nodule 4	cect4pld	text	0			Distance
-247	Distance from the costal pleura (mm)? Nodule 5	cect5pld	text	0			Distance
-248	Distance from the costal pleura (mm)? Nodule 6	cect6pld	text	0			Distance
-249	Distance from the costal pleura (mm)? Nodule 7	cect7pld	text	0			Distance
-250	Distance from the costal pleura (mm)? Nodule 8	cect8pld	text	0			Distance
-251	Distance from the costal pleura (mm)? Nodule 9	cect9pld	text	0			Distance
-252	Distance from the costal pleura (mm)? Nodule 10	cect10pld	text	0			Distance
-253	Action to take.  Nodule 1	cect1ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-254	Action to take.  Nodule 2	cect2ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-255	Action to take.  Nodule 3	cect3ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-256	Action to take.  Nodule 4	cect4ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-257	Action to take.  Nodule 5	cect5ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-258	Action to take.  Nodule 6	cect6ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-259	Action to take.  Nodule 7	cect7ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-260	Action to take.  Nodule 8	cect8ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-261	Action to take.  Nodule 9	cect9ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-262	Action to take.  Nodule 10	cect10ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
-263	Comment on Nodule 1	cect1co	text	0			Comment
-264	Comment on Nodule 2	cect2co	text	0			Comment
-265	Comment on Nodule 3	cect3co	text	0			Comment
-266	Comment on Nodule 4	cect4co	text	0			Comment
-267	Comment on Nodule 5	cect5co	text	0			Comment
-268	Comment on Nodule 6	cect6co	text	0			Comment
-269	Comment on Nodule 7	cect7co	text	0			Comment
-270	Comment on Nodule 8	cect8co	text	0			Comment
-271	Comment on Nodule 9	cect9co	text	0			Comment
-272	Comment on Nodule 10	cect10co	text	0			Comment
-273	Pathologic diagnosis. Nodule 1	cect1pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-274	Pathologic diagnosis. Nodule 2	cect2pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-275	Pathologic diagnosis. Nodule 3	cect3pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-276	Pathologic diagnosis. Nodule 4	cect4pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-277	Pathologic diagnosis. Nodule 5	cect5pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-278	Pathologic diagnosis. Nodule 6	cect6pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-279	Pathologic diagnosis. Nodule 7	cect7pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-280	Pathologic diagnosis. Nodule 8	cect8pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-281	Pathologic diagnosis. Nodule 9	cect9pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-282	Pathologic diagnosis. Nodule 10	cect10pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
-283	Small non-calcified nodules are present	cectancn	checkbox	0		1	Small non-calcified nodules are present
-284	Small calcified nodules are present	cectacn	checkbox	0		1	Small calcified nodules are present
+27	Type of procedure - EBUS	bxtope	checkbox	0		e	EBUS
+28	Type of procedure - Mediastinoscopy	bxtopm	checkbox	0		m	Mediastinoscopy
+29	Type of procedure - VAT	bxtopv	checkbox	0		v	VAT
+30	Type of procedure - Thoracotomy	bxtopt	checkbox	0		t	Thoracotomy
+31	Type of procedure -  Other	bxtopo	checkbox	0		o	Other (specify)
+32	Type of procedure - Other specify	bxtopos	text	1			Other
+33	Complications during biopsy	bxcp	radio	1		n;y	No;Yes
+34	Type of complication - Chest tube	bxcpct	checkbox	0		c	Chest tube
+35	Type of complication - Pneumothorax	bxcppt	checkbox	0		pt	Pneumothorax
+36	Type of complication - Pneumonectasis	bxcppn	checkbox	0		pn	Pneumonectasis
+37	Type of complication - Other	bxcpo	checkbox	0		o	Other
+38	Type of complication - Other specify	bxcpos	text	1			Other (specify)
+39	Biopsy pathology details	bxpdt	textarea	0			Biopsy pathology details
+40	Molecular Testing	rbmt	radio	1		n;y	No;Yes
+41	Molecular Testing - EGFR	rbmte	radio	1		n;neg;pos	No;Negative;Positive
+42	Molecular Testing - K-Ras	rbmtk	radio	1		n;neg;pos	No;Negative;Positive
+43	Molecular Testing - ALK	rbmta	radio	1		n;neg;pos	No;Negative;Positive
+44	Molecular Testing - Other specify	rbmtos	text	0			specify
+45	Molecular Testing - Other	rbmto	radio	1		n;neg;pos	No;Negative;Positive
+46	Is it a new nodule?  Nodule 1	cect1ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+47	Is it a new nodule?  Nodule 2	cect2ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+48	Is it a new nodule?  Nodule 3	cect3ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+49	Is it a new nodule?  Nodule 4	cect4ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+50	Is it a new nodule?  Nodule 5	cect5ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+51	Is it a new nodule?  Nodule 6	cect6ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+52	Is it a new nodule?  Nodule 7	cect7ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+53	Is it a new nodule?  Nodule 8	cect8ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+54	Is it a new nodule?  Nodule 9	cect9ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+55	Is it a new nodule?  Nodule 10	cect10ch	select-one	0		-;n;pn;pd;pe;pi;pj;po;pw;px;pr;rn;rd;ri;rj;pk;pv	"-;Newly seen;Prev seen, no change;Prev seen, slight decr;Prev seen, marked decr;Prev seen, slight incr;Prev seen, marked incr;Prev seen, obscured;Prev seen, resolved;Prev seen, not a nodule;Prev seen, resected;Retrospect, no chg;Retrospect, decrease;Retrospect, slight incr;Retrospect, marked incr;Not in outside report;Not included in scan"
+56	Endobronchial? Nodule 1	cect1en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+57	Endobronchial? Nodule 2	cect2en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+58	Endobronchial? Nodule 3	cect3en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+59	Endobronchial? Nodule 4	cect4en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+60	Endobronchial? Nodule 5	cect5en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+61	Endobronchial? Nodule 6	cect6en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+62	Endobronchial? Nodule 7	cect7en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+63	Endobronchial? Nodule 8	cect8en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+64	Endobronchial? Nodule 9	cect9en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+65	Endobronchial? Nodule 10	cect10en	select-one	0		-;no;tr;rm;lm;bi;rul;rml;rll;lul;lll	-;No;Trachea;Rt. Main;Lt. Main;BI;RUL;RML;RLL;LUL;LLL
+66	Most likely location? Nodule 1	cect1ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+67	Most likely location? Nodule 2	cect2ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+68	Most likely location? Nodule 3	cect3ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+69	Most likely location? Nodule 4	cect4ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+70	Most likely location? Nodule 5	cect5ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+71	Most likely location? Nodule 6	cect6ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+72	Most likely location? Nodule 7	cect7ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+73	Most likely location? Nodule 8	cect8ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+74	Most likely location? Nodule 9	cect9ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+75	Most likely location? Nodule 10	cect10ll	select-one	0		-;end;lul;lll;rul;rml;rll	-;Endobr;LUL;LLL;RUL;RML;RLL
+76	CT Series Number Nodule 1	cect1sn	text	1			CT Series Number
+77	CT Series Number Nodule 2	cect2sn	text	1			CT Series Number
+78	CT Series Number Nodule 3	cect3sn	text	1			CT Series Number
+79	CT Series Number Nodule 4	cect4sn	text	1			CT Series Number
+80	CT Series Number Nodule 5	cect5sn	text	1			CT Series Number
+81	CT Series Number Nodule 6	cect6sn	text	1			CT Series Number
+82	CT Series Number Nodule 7	cect7sn	text	1			CT Series Number
+83	CT Series Number Nodule 8	cect8sn	text	1			CT Series Number
+84	CT Series Number Nodule 9	cect9sn	text	1			CT Series Number
+85	CT Series Number Nodule 10	cect10sn	text	1			CT Series Number
+86	Nodule seen in images CT number LOW Nodule 1	cect1inl	text	1			CT Image Number (Low)
+87	Nodule seen in images CT number HIGH Nodule 1	cect1inh	text	1			CT Image Number (High)
+88	Nodule seen in images CT number LOW Nodule 2	cect2inl	text	1			CT Image Number (Low)
+89	Nodule seen in images CT number HIGH Nodule 2	cect2inh	text	1			CT Image Number (High)
+90	Nodule seen in images CT number LOW Nodule 3	cect3inl	text	1			CT Image Number (Low)
+91	Nodule seen in images CT number HIGH Nodule 3	cect3inh	text	1			CT Image Number (High)
+92	Nodule seen in images CT number LOW Nodule 4	cect4inl	text	1			CT Image Number (Low)
+93	Nodule seen in images CT number HIGH Nodule 4	cect4inh	text	1			CT Image Number (High)
+94	Nodule seen in images CT number LOW Nodule 5	cect5inl	text	1			CT Image Number (Low)
+95	Nodule seen in images CT number HIGH Nodule 5	cect5inh	text	1			CT Image Number (High)
+96	Nodule seen in images CT number LOW Nodule 6	cect6inl	text	1			CT Image Number (Low)
+97	Nodule seen in images CT number HIGH Nodule 6	cect6inh	text	1			CT Image Number (High)
+98	Nodule seen in images CT number LOW Nodule 7	cect7inl	text	1			CT Image Number (Low)
+99	Nodule seen in images CT number HIGH Nodule 7	cect7inh	text	1			CT Image Number (High)
+100	Nodule seen in images CT number LOW Nodule 8	cect8inl	text	1			CT Image Number (Low)
+101	Nodule seen in images CT number HIGH Nodule 8	cect8inh	text	1			CT Image Number (High)
+102	Nodule seen in images CT number LOW Nodule 9	cect9inl	text	1			CT Image Number (Low)
+103	Nodule seen in images CT number HIGH Nodule 9	cect9inh	text	1			CT Image Number (High)
+104	Nodule seen in images CT number LOW Nodule 10	cect10inl	text	1			CT Image Number (Low)
+105	Nodule seen in images CT number HIGH Nodule 10	cect10inh	text	1			CT Image Number (High)
+106	Nodule status Nodule 1	cect1st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
+107	Nodule status Nodule 2	cect2st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
+108	Nodule status Nodule 3	cect3st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
+109	Nodule status Nodule 4	cect4st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
+110	Nodule status Nodule 5	cect5st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
+111	Nodule status Nodule 6	cect6st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
+112	Nodule status Nodule 7	cect7st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
+113	Nodule status Nodule 8	cect8st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
+114	Nodule status Nodule 9	cect9st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
+115	Nodule status Nodule 10	cect10st	select-one	0		-;un;bc;pc;re;rg;tn;pp;pn;pi;ub;bb;mb;ab;om;mr;br	"-;Unknown;Benign (Ca++);Prob benign, prob Ca++;Resolved;Resolving;No change - 2 yrs;PET - positive;PET - negative;PET - indeterminate;Biopsy - unknown;Biopsy - benign;Biopsy - malignant;Biopsy - atyp bronch prolif;Biopsy - metastatic;Resected - malignant;Resected - benign"
+116	Nodule consistency Nodule 1	cect1nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+117	Nodule consistency Nodule 2	cect2nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+118	Nodule consistency Nodule 3	cect3nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+119	Nodule consistency Nodule 4	cect4nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+120	Nodule consistency Nodule 5	cect5nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+121	Nodule consistency Nodule 6	cect6nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+122	Nodule consistency Nodule 7	cect7nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+123	Nodule consistency Nodule 8	cect8nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+124	Nodule consistency Nodule 9	cect9nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+125	Nodule consistency Nodule 10	cect10nt	select-one	0		-;s;m;g;o	-;Solid;Part-solid;Nonsolid;Other (see comment)
+126	Length (mm) Nodule 1	cect1sl	text	1			Length (mm)
+127	Length (mm) Nodule 2	cect2sl	text	1			Length (mm)
+128	Length (mm) Nodule 3	cect3sl	text	1			Length (mm)
+129	Length (mm) Nodule 4	cect4sl	text	1			Length (mm)
+130	Length (mm) Nodule 5	cect5sl	text	1			Length (mm)
+131	Length (mm) Nodule 6	cect6sl	text	1			Length (mm)
+132	Length (mm) Nodule 7	cect7sl	text	1			Length (mm)
+133	Length (mm) Nodule 8	cect8sl	text	1			Length (mm)
+134	Length (mm) Nodule 9	cect9sl	text	1			Length (mm)
+135	Length (mm) Nodule 10	cect10sl	text	1			Length (mm)
+136	Maximum width (mm)  Nodule 1	cect1sw	text	1			Maximum Width
+137	Maximum width (mm)  Nodule 2	cect2sw	text	1			Maximum Width
+138	Maximum width (mm)  Nodule 3	cect3sw	text	1			Maximum Width
+139	Maximum width (mm)  Nodule 4	cect4sw	text	1			Maximum Width
+140	Maximum width (mm)  Nodule 5	cect5sw	text	1			Maximum Width
+141	Maximum width (mm)  Nodule 6	cect6sw	text	1			Maximum Width
+142	Maximum width (mm)  Nodule 7	cect7sw	text	1			Maximum Width
+143	Maximum width (mm)  Nodule 8	cect8sw	text	1			Maximum Width
+144	Maximum width (mm)  Nodule 9	cect9sw	text	1			Maximum Width
+145	Maximum width (mm)  Nodule 10	cect10sw	text	1			Maximum Width
+146	Height (mm) Nodule 1	cect1sh	text	0			Height
+147	Height (mm) Nodule 2	cect2sh	text	0			Height
+148	Height (mm) Nodule 3	cect3sh	text	0			Height
+149	Height (mm) Nodule 4	cect4sh	text	0			Height
+150	Height (mm) Nodule 5	cect5sh	text	0			Height
+151	Height (mm) Nodule 6	cect6sh	text	0			Height
+152	Height (mm) Nodule 7	cect7sh	text	0			Height
+153	Height (mm) Nodule 8	cect8sh	text	0			Height
+154	Height (mm) Nodule 9	cect9sh	text	0			Height
+155	Height (mm) Nodule 10	cect10sh	text	0			Height
+156	Volume (mm 3 ) Nodule 1	cect1sv	text	0			Volume
+157	Volume (mm 3 ) Nodule 2	cect2sv	text	0			Volume
+158	Volume (mm 3 ) Nodule 3	cect3sv	text	0			Volume
+159	Volume (mm 3 ) Nodule 4	cect4sv	text	0			Volume
+160	Volume (mm 3 ) Nodule 5	cect5sv	text	0			Volume
+161	Volume (mm 3 ) Nodule 6	cect6sv	text	0			Volume
+162	Volume (mm 3 ) Nodule 7	cect7sv	text	0			Volume
+163	Volume (mm 3 ) Nodule 8	cect8sv	text	0			Volume
+164	Volume (mm 3 ) Nodule 9	cect9sv	text	0			Volume
+165	Volume (mm 3 ) Nodule 10	cect10sv	text	0			Volume
+166	Solid comp. of part-solid. Nodule length. Nodule 1	cect1ssl	text	1	length		length
+167	Solid comp. of part-solid. Nodule width. Nodule 1	cect1ssw	text	1	width		width
+168	Solid comp. of part-solid. Nodule length. Nodule 2	cect2ssl	text	1			length
+169	Solid comp. of part-solid. Nodule width. Nodule 2	cect2ssw	text	1			width
+170	Solid comp. of part-solid. Nodule length. Nodule 3	cect3ssl	text	1			length
+171	Solid comp. of part-solid. Nodule width. Nodule 3	cect3ssw	text	1			width
+172	Solid comp. of part-solid. Nodule length. Nodule 4	cect4ssl	text	1			length
+173	Solid comp. of part-solid. Nodule width. Nodule 4	cect4ssw	text	1			width
+174	Solid comp. of part-solid. Nodule length. Nodule 5	cect5ssl	text	1			length
+175	Solid comp. of part-solid. Nodule width. Nodule 5	cect5ssw	text	1			width
+176	Solid comp. of part-solid. Nodule length. Nodule 6	cect6ssl	text	1			length
+177	Solid comp. of part-solid. Nodule width. Nodule 6	cect6ssw	text	1			width
+178	Solid comp. of part-solid. Nodule length. Nodule 7	cect7ssl	text	1			length
+179	Solid comp. of part-solid. Nodule width. Nodule 7	cect7ssw	text	1			width
+180	Solid comp. of part-solid. Nodule length. Nodule 8	cect8ssl	text	1			length
+181	Solid comp. of part-solid. Nodule width. Nodule 8	cect8ssw	text	1			width
+182	Solid comp. of part-solid. Nodule length. Nodule 9	cect9ssl	text	1			length
+183	Solid comp. of part-solid. Nodule width. Nodule 9	cect9ssw	text	1			width
+184	Solid comp. of part-solid. Nodule length. Nodule 10	cect10ssl	text	1			length
+185	Solid comp. of part-solid. Nodule width. Nodule 10	cect10ssw	text	1			width
+186	Smooth edges Nodule 1	cect1se	checkbox	0		y	Yes
+187	Smooth edges Nodule 2	cect2se	checkbox	0		y	Yes
+188	Smooth edges Nodule 3	cect3se	checkbox	0		y	Yes
+189	Smooth edges Nodule 4	cect4se	checkbox	0		y	Yes
+190	Smooth edges Nodule 5	cect5se	checkbox	0		y	Yes
+191	Smooth edges Nodule 6	cect6se	checkbox	0		y	Yes
+192	Smooth edges Nodule 7	cect7se	checkbox	0		y	Yes
+193	Smooth edges Nodule 8	cect8se	checkbox	0		y	Yes
+194	Smooth edges Nodule 9	cect9se	checkbox	0		y	Yes
+195	Smooth edges Nodule 10	cect10se	checkbox	0		y	Yes
+196	Calcifications Nodule 1	cect1ca	checkbox	0		y	Yes
+197	Calcifications Nodule 2	cect2ca	checkbox	0		y	Yes
+198	Calcifications Nodule 3	cect3ca	checkbox	0		y	Yes
+199	Calcifications Nodule 4	cect4ca	checkbox	0		y	Yes
+200	Calcifications Nodule 5	cect5ca	checkbox	0		y	Yes
+201	Calcifications Nodule 6	cect6ca	checkbox	0		y	Yes
+202	Calcifications Nodule 7	cect7ca	checkbox	0		y	Yes
+203	Calcifications Nodule 8	cect8ca	checkbox	0		y	Yes
+204	Calcifications Nodule 9	cect9ca	checkbox	0		y	Yes
+205	Calcifications Nodule 10	cect10ca	checkbox	0		y	Yes
+206	Index Nodule	cectin	checkbox	0		1	
+207	Index Nodule Nodule 1	cect1in	checkbox	0		y	Yes
+208	Index Nodule Nodule 2	cect2in	checkbox	0		y	Yes
+209	Index Nodule Nodule 3	cect3in	checkbox	0		y	Yes
+210	Index Nodule Nodule 4	cect4in	checkbox	0		y	Yes
+211	Index Nodule Nodule 5	cect5in	checkbox	0		y	Yes
+212	Index Nodule Nodule 6	cect6in	checkbox	0		y	Yes
+213	Index Nodule Nodule 7	cect7in	checkbox	0		y	Yes
+214	Index Nodule Nodule 8	cect8in	checkbox	0		y	Yes
+215	Index Nodule Nodule 9	cect9in	checkbox	0		y	Yes
+216	Index Nodule Nodule 10	cect10in	checkbox	0		y	Yes
+217	Spiculated Nodule 1	cect1sp	checkbox	0		y	Yes
+218	Spiculated Nodule 2	cect2sp	checkbox	0		y	Yes
+219	Spiculated Nodule 3	cect3sp	checkbox	0		y	Yes
+220	Spiculated Nodule 4	cect4sp	checkbox	0		y	Yes
+221	Spiculated Nodule 5	cect5sp	checkbox	0		y	Yes
+222	Spiculated Nodule 6	cect6sp	checkbox	0		y	Yes
+223	Spiculated Nodule 7	cect7sp	checkbox	0		y	Yes
+224	Spiculated Nodule 8	cect8sp	checkbox	0		y	Yes
+225	Spiculated Nodule 9	cect9sp	checkbox	0		y	Yes
+226	Spiculated Nodule 10	cect10sp	checkbox	0		y	Yes
+227	Distance from the costal pleura (mm)? Nodule 1	cect1pld	text	0			Distance
+228	Distance from the costal pleura (mm)? Nodule 2	cect2pld	text	0			Distance
+229	Distance from the costal pleura (mm)? Nodule 3	cect3pld	text	0			Distance
+230	Distance from the costal pleura (mm)? Nodule 4	cect4pld	text	0			Distance
+231	Distance from the costal pleura (mm)? Nodule 5	cect5pld	text	0			Distance
+232	Distance from the costal pleura (mm)? Nodule 6	cect6pld	text	0			Distance
+233	Distance from the costal pleura (mm)? Nodule 7	cect7pld	text	0			Distance
+234	Distance from the costal pleura (mm)? Nodule 8	cect8pld	text	0			Distance
+235	Distance from the costal pleura (mm)? Nodule 9	cect9pld	text	0			Distance
+236	Distance from the costal pleura (mm)? Nodule 10	cect10pld	text	0			Distance
+237	Action to take.  Nodule 1	cect1ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+238	Action to take.  Nodule 2	cect2ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+239	Action to take.  Nodule 3	cect3ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+240	Action to take.  Nodule 4	cect4ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+241	Action to take.  Nodule 5	cect5ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+242	Action to take.  Nodule 6	cect6ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+243	Action to take.  Nodule 7	cect7ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+244	Action to take.  Nodule 8	cect8ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+245	Action to take.  Nodule 9	cect9ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+246	Action to take.  Nodule 10	cect10ac	select-one	0		-;s;f;a;e;c;b;p;r	-;Annual repeat CT;Follow-up CT;Abx + follow-up CT;PET;CT w contrast;CT-guided biopsy;Bronchoscopy;Resection
+247	Comment on Nodule 1	cect1co	text	0			Comment
+248	Comment on Nodule 2	cect2co	text	0			Comment
+249	Comment on Nodule 3	cect3co	text	0			Comment
+250	Comment on Nodule 4	cect4co	text	0			Comment
+251	Comment on Nodule 5	cect5co	text	0			Comment
+252	Comment on Nodule 6	cect6co	text	0			Comment
+253	Comment on Nodule 7	cect7co	text	0			Comment
+254	Comment on Nodule 8	cect8co	text	0			Comment
+255	Comment on Nodule 9	cect9co	text	0			Comment
+256	Comment on Nodule 10	cect10co	text	0			Comment
+257	Pathologic diagnosis. Nodule 1	cect1pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+258	Pathologic diagnosis. Nodule 2	cect2pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+259	Pathologic diagnosis. Nodule 3	cect3pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+260	Pathologic diagnosis. Nodule 4	cect4pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+261	Pathologic diagnosis. Nodule 5	cect5pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+262	Pathologic diagnosis. Nodule 6	cect6pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+263	Pathologic diagnosis. Nodule 7	cect7pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+264	Pathologic diagnosis. Nodule 8	cect8pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+265	Pathologic diagnosis. Nodule 9	cect9pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+266	Pathologic diagnosis. Nodule 10	cect10pd	select-one	0		-;aa;ap;ai;mi;ns;ad;as;la;sq;sm;ct;ca;be;bs;os	-For Pathology Use Only-;AAH;Atyp bronch prolif;AIS;MIA;Unspec. non-small cell;Adenocarcinoma;Adenosquamous;Large cell;Squamous cell;Small cell;Carcinoid - typical;Carcinoid - atypical;Not malignant;Benign specific;Other (specify)
+267	Small non-calcified nodules are present	cectancn	checkbox	0		1	Small non-calcified nodules are present
+268	Small calcified nodules are present	cectacn	checkbox	0		1	Small calcified nodules are present
