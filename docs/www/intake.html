@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-  <meta content="2021.07.06" name="version"/>
+  <meta content="2021.07.08" name="version"/>
   <meta content="Domenic DiNatale, domenic.dinatale@paraxialtech.com" name="author"/>
   <title>
    @@SITETITLE@@: Lung Screening Intake Form
@@ -61,17 +61,17 @@
   </script>
   <script src="lib/chart-js-2.9.3/chartjs-plugin-datalabels.min.js">
   </script>
-  <script src="jquery-conditonally-enable.js?v=2021.07.06">
+  <script src="jquery-conditonally-enable.js?v=2021.07.08">
   </script>
-  <script src="jquery-conditonally-display.js?v=2021.07.06">
+  <script src="jquery-conditonally-display.js?v=2021.07.08">
   </script>
-  <script src="jqueryui-vista-filemanAutocomplete.js?v=2021.07.06">
+  <script src="jqueryui-vista-filemanAutocomplete.js?v=2021.07.08">
   </script>
-  <script src="vapals.js?v=2021.07.06">
+  <script src="vapals.js?v=2021.07.08">
   </script>
-  <script src="init.js?v=2021.07.06">
+  <script src="init.js?v=2021.07.08">
   </script>
-  <script src="nodule-grid.js?v=2021.07.06">
+  <script src="nodule-grid.js?v=2021.07.08">
   </script>
   <!--System Navigation-->
   <nav class="navbar navbar-default" role="navigation">
@@ -350,7 +350,7 @@
        <div class="panel panel-default" id="reason-container" style="display:none;">
         <div class="alert alert-warning" style="margin-bottom: 0;border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
          Indicate one or more reasons why the participant is not eligible for lung screening. No
-                            intake note will be generated.
+                                intake note will be generated.
         </div>
         <div class="panel-body">
          <div class="form-group form-group-sm form-inline">
@@ -496,8 +496,9 @@
        </div>
        <div class="col-sm-8 col-md-9 form-group">
         <label class="required">
-         The lung screening program reached the participant or was contacted via
-                            (check all that apply)?
+         The lung screening program reached the participant or was contacted
+                                via
+                                (check all that apply)?
         </label>
         <div class="checkbox">
          <label>
@@ -632,7 +633,7 @@
       <div class="col-sm-8 col-md-9 form-group">
        <label class="doc-heading required">
         The lung screening program reached the participant or was
-                        contacted via (check all that apply):
+                            contacted via (check all that apply):
        </label>
        <div class="checkbox">
         <label>
@@ -1082,17 +1083,23 @@
           Discussion complete
          </label>
          <p class="alert alert-warning" id="siidmdc-affirmation">
-          Veteran of age and exposure to cigarette smoke as described above, and without a current
-                                diagnosis or obvious symptoms suggestive of lung cancer, has been educated today about
-                                the estimated risk for lung cancer, the possibility of a cure or life prolonging if an
-                                early lung cancer were to be found during screening, the possibility of imaging
-                                abnormalities not being lung cancer, the possibility of complications from additional
-                                diagnostic procedures, and the approximate amount of radiation exposure associated with
-                                each screening procedure. In addition, the Veteran has been educated today about the
-                                importance of adhering to annual lung screening, the possible impact of other medical
-                                conditions on the overall health status, the importance of avoiding exposure to
-                                cigarette smoke, available tobacco cessation programs and available lung screening
-                                services at this VA facility. Education material was provided to the Veteran.
+          Veteran of age and exposure to cigarette smoke as described above, and without a
+                                    current
+                                    diagnosis or obvious symptoms suggestive of lung cancer, has been educated today
+                                    about
+                                    the estimated risk for lung cancer, the possibility of a cure or life prolonging if
+                                    an
+                                    early lung cancer were to be found during screening, the possibility of imaging
+                                    abnormalities not being lung cancer, the possibility of complications from
+                                    additional
+                                    diagnostic procedures, and the approximate amount of radiation exposure associated
+                                    with
+                                    each screening procedure. In addition, the Veteran has been educated today about the
+                                    importance of adhering to annual lung screening, the possible impact of other
+                                    medical
+                                    conditions on the overall health status, the importance of avoiding exposure to
+                                    cigarette smoke, available tobacco cessation programs and available lung screening
+                                    services at this VA facility. Education material was provided to the Veteran.
           <br/>
          </p>
         </div>
@@ -1119,7 +1126,7 @@
          <label>
           <input id="sildct-y" name="sildct" type="radio" value="y"/>
           Enroll in the Lung Screening program and have an LDCT ordered.
-                                Coordination of care will be made by the team
+                                    Coordination of care will be made by the team
          </label>
         </div>
        </div>
@@ -1237,6 +1244,9 @@
          <option value="cost">
           Burden of cost
          </option>
+         <option value="deceased">
+          Deceased
+         </option>
          <option value="other">
           Other (specify)
          </option>
@@ -1256,6 +1266,25 @@
           Being followed elsewhere (get results)
          </option>
         </select>
+       </div>
+      </div>
+      <div class="row" id="date-of-death-container">
+       <div class="col-md-4 form-group">
+        <label class="required" for="sidod">
+         Date of death
+        </label>
+        <div class="input-group datepicker">
+         <input aria-describedby="sidod-addon" class="form-control" data-restriction="past" id="sidod" name="sidod" required="required"/>
+         <div class="input-group-addon">
+          <div class="input-group-text" id="sidod-addon">
+           <i aria-hidden="true" class="fa fa-calendar">
+           </i>
+          </div>
+         </div>
+        </div>
+        <small class="form-text text-muted">
+         MM/DD/YYYY
+        </small>
        </div>
       </div>
       <div class="row">
@@ -1334,7 +1363,7 @@
     <span id="sami-version" style="float:right; font-family: Courier,monospace">
      <span id="formMode">
      </span>
-     2021.07.06
+     2021.07.08
     </span>
    </div>
   </footer>
@@ -1496,435 +1525,442 @@
   </script>
   <script>
    //NB: intentionally executed before DOM is rendered so section is never visible
-    const newForm = "@@NEWFORM@@";
-    const chartEligibilityNoteExists = "@@CHART_ELIGIBILITY_NOTE_EXISTS@@" === "true" || "@@PRE_ENROLLMENT_NOTE_EXISTS@@" === "true" || "@@INTAKE_NOTE_EXISTS@@" === "true";
-    const preEnrollmentNoteExists = "@@PRE_ENROLLMENT_NOTE_EXISTS@@" === "true" || "@@INTAKE_NOTE_EXISTS@@" === "true";
+        const newForm = "@@NEWFORM@@";
+        const chartEligibilityNoteExists = "@@CHART_ELIGIBILITY_NOTE_EXISTS@@" === "true" || "@@PRE_ENROLLMENT_NOTE_EXISTS@@" === "true" || "@@INTAKE_NOTE_EXISTS@@" === "true";
+        const preEnrollmentNoteExists = "@@PRE_ENROLLMENT_NOTE_EXISTS@@" === "true" || "@@INTAKE_NOTE_EXISTS@@" === "true";
 
-    //NB: intentionally evaluated here, before DOM is manipulated
-    const eligible = $("[name=sicechrt]:checked").val();
-    const enrolledVal = $("[name=sildct]:checked").val() || $("#sildct").val(); //visible checkbox or hidden field value
-    const enrolled = enrolledVal === "y";
+        //NB: intentionally evaluated here, before DOM is manipulated
+        const eligible = $("[name=sicechrt]:checked").val();
+        const enrolledVal = $("[name=sildct]:checked").val() || $("#sildct").val(); //visible checkbox or hidden field value
+        const enrolled = enrolledVal === "y";
 
-    if (newForm === "true") {
-        $("#reason-for-change-container").remove();
-        $("#change-log-container").remove();
-    }
+        if (newForm === "true") {
+            $("#reason-for-change-container").remove();
+            $("#change-log-container").remove();
+        }
 
 
-    if (chartEligibilityNoteExists) {
-        let notice = "";
-        let noticeClass = "alert-info";
+        if (chartEligibilityNoteExists) {
+            let notice = "";
+            let noticeClass = "alert-info";
 
-        if (eligible === 'y' || eligible === 'n') { //NB: question was answered
-            $("#chart-eligibility").html("");
-            if (eligible === 'y') {
-                notice += "Previously considered to be <em>eligible</em> based on a chart review.";
-            } else if (eligible === 'n') {
-                notice += "Previously considered <strong>ineligible<strong> during a chart review. Refer to eligibility note for details.";
-                noticeClass = "alert-warning";
+            if (eligible === 'y' || eligible === 'n') { //NB: question was answered
+                $("#chart-eligibility").html("");
+                if (eligible === 'y') {
+                    notice += "Previously considered to be <em>eligible</em> based on a chart review.";
+                } else if (eligible === 'n') {
+                    notice += "Previously considered <strong>ineligible<strong> during a chart review. Refer to eligibility note for details.";
+                    noticeClass = "alert-warning";
+                }
+            }
+
+            if (preEnrollmentNoteExists) {
+                const discussionHeldValue = $("[name=sipedisc]:checked").val();
+                if (discussionHeldValue === 'y') {
+                    notice += "<br/><br/>";
+                    notice += "A pre-enrollment discussion was held with the participant";
+
+                    const discussionDateValue = $("#sipedc").val();
+                    if (discussionDateValue) {
+                        notice += " on " + discussionDateValue;
+                    }
+                    notice += ".";
+
+                    const discussionResultDesc = $("[name=siperslt]:checked").parent("label").text().trim();
+                    if (discussionResultDesc) {
+                        notice += " The result of that discussion was \"" + discussionResultDesc + "\"";
+                    }
+
+                    $("#pre-enrollment-discussion").html(""); //clear out the HTML regardless of value
+                }
+            }
+
+            //now add the note to the DOM:
+            if (notice !== "") {
+                const $preSection = $("#chart-eligibility");
+                const $preRow = $('<div class="row"></div>');
+                const $preCol = $('<div class="col-lg-8 col-md-12"></div>');
+                const $alert = $('<div class="alert ' + noticeClass + '">' + notice + '</div>');
+                $preCol.append($alert);
+                $preRow.append($preCol);
+                $preSection.append($preRow);
+                $("#wizard-bar").remove(); // no need for the navbar
             }
         }
 
-        if (preEnrollmentNoteExists) {
-            const discussionHeldValue = $("[name=sipedisc]:checked").val();
-            if (discussionHeldValue === 'y') {
-                notice += "<br/><br/>";
-                notice += "A pre-enrollment discussion was held with the participant";
+        if (enrolled) {
+            const $enrollSection = $("#enrollment-container").html("");
+            const $enrollRow = $('<div class="row"></div>');
+            const $enrollCol = $('<div class="col-lg-5 col-md-6 col-sm-8"></div>');
+            const $enrollAlert = $("<div class=\"alert alert-info\">Informed decision making was completed and " +
+                "participant is enrolled in the Lung Screening program.</div>");
+            $enrollCol.append($('<input type="hidden" id="sildct" name="sildct" value="y"/>')); //veteran's option to enroll
+            $enrollCol.append($('<input type="hidden" id="siidmdc" name="siidmdc" value="1"/>')); //informed decision making
 
-                const discussionDateValue = $("#sipedc").val();
-                if (discussionDateValue) {
-                    notice += " on " + discussionDateValue;
-                }
-                notice += ".";
-
-                const discussionResultDesc = $("[name=siperslt]:checked").parent("label").text().trim();
-                if (discussionResultDesc) {
-                    notice += " The result of that discussion was \"" + discussionResultDesc + "\"";
-                }
-
-                $("#pre-enrollment-discussion").html(""); //clear out the HTML regardless of value
-            }
+            $enrollCol.append($enrollAlert);
+            $enrollRow.append($enrollCol);
+            $enrollSection.append($enrollRow);
         }
 
-        //now add the note to the DOM:
-        if (notice !== "") {
-            const $preSection = $("#chart-eligibility");
-            const $preRow = $('<div class="row"></div>');
-            const $preCol = $('<div class="col-lg-8 col-md-12"></div>');
-            const $alert = $('<div class="alert ' + noticeClass + '">' + notice + '</div>');
-            $preCol.append($alert);
-            $preRow.append($preCol);
-            $preSection.append($preRow);
-            $("#wizard-bar").remove(); // no need for the navbar
-        }
-    }
+        function createFormValidator() {
 
-    if (enrolled) {
-        const $enrollSection = $("#enrollment-container").html("");
-        const $enrollRow = $('<div class="row"></div>');
-        const $enrollCol = $('<div class="col-lg-5 col-md-6 col-sm-8"></div>');
-        const $enrollAlert = $("<div class=\"alert alert-info\">Informed decision making was completed and " +
-            "participant is enrolled in the Lung Screening program.</div>");
-        $enrollCol.append($('<input type="hidden" id="sildct" name="sildct" value="y"/>')); //veteran's option to enroll
-        $enrollCol.append($('<input type="hidden" id="siidmdc" name="siidmdc" value="1"/>')); //informed decision making
+            const $form = $('#main-form');
+            const multiInputValidators = ['siceiden', 'sicechrt', 'sicemhlc', 'sipedisc', 'sipav', 'sirs', 'sistatus'];
 
-        $enrollCol.append($enrollAlert);
-        $enrollRow.append($enrollCol);
-        $enrollSection.append($enrollRow);
-    }
-
-    function createFormValidator() {
-
-        const $form = $('#main-form');
-        const multiInputValidators = ['siceiden', 'sicechrt', 'sicemhlc', 'sipedisc', 'sipav', 'sirs', 'sistatus'];
-
-        $form.formValidation({
-                fields: {
-                    //Intake section only here
-                    sidc: {
-                        validators: {
-                            notEmpty: {message: 'Contact date is required'},
-                            date: {max: VAPALS.todaysDate(), message: 'Contact date may not be in the future'}
-                        }
-                    },
-                    silnip: { //use a real element name for the field so conditional plugins can toggle the field
-                        selector: '[group=intake-contact]',
-                        validators: {choice: {min: 1, message: 'Select one or more contact methods'}}
-                    },
-                    silnoo: {validators: {notEmpty: {message: 'Other contact method is required'}}},
-                    sipav: {validators: {notEmpty: {message: 'Primary address verification is required'}}},
-                    //TODO: shouldn't address be required?
-                    sippn: {validators: {phone: {message: 'Not a valid US phone number', country: 'US'}}},
-                    sirs: {validators: {notEmpty: {message: 'Rural status is required'}}},
-                    sicpd: {
-                        validators: {
-                            notEmpty: {message: 'Packs per day is required'},
-                            integer: {message: 'must be a whole number'}
-                        }
-                    },
-                    sisny: {
-                        validators: {
-                            notEmpty: {message: 'Number of years is required'},
-                            integer: {message: 'Must be a whole number'}
-                        }
-                    },
-                    sistatus: {validators: {notEmpty: {message: 'Enrollment status is required'}}},
-                    sistachg: {validators: {notEmpty: {message: 'Reason for change is required'}}},
-                    sistreas: {validators: {notEmpty: {message: 'Explanation is required'}}},
-
-                },
-                plugins: {
-                    declarative: new FormValidation.plugins.Declarative(),
-                    trigger: new FormValidation.plugins.Trigger(),
-                    bootstrap3: new FormValidation.plugins.Bootstrap3(),
-                    submitButton: new FormValidation.plugins.SubmitButton(),
-                    defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
-                    excluded: new FormValidation.plugins.Excluded(), //disable validators on hidden, disabled fields
-                    icon: new FormValidation.plugins.Icon({
-                        valid: '',
-                        invalid: 'glyphicon glyphicon-remove',
-                        validating: 'glyphicon glyphicon-refresh',
-                        onPlaced: function (e) {
-                            if (multiInputValidators.indexOf(e.field) > -1) {
-                                $fg = $("#" + e.element.id).closest(".form-group");
-                                $c = $fg.find(".fv-plugins-message-container");
-                                if ($c.length == 1) {
-                                    $c.append(e.iconElement);
-                                } else {
-                                    $fg.append(e.iconElement);
-                                }
+            $form.formValidation({
+                    fields: {
+                        //Intake section only here
+                        sidc: {
+                            validators: {
+                                notEmpty: {message: 'Contact date is required'},
+                                date: {max: VAPALS.todaysDate(), message: 'Contact date may not be in the future'}
                             }
                         },
+                        silnip: { //use a real element name for the field so conditional plugins can toggle the field
+                            selector: '[group=intake-contact]',
+                            validators: {choice: {min: 1, message: 'Select one or more contact methods'}}
+                        },
+                        silnoo: {validators: {notEmpty: {message: 'Other contact method is required'}}},
+                        sipav: {validators: {notEmpty: {message: 'Primary address verification is required'}}},
+                        //TODO: shouldn't address be required?
+                        sippn: {validators: {phone: {message: 'Not a valid US phone number', country: 'US'}}},
+                        sirs: {validators: {notEmpty: {message: 'Rural status is required'}}},
+                        sicpd: {
+                            validators: {
+                                notEmpty: {message: 'Packs per day is required'},
+                                integer: {message: 'must be a whole number'}
+                            }
+                        },
+                        sisny: {
+                            validators: {
+                                notEmpty: {message: 'Number of years is required'},
+                                integer: {message: 'Must be a whole number'}
+                            }
+                        },
+                        sistatus: {validators: {notEmpty: {message: 'Enrollment status is required'}}},
+                        sistachg: {validators: {notEmpty: {message: 'Reason for change is required'}}},
+                        sistreas: {validators: {notEmpty: {message: 'Explanation is required'}}},
+
+                    },
+                    plugins: {
+                        declarative: new FormValidation.plugins.Declarative(),
+                        trigger: new FormValidation.plugins.Trigger(),
+                        bootstrap3: new FormValidation.plugins.Bootstrap3(),
+                        submitButton: new FormValidation.plugins.SubmitButton(),
+                        defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
+                        excluded: new FormValidation.plugins.Excluded(), //disable validators on hidden, disabled fields
+                        icon: new FormValidation.plugins.Icon({
+                            valid: '',
+                            invalid: 'glyphicon glyphicon-remove',
+                            validating: 'glyphicon glyphicon-refresh',
+                            onPlaced: function (e) {
+                                if (multiInputValidators.indexOf(e.field) > -1) {
+                                    $fg = $("#" + e.element.id).closest(".form-group");
+                                    $c = $fg.find(".fv-plugins-message-container");
+                                    if ($c.length == 1) {
+                                        $c.append(e.iconElement);
+                                    } else {
+                                        $fg.append(e.iconElement);
+                                    }
+                                }
+                            },
+                        })
+                    }
+                }
+            );
+
+            //NB: keep this else event handlers won't work.
+            const fv = $form.data("formValidation");
+
+            // when enrolled these fields are removed from the DOM, so we add the validators here
+            if (!enrolled) {
+
+                // CHART REVIEW
+                fv.addField('sicechrt', {validators: {notEmpty: {message: 'Chart review is required'}}});
+                fv.addField('siceiden', {validators: {notEmpty: {message: 'Potential candidate is required'}}});
+                fv.addField('sicerfdt', {
+                    validators: {
+                        notEmpty: {message: 'Referral date is required'},
+                        date: {max: VAPALS.todaysDate(), message: 'Referral date may not be in the future'}
+                    }
+                });
+                fv.addField('sicerfpc', {
+                    //use a real element name for the field so conditional plugins can toggle the field
+                    selector: '[name^=sicerf][type=checkbox]',
+                    validators: {choice: {min: 1, message: 'Select one or more specialty providers'}}
+                });
+                fv.addField('sicerfoo', {
+                    validators: {notEmpty: {message: 'Other referring provider specialty is required'}}
+                });
+                fv.addField('sicemhlc', { //use a real element name for the field so conditional plugins can toggle the field
+                    selector: '[group=ineligible-reason]',
+                    validators: {choice: {min: 1, message: 'Select one or more reasons'}}
+                });
+                fv.addField('sicemhoo', {validators: {notEmpty: {message: 'Other medical reason is required'}}});
+                fv.addField('siceceoo', {validators: {notEmpty: {message: 'Other care is required'}}});
+                fv.addField('siceshoo', {validators: {notEmpty: {message: 'Other smoking history is required'}}});
+
+                // PRE-ENROLLMENT DISCUSSION
+                fv.addField('sipedisc', {validators: {notEmpty: {message: 'Discussion review is required'}}});
+                fv.addField('sipedc', {
+                    validators: {
+                        notEmpty: {message: 'Contact date is required'},
+                        date: {max: VAPALS.todaysDate(), message: 'Contact date may not be in the future'}
+                    }
+                });
+                fv.addField('sipecnip', { //use a real element name for the field so conditional plugins can toggle the field
+                    selector: '[group=discussion-contact]',
+                    validators: {choice: {min: 1, message: 'Select one or more contact methods'}}
+                });
+                fv.addField('sipecnoo', {validators: {notEmpty: {message: 'Other contact method is required'}}});
+                fv.addField('siperslt', {validators: {notEmpty: {message: 'Discussion result is required'}}});
+
+                // INTAKE AREA
+                fv.addField('siidmdc', {validators: {notEmpty: {message: 'Informed decision making is required'}}});
+                fv.addField('sildct', {validators: {notEmpty: {message: 'Veteran\'s option is required'}}});
+                fv.addField('sidod', {
+                    validators: {
+                        notEmpty: {message: 'Date of death is required'},
+                        date: {max: VAPALS.todaysDate(), message: 'Date of death may not be in the future'}
+                    }
+                });
+            }
+
+            fv.on('core.form.invalid', VAPALS.autoScrollToErrorField);
+            fv.on('core.element.validated', VAPALS.hideSuccessFormatting);
+
+            return fv;
+        }
+
+        $(function () {
+
+            const fv = createFormValidator();
+            $("#save-for-later-button").on('click', function () {
+                fv.destroy();
+            });
+
+            const initialRuralUrbanValue = $("[name=sirs]").filter(":checked").val();
+            const $zipField = $("#sipz");
+            const RURAL = 'r';
+            const URBAN = 'u';
+            const UNKNOWN = 'n';
+            let zipLookupTimer = 0;
+
+            function zipLookup(updateSelection) {
+                const zipcode = $zipField.val();
+                const $ruralText = $("#rural-text");
+                $.ajax(("/zipru/" + zipcode), {dataType: "json"})
+                    .done(function (json) {
+                        const ruralData = json.result;
+                        let message = "";
+                        if (ruralData === URBAN) {
+                            message = zipcode + " is an <em>urban</em> address";
+                            if (updateSelection) {
+                                $("[name=sirs][value='" + URBAN + "']").prop('checked', true);
+                            }
+                        } else if (ruralData === RURAL) {
+                            message = zipcode + " is a <em>rural</em> address";
+                            if (updateSelection) {
+                                $("[name=sirs][value='" + RURAL + "']").prop('checked', true);
+                            }
+                        } else if (ruralData === UNKNOWN) {
+                            message = "cannot determine rural/urban status";
+                            if (updateSelection) {
+                                $("[name=sirs][value='" + UNKNOWN + "']").prop('checked', true);
+                            }
+                        }
+                        $ruralText.html(message);
                     })
-                }
+                    .fail(function () {
+                        $ruralText.html("");
+                    });
             }
-        );
 
-        //NB: keep this else event handlers won't work.
-        const fv = $form.data("formValidation");
-
-        // when enrolled these fields are removed from the DOM, so we add the validators here
-        if (!enrolled) {
-
-            // CHART REVIEW
-            fv.addField('sicechrt', {validators: {notEmpty: {message: 'Chart review is required'}}});
-            fv.addField('siceiden', {validators: {notEmpty: {message: 'Potential candidate is required'}}});
-            fv.addField('sicerfdt', {
-                validators: {
-                    notEmpty: {message: 'Referral date is required'},
-                    date: {max: VAPALS.todaysDate(), message: 'Referral date may not be in the future'}
+            //whenever the zip code is changed, determine the zip code designation, but wait until user stops typing.
+            $zipField.on('keyup change', function () {
+                if (zipLookupTimer) {
+                    clearTimeout(zipLookupTimer);
                 }
+                zipLookupTimer = setTimeout(function () {
+                    zipLookup(true);
+                }, 400);
             });
-            fv.addField('sicerfpc', {
-                //use a real element name for the field so conditional plugins can toggle the field
-                selector: '[name^=sicerf][type=checkbox]',
-                validators: {choice: {min: 1, message: 'Select one or more specialty providers'}}
+
+            if ($zipField.val() !== "") {
+                //if selection is blank, select the appropriate value, otherwise just get the help text
+                const updateSelection = initialRuralUrbanValue === undefined;
+                zipLookup(updateSelection);
+            }
+
+            //PRE-ENROLLMENT CHART ELIGIBILITY
+            $("[name=siceiden]").conditionallyDisplay({sourceValues: "referral", enable: "#referral-container"});
+            $("#sicerfot").conditionallyDisplay({enable: "#sicerfoo"});
+
+            //If not eligible via chart, require the reason, hide the remainder of the form.
+            $("[name=sicechrt]").conditionallyDisplay({
+                sourceValues: "n",
+                enable: "#reason-container",
+                disable: "#pre-enrollment-discussion" //, #intake, #intake-tab
+            }).on('change', function () {
+                //when participant is eligible, display informational message requiring remaining sections be completed.
+                const eligible = $("[name=sicechrt]:checked").val();
+                $("#sicechrt-y-alert").toggle(eligible === "y");
             });
-            fv.addField('sicerfoo', {
-                validators: {notEmpty: {message: 'Other referring provider specialty is required'}}
-            });
-            fv.addField('sicemhlc', { //use a real element name for the field so conditional plugins can toggle the field
-                selector: '[group=ineligible-reason]',
-                validators: {choice: {min: 1, message: 'Select one or more reasons'}}
-            });
-            fv.addField('sicemhoo', {validators: {notEmpty: {message: 'Other medical reason is required'}}});
-            fv.addField('siceceoo', {validators: {notEmpty: {message: 'Other care is required'}}});
-            fv.addField('siceshoo', {validators: {notEmpty: {message: 'Other smoking history is required'}}});
 
-            // PRE-ENROLLMENT DISCUSSION
-            fv.addField('sipedisc', {validators: {notEmpty: {message: 'Discussion review is required'}}});
-            fv.addField('sipedc', {
-                validators: {
-                    notEmpty: {message: 'Contact date is required'},
-                    date: {max: VAPALS.todaysDate(), message: 'Contact date may not be in the future'}
-                }
-            });
-            fv.addField('sipecnip', { //use a real element name for the field so conditional plugins can toggle the field
-                selector: '[group=discussion-contact]',
-                validators: {choice: {min: 1, message: 'Select one or more contact methods'}}
-            });
-            fv.addField('sipecnoo', {validators: {notEmpty: {message: 'Other contact method is required'}}});
-            fv.addField('siperslt', {validators: {notEmpty: {message: 'Discussion result is required'}}});
+            // "other" fields in reason block
+            $("#sicemhot").conditionallyDisplay({enable: "#sicemhoo"}); //other medical history
+            $("#siceceot").conditionallyDisplay({enable: "#siceceoo"}); //received care elsewhere
+            $("#siceshot").conditionallyDisplay({enable: "#siceshoo"}); //other smoking history
 
-            // INTAKE AREA
-            fv.addField('siidmdc', {validators: {notEmpty: {message: 'Informed decision making is required'}}});
-            fv.addField('sildct', {validators: {notEmpty: {message: 'Veteran\'s option is required'}}});
-        }
+            // start the page by hiding the pre-enrollment discussion and intake sections if the current value for
+            // eligible based on chart review was not answered or was answered NO
+            if (!enrolled && (eligible === undefined || eligible === 'n')) {
+                $("#pre-enrollment-discussion").hide(); //, #intake, #intake-tab
+            }
 
-        fv.on('core.form.invalid', VAPALS.autoScrollToErrorField);
-        fv.on('core.element.validated', VAPALS.hideSuccessFormatting);
+            //PRE-ENROLLMENT PATIENT DISCUSSION
 
-        return fv;
-    }
+            //enable discussion container when pre-enrollment discussion occurred AND enable intake area when
+            // pre-enrollment did NOT occur (default)
+            $("[name=sipedisc]")
+                .conditionallyDisplay({sourceValues: 'y', enable: '#discussion-container'});
+            //.conditionallyDisplay({sourceValues: 'n', enable: '#intake,#intake-tab'});
 
-    $(function () {
+            //enable intake when pre-enrollment result is that the participant want's in.
+            //$("[name=siperslt]").conditionallyDisplay({enable: '#intake,#intake-tab'});
 
-        const fv = createFormValidator();
-        $("#save-for-later-button").on('click', function () {
-                        fv.destroy();
-        });
+            $("#sipecnot").conditionallyEnable({sourceValues: "1", enable: "#sipecnoo"}); // other contact method
 
-        const initialRuralUrbanValue = $("[name=sirs]").filter(":checked").val();
-        const $zipField = $("#sipz");
-        const RURAL = 'r';
-        const URBAN = 'u';
-        const UNKNOWN = 'n';
-        let zipLookupTimer = 0;
+            // If unselected (initial form), preselect "no" as the default.
+            const hadDiscussion = $("[name=sipedisc]:checked").val();
+            if (hadDiscussion === undefined) {
+                $("#sipedisc-n").prop("checked", true);
+            }
 
-        function zipLookup(updateSelection) {
-            const zipcode = $zipField.val();
-            const $ruralText = $("#rural-text");
-            $.ajax(("/zipru/" + zipcode), {dataType: "json"})
-                .done(function (json) {
-                    const ruralData = json.result;
-                    let message = "";
-                    if (ruralData === URBAN) {
-                        message = zipcode + " is an <em>urban</em> address";
-                        if (updateSelection) {
-                            $("[name=sirs][value='" + URBAN + "']").prop('checked', true);
-                        }
-                    } else if (ruralData === RURAL) {
-                        message = zipcode + " is a <em>rural</em> address";
-                        if (updateSelection) {
-                            $("[name=sirs][value='" + RURAL + "']").prop('checked', true);
-                        }
-                    } else if (ruralData === UNKNOWN) {
-                        message = "cannot determine rural/urban status";
-                        if (updateSelection) {
-                            $("[name=sirs][value='" + UNKNOWN + "']").prop('checked', true);
-                        }
+            //INTAKE
+            $("#silnot").conditionallyEnable({sourceValues: "1", enable: "#silnoo"});
+            $("#sistachg").conditionallyDisplay({sourceValues: "deceased", enable: "#date-of-death-container"})
+            $("#sicpd").on('keyup change', function () {
+                const cigsPerDay = $("#sicpd").val();
+                const $sippd = $("#sippd");
+                const $sippdVal = $("#sippd-val");
+                if (cigsPerDay >= 0) {
+                    const cpd = VAPALS.calculatePacksPerDay(cigsPerDay);
+                    if (cpd > 0) {
+                        $sippd.val(cpd);
+                        $sippdVal.text(cpd);
+                    } else {
+                        $sippd.val("");
+                        $sippdVal.text("-");
                     }
-                    $ruralText.html(message);
-                })
-                .fail(function () {
-                    $ruralText.html("");
-                });
-        }
+                    $sippd.change();
+                }
+            }).trigger('keyup');
 
-        //whenever the zip code is changed, determine the zip code designation, but wait until user stops typing.
-        $zipField.on('keyup change', function () {
-            if (zipLookupTimer) {
-                clearTimeout(zipLookupTimer);
-            }
-            zipLookupTimer = setTimeout(function () {
-                zipLookup(true);
-            }, 400);
-        });
+            $("#sidc, #sippd, #sisny").on('keyup change', function () {
+                const packsPerDay = $("#sippd").val();
+                const cigYears = $("#sisny").val();
+                const packYears = VAPALS.calculatePackYears(packsPerDay, cigYears);
 
-        if ($zipField.val() !== "") {
-            //if selection is blank, select the appropriate value, otherwise just get the help text
-            const updateSelection = initialRuralUrbanValue === undefined;
-            zipLookup(updateSelection);
-        }
-
-        //PRE-ENROLLMENT CHART ELIGIBILITY
-        $("[name=siceiden]").conditionallyDisplay({sourceValues: "referral", enable: "#referral-container"});
-        $("#sicerfot").conditionallyDisplay({enable: "#sicerfoo"});
-
-        //If not eligible via chart, require the reason, hide the remainder of the form.
-        $("[name=sicechrt]").conditionallyDisplay({
-            sourceValues: "n",
-            enable: "#reason-container",
-            disable: "#pre-enrollment-discussion" //, #intake, #intake-tab
-        }).on('change', function () {
-            //when participant is eligible, display informational message requiring remaining sections be completed.
-            const eligible = $("[name=sicechrt]:checked").val();
-            $("#sicechrt-y-alert").toggle(eligible === "y");
-        });
-
-        // "other" fields in reason block
-        $("#sicemhot").conditionallyDisplay({enable: "#sicemhoo"}); //other medical history
-        $("#siceceot").conditionallyDisplay({enable: "#siceceoo"}); //received care elsewhere
-        $("#siceshot").conditionallyDisplay({enable: "#siceshoo"}); //other smoking history
-
-        // start the page by hiding the pre-enrollment discussion and intake sections if the current value for
-        // eligible based on chart review was not answered or was answered NO
-        if (!enrolled && (eligible === undefined || eligible === 'n')) {
-            $("#pre-enrollment-discussion").hide(); //, #intake, #intake-tab
-        }
-
-        //PRE-ENROLLMENT PATIENT DISCUSSION
-
-        //enable discussion container when pre-enrollment discussion occurred AND enable intake area when
-        // pre-enrollment did NOT occur (default)
-        $("[name=sipedisc]")
-            .conditionallyDisplay({sourceValues: 'y', enable: '#discussion-container'});
-        //.conditionallyDisplay({sourceValues: 'n', enable: '#intake,#intake-tab'});
-
-        //enable intake when pre-enrollment result is that the participant want's in.
-        //$("[name=siperslt]").conditionallyDisplay({enable: '#intake,#intake-tab'});
-
-        $("#sipecnot").conditionallyEnable({sourceValues: "1", enable: "#sipecnoo"}); // other contact method
-
-        // If unselected (initial form), preselect "no" as the default.
-        const hadDiscussion = $("[name=sipedisc]:checked").val();
-        if (hadDiscussion === undefined) {
-            $("#sipedisc-n").prop("checked", true);
-        }
-
-        //INTAKE
-        $("#silnot").conditionallyEnable({sourceValues: "1", enable: "#silnoo"});
-        $("#sicpd").on('keyup change', function () {
-            const cigsPerDay = $("#sicpd").val();
-            const $sippd = $("#sippd");
-            const $sippdVal = $("#sippd-val");
-            if (cigsPerDay >= 0) {
-                const cpd = VAPALS.calculatePacksPerDay(cigsPerDay);
-                if (cpd > 0) {
-                    $sippd.val(cpd);
-                    $sippdVal.text(cpd);
+                if (packYears > 0) {
+                    $("#sippy").val(packYears.toFixed(2));
+                    let packYearsText = packYears.toFixed(2);
+                    const $currentFormRow = $("#pack-years-history tbody tr[data-current-form]").last();
+                    if ($currentFormRow.length == 1) {
+                        let intakeDate = VAPALS.toMoment($("#sidc").val());
+                        if (!intakeDate.isValid()) {
+                            intakeDate = moment();
+                        }
+                        packYearsText += " thru " + intakeDate.format(VAPALS.DATE_FORMAT);
+                    }
+                    $("#sippy-val").text(packYearsText);
                 } else {
-                    $sippd.val("");
-                    $sippdVal.text("-");
+                    $("#sippy").val("");
+                    $("#sippy-val").text("-");
                 }
-                $sippd.change();
+
+                const cumulative = computeCumulativePackYears(packYears);
+                $("#sippycu").val(cumulative.toFixed(2));
+                const message = "Cumulative pack years will be updated to <strong>" + cumulative.toFixed(2) + "</strong>";
+                $("#cumulative-pack-years-message").html(message).show();
+            });
+            $("#sidc").trigger('keyup');
+
+            //removed smoking history table if there is none (i.e. initial intake form entry)
+            if ($("#pack-years-history tbody tr").length === 0) {
+                $("#pack-years-history").remove();
             }
-        }).trigger('keyup');
 
-        $("#sidc, #sippd, #sisny").on('keyup change', function () {
-            const packsPerDay = $("#sippd").val();
-            const cigYears = $("#sisny").val();
-            const packYears = VAPALS.calculatePackYears(packsPerDay, cigYears);
+            $("[name=siidmdc]").conditionallyDisplay({sourceValues: "1", enable: "#siidmdc-affirmation"});
 
-            if (packYears > 0) {
-                $("#sippy").val(packYears.toFixed(2));
-                let packYearsText = packYears.toFixed(2);
-                const $currentFormRow = $("#pack-years-history tbody tr[data-current-form]").last();
-                if ($currentFormRow.length == 1) {
-                    let intakeDate = VAPALS.toMoment($("#sidc").val());
-                    if (!intakeDate.isValid()) {
-                        intakeDate = moment();
-                    }
-                    packYearsText += " thru " + intakeDate.format(VAPALS.DATE_FORMAT);
+            $("[name=sistatus]").on('change', function () {
+                //require reason fields when marking participant as "not active"
+                $("#reason-for-change-container").toggle($("#sistatus-inactive").is(":checked"));
+
+            });
+
+            $('#body').scrollspy({target: '#wizard-bar'})
+        });
+
+        //NB: needs to be outside of jquery fx to prevent default
+        $("#save-chart-eligibility").on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const fv = $("form").data("formValidation");
+
+            validateSection(fv, $("#chart-eligibility")).then(function (valid) {
+                if (valid) {
+                    $("[name=samistatus]").val("chart-eligibility");
+                    $("form").trigger("submit");
                 }
-                $("#sippy-val").text(packYearsText);
-            } else {
-                $("#sippy").val("");
-                $("#sippy-val").text("-");
-            }
-
-            const cumulative = computeCumulativePackYears(packYears);
-            $("#sippycu").val(cumulative.toFixed(2));
-            const message = "Cumulative pack years will be updated to <strong>" + cumulative.toFixed(2) + "</strong>";
-            $("#cumulative-pack-years-message").html(message).show();
-        });
-        $("#sidc").trigger('keyup');
-
-        //removed smoking history table if there is none (i.e. initial intake form entry)
-        if ($("#pack-years-history tbody tr").length === 0) {
-            $("#pack-years-history").remove();
-        }
-
-        $("[name=siidmdc]").conditionallyDisplay({sourceValues: "1", enable: "#siidmdc-affirmation"});
-
-        $("[name=sistatus]").on('change', function () {
-            //require reason fields when marking participant as "not active"
-            $("#reason-for-change-container").toggle($("#sistatus-inactive").is(":checked"));
-
-        });
-
-        $('#body').scrollspy({target: '#wizard-bar'})
-    });
-
-    //NB: needs to be outside of jquery fx to prevent default
-    $("#save-chart-eligibility").on('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const fv = $("form").data("formValidation");
-
-        validateSection(fv, $("#chart-eligibility")).then(function (valid) {
-            if (valid) {
-                $("[name=samistatus]").val("chart-eligibility");
-                $("form").trigger("submit");
-            }
-        });
-    });
-    $("#save-pre-enrollment-discussion").on('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        const fv = $("form").data("formValidation");
-
-        validateSection(fv, $("#pre-enrollment-discussion")).then(function (valid) {
-            if (valid) {
-                $("[name=samistatus]").val("pre-enrollment-discussion");
-                $("form").trigger("submit");
-            }
-        });
-    });
-
-
-    /**
-     * Validates all visible input fields within a section of the page using the provided formValidation instance
-     * @param fv the form validator
-     * @param $section the area to validate.
-     * @returns {Promise<boolean>} true if validated without error; otherwise false.
-     */
-    function validateSection(fv, $section) {
-        const $inputFields = $section.find(":input:visible");
-        const fieldNames = $inputFields.map(function () {
-            return this.name;
-        }).get();
-        const distinctNames = fieldNames.filter(VAPALS.unique);
-        return new Promise(function (resolve) {
-            const validationPromises = [];
-            if (fv) {
-                $.each(distinctNames, function (i, fieldName) {
-                    if (fieldName in fv.fields) {
-                        validationPromises.push(fv.validateField(fieldName));
-                    }
-                });
-            }
-
-            Promise.all(validationPromises).then(function (values) {
-                $.each(values, function (i, v) {
-                    if (v === 'Invalid') {
-                        return resolve(false);
-                    }
-                });
-                return (resolve(true));
             });
         });
-    }
+        $("#save-pre-enrollment-discussion").on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const fv = $("form").data("formValidation");
+
+            validateSection(fv, $("#pre-enrollment-discussion")).then(function (valid) {
+                if (valid) {
+                    $("[name=samistatus]").val("pre-enrollment-discussion");
+                    $("form").trigger("submit");
+                }
+            });
+        });
+
+
+        /**
+         * Validates all visible input fields within a section of the page using the provided formValidation instance
+         * @param fv the form validator
+         * @param $section the area to validate.
+         * @returns {Promise<boolean>} true if validated without error; otherwise false.
+         */
+        function validateSection(fv, $section) {
+            const $inputFields = $section.find(":input:visible");
+            const fieldNames = $inputFields.map(function () {
+                return this.name;
+            }).get();
+            const distinctNames = fieldNames.filter(VAPALS.unique);
+            return new Promise(function (resolve) {
+                const validationPromises = [];
+                if (fv) {
+                    $.each(distinctNames, function (i, fieldName) {
+                        if (fieldName in fv.fields) {
+                            validationPromises.push(fv.validateField(fieldName));
+                        }
+                    });
+                }
+
+                Promise.all(validationPromises).then(function (values) {
+                    $.each(values, function (i, v) {
+                        if (v === 'Invalid') {
+                            return resolve(false);
+                        }
+                    });
+                    return (resolve(true));
+                });
+            });
+        }
   </script>
  </body>
 </html>

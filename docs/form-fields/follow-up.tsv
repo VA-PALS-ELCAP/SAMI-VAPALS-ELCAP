@@ -1,74 +1,75 @@
 FIELD NUM	QUESTION	NAME	TYPE	REQUIRED	PLACEHOLDER	VALUES	LABELS
 1	This interaction is a	futype	radio	1		"other,ct"	"Other communication with veteran,CT visit and/or communication about CT results"
-2	Follow-up date	sidof	text	1			Follow-up date
-3	Date of baseline CT	sidoe	text	1			Date of baseline CT
-4	Follow-up Coordinator	sico	text	1			Coordinator
-5	Reason for scan	fursnscn	textarea	1			
-6	Have you taken antibiotics since your last CT scan	siabx	radio	1		n;y	No;Yes
-7	Is this an annual CT scan	siaex	radio	1		n;y	No;Yes
-8	"During the past year, have you experienced any of these symptoms - Cough producing bloody material"	siwcb	checkbox	0		b	Cough producing bloody material
-9	"During the past year, have you experienced any of these symptoms - Unexplained weight loss greater than 20 lbs"	siwcl	checkbox	0		l	Unexplained weight loss greater than 20 lbs
-10	"During the past year, have you experienced any of these symptoms - Unexplained hoarseness"	siwch	checkbox	0		h	Unexplained hoarseness
-11	"During the past year, have you experienced any of these symptoms - other"	siwco	checkbox	0		o	Other
-12	"During the past year, have you experienced any of these symptoms - other specified"	siwcos	text	1			Cough producing bloody material
-13	"If yes, have you seen a physician for these symptoms"	siwcp	radio	0		n;y	No;Yes
-14	"If yes, have you seen a physician for this - whom"	siwcw	text	0			Whom?
-15	"If yes, are you now experiencing symptoms"	siwcn	radio	0		n;y	No;Yes
-16	When did you most recently have a chest CT	siact	select-one	0		-;a;b;f;c;d;e	-;Less than 6 months ago;6 months to 18 months ago;18 months to 3 years ago;3 years to 5 years ago;Over 5 years ago;Never
-17	Have you been hospitalized in the past year	siho	radio	1		n;y	No;Yes
-18	What were you hospitalized for in the past year	sihow	text	0			For what?
-19	What year were you hospitalized	sihod	text	0			YYYY
-20	Where were you hospitalized	sihol	text	0			Where?
-21	Have you had a diagnosis of cancer in the past year	sicd	radio	1		n;y	No;Yes
-22	What part of the body did you have cancer in	sicdl	select-one	0		-;br;co;li;lu;ov;pa;pr;sk;st;ut;os	-;Breast;Colon / rectum;Liver;Lung / bronchus;Ovary;Pancreas;Prostate;Skin;Stomach;Uterus;Other (specify)
-23	What part of the body did you have cancer in -  Other specify	sicdls	text	0			Other?
-24	When were you diagnosed	sicdd	text	0			When were you diagnosed?
-25	"If lung cancer has been diagnosed, have you had surgery"	silcs	radio	1		n;y;o	No;Yes;N/A
-26	When did you have surgery	silcsd	text	0			When?
-27	Where did you have surgery	silcsl	text	0			Where?
-28	"If a lung cancer has been removed, is there evidence of a recurrence"	sier	radio	1		n;y;o	No;Yes;N/A
-29	"If a lung cancer has been removed, is there evidence of recurrence?"	sierd	text	0			Describe
-30	"Since your last followup, have you smoked cigarettes at all, even a puff?"	sisa	radio	0		n;y;o	No;Yes;Never smoked
-31	"On average, how many cigarettes did you smoke per day?"	sicpd	text	0			
-32	How many packs of cigarettes did you smoke per day (PPD)?	sippd	text	0			
-33	Quit date	siq	text	0			
-34	Reported pack years	sippy	text	1			
-35	Cumulative reported pack years	sippycu	text	1			
-36	"Since we last asked, have you ever tried to quit smoking"	sittq	radio	0		n;y;o	No;Yes;N/A
-37	How many times have you quit smoking for at least 24 hours	sittqt	text	0			
-38	"Since we last asked what, if any, smoking cessation methods have you used? - Have not tried to quit - Have not tried to quit"	sisca	checkbox	0		a	Have not tried to quit
-39	"Since we last asked what, if any, smoking cessation methods have you used? - Cold Turkey by completely stopping on your own with no other assistance"	siscb	checkbox	0		b	Cold Turkey by completely stopping on your own with no other assistance
-40	"Since we last asked what, if any, smoking cessation methods have you used? - Tapering or reducing number of cigarettes smoked per day"	siscc	checkbox	0		c	Tapering or reducing number of cigarettes smoked per day
-41	"Since we last asked what, if any, smoking cessation methods have you used? - Self-help material (e.g., brochure, cessation website)"	siscd	checkbox	0		d	"Self-help material (e.g., brochure, cessation website)"
-42	"Since we last asked what, if any, smoking cessation methods have you used? - Individual consultation or cessation counseling"	sisce	checkbox	0		e	Individual consultation or cessation counseling
-43	"Since we last asked what, if any, smoking cessation methods have you used? - Telephone cessation counseling hotline (e.g., 1-855-QUIT-VET, 1-800-QUIT-NOW)"	siscf	checkbox	0		f	"Telephone cessation counseling hotline (e.g., 1-855-QUIT-VET, 1-800-QUIT-NOW)"
-44	"Since we last asked what, if any, smoking cessation methods have you used? - Peer support (e.g.; Nicotine Anonymous)"	siscg	checkbox	0		g	"Peer support (e.g., Nicotine Anonymous)"
-45	"Since we last asked what, if any, smoking cessation methods have you used? - Nicotine replacement therapy (e.g., patch; gum, inhaler, nasal spray, lozenge)"	sisch	checkbox	0		h	"Nicotine replacement therapy (e.g., patch, gum, inhaler, nasal spray, lozenge)"
-46	"Since we last asked what, if any, smoking cessation methods have you used? - Zyban"	sisci	checkbox	0		i	Zyban
-47	"Since we last asked what, if any, smoking cessation methods have you used? - Hypnosis"	siscj	checkbox	0		j	Hypnosis
-48	"Since we last asked what, if any, smoking cessation methods have you used? - Acupuncture / acupressure"	sisck	checkbox	0		k	Acupuncture / acupressure
-49	"Since we last asked what, if any, smoking cessation methods have you used? - Other"	siscl	checkbox	0		l	Other
-50	"Since we last asked what, if any, smoking cessation methods have you used? - Other (specify)"	siscos	text	1			Other (specify)
-51	Are you seriously thinking of quitting smoking	siqst	select-one	0		-;y;m;n;o	"-;Yes, within the next 30 days;Yes, within the next 6 months;No, not thinking of quitting;N/A"
-52	Tobacco cessation provided:	siscmd	radio	1		d;a;i	Declined;Advised to quit smoking -- VA resources provided; Interested in VA tobacco cessation medication. Encouraged Veteran to talk to provider or pharmacist about which medication option is best for you.
-53	Communications method: In Person	fucmotip	checkbox	0		1	
-54	Communications method: Telephone	fucmotte	checkbox	0		1	
-55	Communications method: TeleHealth	fucmotth	checkbox	0		1	
-56	Communications method: Mailed letter	fucmotml	checkbox	0		1	
-57	Communications method: Message in Patient Portal	fucmotpp	checkbox	0		1	
-58	Communications method: Video-on-Demand (VOD)	fucmotvd	checkbox	0		1	
-59	Communications method: Other	fucmotot	checkbox	0		1	
-60	Other contact method	fucmotoo	text	1			
-61	Additional details	fucmotde	textarea	0			
-62	Last CT date	fulctdt	date	1			
-63	Communications method: In Person	fucmctip	checkbox	0		1	
-64	Communications method: Telephone	fucmctte	checkbox	0		1	
-65	Communications method: TeleHealth	fucmctth	checkbox	0		1	
-66	Communications method: Mailed letter	fucmctml	checkbox	0		1	
-67	Communications method: Message in Patient Portal	fucmctpp	checkbox	0		1	
-68	Communications method: Video-on-Demand (VOD)	fucmctvd	checkbox	0		1	
-69	Communications method: Other	fucmctot	checkbox	0		1	
-70	Other contact method	fucmctoo	text	1			
-71	Additional details	fucmctde	textarea	0			
-72	Has a new CT/LDCT been ordered?	funewct	radio	1		n;y	No;Yes
-73	Communication to pulmonary?	fucompul	radio	0		n;y	No;Yes
+2	Form Date	sidof	text	1			Follow-up date
+3	Next CT Follow-up	sidoct	text	1			Next CT Follow-up
+4	Date of baseline CT	sidoe	text	1			Date of baseline CT
+5	Follow-up Coordinator	sico	text	1			Coordinator
+6	Reason for scan	fursnscn	textarea	1			
+7	Have you taken antibiotics since your last CT scan	siabx	radio	1		n;y	No;Yes
+8	Is this an annual CT scan	siaex	radio	1		n;y	No;Yes
+9	"During the past year, have you experienced any of these symptoms - Cough producing bloody material"	siwcb	checkbox	0		b	Cough producing bloody material
+10	"During the past year, have you experienced any of these symptoms - Unexplained weight loss greater than 20 lbs"	siwcl	checkbox	0		l	Unexplained weight loss greater than 20 lbs
+11	"During the past year, have you experienced any of these symptoms - Unexplained hoarseness"	siwch	checkbox	0		h	Unexplained hoarseness
+12	"During the past year, have you experienced any of these symptoms - other"	siwco	checkbox	0		o	Other
+13	"During the past year, have you experienced any of these symptoms - other specified"	siwcos	text	1			Cough producing bloody material
+14	"If yes, have you seen a physician for these symptoms"	siwcp	radio	0		n;y	No;Yes
+15	"If yes, have you seen a physician for this - whom"	siwcw	text	0			Whom?
+16	"If yes, are you now experiencing symptoms"	siwcn	radio	0		n;y	No;Yes
+17	When did you most recently have a chest CT	siact	select-one	0		-;a;b;f;c;d;e	-;Less than 6 months ago;6 months to 18 months ago;18 months to 3 years ago;3 years to 5 years ago;Over 5 years ago;Never
+18	Have you been hospitalized in the past year	siho	radio	1		n;y	No;Yes
+19	What were you hospitalized for in the past year	sihow	text	0			For what?
+20	What year were you hospitalized	sihod	text	0			YYYY
+21	Where were you hospitalized	sihol	text	0			Where?
+22	Have you had a diagnosis of cancer in the past year	sicd	radio	1		n;y	No;Yes
+23	What part of the body did you have cancer in	sicdl	select-one	0		-;br;co;li;lu;ov;pa;pr;sk;st;ut;os	-;Breast;Colon / rectum;Liver;Lung / bronchus;Ovary;Pancreas;Prostate;Skin;Stomach;Uterus;Other (specify)
+24	What part of the body did you have cancer in -  Other specify	sicdls	text	0			Other?
+25	When were you diagnosed	sicdd	text	0			When were you diagnosed?
+26	"If lung cancer has been diagnosed, have you had surgery"	silcs	radio	1		n;y;o	No;Yes;N/A
+27	When did you have surgery	silcsd	text	0			When?
+28	Where did you have surgery	silcsl	text	0			Where?
+29	"If a lung cancer has been removed, is there evidence of a recurrence"	sier	radio	1		n;y;o	No;Yes;N/A
+30	"If a lung cancer has been removed, is there evidence of recurrence?"	sierd	text	0			Describe
+31	"Since your last followup, have you smoked cigarettes at all, even a puff?"	sisa	radio	0		n;y;o	No;Yes;Never smoked
+32	"On average, how many cigarettes did you smoke per day?"	sicpd	text	0			
+33	How many packs of cigarettes did you smoke per day (PPD)?	sippd	text	0			
+34	Quit date	siq	text	0			
+35	Reported pack years	sippy	text	1			
+36	Cumulative reported pack years	sippycu	text	1			
+37	"Since we last asked, have you ever tried to quit smoking"	sittq	radio	0		n;y;o	No;Yes;N/A
+38	How many times have you quit smoking for at least 24 hours	sittqt	text	0			
+39	"Since we last asked what, if any, smoking cessation methods have you used? - Have not tried to quit - Have not tried to quit"	sisca	checkbox	0		a	Have not tried to quit
+40	"Since we last asked what, if any, smoking cessation methods have you used? - Cold Turkey by completely stopping on your own with no other assistance"	siscb	checkbox	0		b	Cold Turkey by completely stopping on your own with no other assistance
+41	"Since we last asked what, if any, smoking cessation methods have you used? - Tapering or reducing number of cigarettes smoked per day"	siscc	checkbox	0		c	Tapering or reducing number of cigarettes smoked per day
+42	"Since we last asked what, if any, smoking cessation methods have you used? - Self-help material (e.g., brochure, cessation website)"	siscd	checkbox	0		d	"Self-help material (e.g., brochure, cessation website)"
+43	"Since we last asked what, if any, smoking cessation methods have you used? - Individual consultation or cessation counseling"	sisce	checkbox	0		e	Individual consultation or cessation counseling
+44	"Since we last asked what, if any, smoking cessation methods have you used? - Telephone cessation counseling hotline (e.g., 1-855-QUIT-VET, 1-800-QUIT-NOW)"	siscf	checkbox	0		f	"Telephone cessation counseling hotline (e.g., 1-855-QUIT-VET, 1-800-QUIT-NOW)"
+45	"Since we last asked what, if any, smoking cessation methods have you used? - Peer support (e.g.; Nicotine Anonymous)"	siscg	checkbox	0		g	"Peer support (e.g., Nicotine Anonymous)"
+46	"Since we last asked what, if any, smoking cessation methods have you used? - Nicotine replacement therapy (e.g., patch; gum, inhaler, nasal spray, lozenge)"	sisch	checkbox	0		h	"Nicotine replacement therapy (e.g., patch, gum, inhaler, nasal spray, lozenge)"
+47	"Since we last asked what, if any, smoking cessation methods have you used? - Zyban"	sisci	checkbox	0		i	Zyban
+48	"Since we last asked what, if any, smoking cessation methods have you used? - Hypnosis"	siscj	checkbox	0		j	Hypnosis
+49	"Since we last asked what, if any, smoking cessation methods have you used? - Acupuncture / acupressure"	sisck	checkbox	0		k	Acupuncture / acupressure
+50	"Since we last asked what, if any, smoking cessation methods have you used? - Other"	siscl	checkbox	0		l	Other
+51	"Since we last asked what, if any, smoking cessation methods have you used? - Other (specify)"	siscos	text	1			Other (specify)
+52	Are you seriously thinking of quitting smoking	siqst	select-one	0		-;y;m;n;o	"-;Yes, within the next 30 days;Yes, within the next 6 months;No, not thinking of quitting;N/A"
+53	Tobacco cessation provided:	siscmd	radio	1		d;a;i	Declined;Advised to quit smoking -- VA resources provided; Interested in VA tobacco cessation medication. Encouraged Veteran to talk to provider or pharmacist about which medication option is best for you.
+54	Communications method: In Person	fucmotip	checkbox	0		1	
+55	Communications method: Telephone	fucmotte	checkbox	0		1	
+56	Communications method: TeleHealth	fucmotth	checkbox	0		1	
+57	Communications method: Mailed letter	fucmotml	checkbox	0		1	
+58	Communications method: Message in Patient Portal	fucmotpp	checkbox	0		1	
+59	Communications method: Video-on-Demand (VOD)	fucmotvd	checkbox	0		1	
+60	Communications method: Other	fucmotot	checkbox	0		1	
+61	Other contact method	fucmotoo	text	1			
+62	Additional details	fucmotde	textarea	0			
+63	Last CT date	fulctdt	date	1			
+64	Communications method: In Person	fucmctip	checkbox	0		1	
+65	Communications method: Telephone	fucmctte	checkbox	0		1	
+66	Communications method: TeleHealth	fucmctth	checkbox	0		1	
+67	Communications method: Mailed letter	fucmctml	checkbox	0		1	
+68	Communications method: Message in Patient Portal	fucmctpp	checkbox	0		1	
+69	Communications method: Video-on-Demand (VOD)	fucmctvd	checkbox	0		1	
+70	Communications method: Other	fucmctot	checkbox	0		1	
+71	Other contact method	fucmctoo	text	1			
+72	Additional details	fucmctde	textarea	0			
+73	Has a new CT/LDCT been ordered?	funewct	radio	1		n;y	No;Yes
+74	Communication to pulmonary?	fucompul	radio	0		n;y	No;Yes

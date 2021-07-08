@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-  <meta content="2021.07.06" name="version"/>
+  <meta content="2021.07.08" name="version"/>
   <meta content="Domenic DiNatale, domenic.dinatale@paraxialtech.com" name="author"/>
   <title>
    @@SITETITLE@@: Followup Form
@@ -50,17 +50,17 @@
   </script>
   <script src="../www/lib/chart-js-2.9.3/chartjs-plugin-datalabels.min.js">
   </script>
-  <script src="../www/jquery-conditonally-enable.js?v=2021.07.06">
+  <script src="../www/jquery-conditonally-enable.js?v=2021.07.08">
   </script>
-  <script src="../www/jquery-conditonally-display.js?v=2021.07.06">
+  <script src="../www/jquery-conditonally-display.js?v=2021.07.08">
   </script>
-  <script src="../www/jqueryui-vista-filemanAutocomplete.js?v=2021.07.06">
+  <script src="../www/jqueryui-vista-filemanAutocomplete.js?v=2021.07.08">
   </script>
-  <script src="../www/vapals.js?v=2021.07.06">
+  <script src="../www/vapals.js?v=2021.07.08">
   </script>
-  <script src="../www/init.js?v=2021.07.06">
+  <script src="../www/init.js?v=2021.07.08">
   </script>
-  <script src="../www/nodule-grid.js?v=2021.07.06">
+  <script src="../www/nodule-grid.js?v=2021.07.08">
   </script>
   <!--System Navigation-->
   <nav class="navbar navbar-default" role="navigation">
@@ -200,12 +200,29 @@
     <div class="row">
      <div class="form-group col-sm-3 col-md-3 col-lg-2">
       <label class="required" for="sidof">
-       Follow-up date
+       Form date
       </label>
       <div class="input-group datepicker">
        <input aria-describedby="sidof-addon" class="form-control" data-restriction="past" id="sidof" name="sidof" required="required"/>
        <div class="input-group-addon">
         <div class="input-group-text" id="sidof-addon">
+         <i aria-hidden="true" class="fa fa-calendar">
+         </i>
+        </div>
+       </div>
+      </div>
+      <small class="form-text text-muted">
+       MM/DD/YYYY
+      </small>
+     </div>
+     <div class="form-group col-sm-3 col-md-3 col-lg-2">
+      <label class="required" for="sidoct">
+       Next CT follow-up
+      </label>
+      <div class="input-group datepicker">
+       <input aria-describedby="sidoct-addon" class="form-control" data-restriction="" id="sidoct" name="sidoct" required="required"/>
+       <div class="input-group-addon">
+        <div class="input-group-text" id="sidoct-addon">
          <i aria-hidden="true" class="fa fa-calendar">
          </i>
         </div>
@@ -1336,7 +1353,7 @@
     <span id="sami-version" style="float:right; font-family: Courier,monospace">
      <span id="formMode">
      </span>
-     2021.07.06
+     2021.07.08
     </span>
    </div>
   </footer>

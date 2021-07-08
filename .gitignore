@@ -10,3 +10,7 @@ java/tests/.gradle/
 va-pals.iml
 docs/src/doc/**
 /venv/
+/.gradle/
+/gradle/wrapper/
+/gradlew
+/gradlew.bat

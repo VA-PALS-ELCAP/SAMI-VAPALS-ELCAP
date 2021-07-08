@@ -72,4 +72,7 @@ FIELD NUM	QUESTION	NAME	TYPE	REQUIRED	PLACEHOLDER	VALUES	LABELS
 71	Clinical Indications for Initial Screening CT	siclin	textarea	0			Clinical Indications for Initial Screening CT
 72	Participant communication record	sipcrn	textarea	0			Participant communication record
 73	Enrollment	sistatus	radio	1		active;inactive	Active;Not active
-74	CT Appointment	sicectap	text	0			CT Appointment
+74	CT Appointment	sicectap	text	1			CT Appointment
+75	Reason	sistachg	select-one	1		;transferred;medical;unwilling;refused;illadvised;radiation;moved;insurance;cost;deceased;other;excluded;complete;noresponse;nocontact;followed	-;Transferred to another institution (specify);Unable due to medical reason (specify);Unwilling due to personal reason (specify);Refused to continue;Physician advised against;Concern about radiation;Moved and unable to return;No insurance, can't have Dx CT;Burden of cost;Deceased;Other (specify);Excluded (specify);Study complete;No response to 3 calls + 3 letters;Unable to contact;Being followed elsewhere (get results)
+76	Date of death	sidod	text	1			Date of death
+77	Explanation	sistreas	textarea	0			Explanation

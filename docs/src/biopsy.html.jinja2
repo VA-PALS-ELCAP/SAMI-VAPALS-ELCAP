@@ -233,11 +233,6 @@
                     <div class="form-group">
                         <label class="control-label" for="rbmtos">Other</label>
                         <input type="text" name="rbmtos" id="rbmtos" class="form-control" placeholder="specify">
-                        <div id="rbmto-container">
-                            {{ f.inlineRadio("rbmto", "rbmto-n", "n", "No", true) }}
-                            {{ f.inlineRadio("rbmto", "rbmto-neg", "neg", "Negative") }}
-                            {{ f.inlineRadio("rbmto", "rbmto-pos", "pos", "Positive") }}
-                        </div>
                     </div>
                 </div>
             </div>
@@ -393,11 +388,6 @@
 
             //Molecular Testing
             $("[name='rbmt']").conditionallyDisplay({enable: "#rbmt-container"}); //entire section
-            $("[name='rbmtos']").conditionallyEnable({
-                sourceValues: function (actualValue) {
-                    return actualValue !== "";
-                }, enable: "#rbmto-container"
-            });
 
             initNoduleGrid(fv);
         });
